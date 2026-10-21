@@ -1,0 +1,234 @@
+[
+  {
+    "text": "전류 전쟁에서 테슬라는 교류(AC)를, 에디슨은 직류(DC)를 지지했다.",
+    "answer": "O",
+    "choiceO": "O",
+    "choiceX": "X",
+    "seconds": 10,
+    "explanation": "테슬라는 교류 전력 시스템 발전에 기여했고, 에디슨은 직류 시스템을 지지했다.",
+    "topic": "테슬라와 에디슨",
+    "review": "확정",
+    "note": "1번은 맛보기로, 틀려도 탈락하지 않는다.\n진행: 맛보기 문제. 테슬라와 에디슨의 사진과 이름을 함께 보여주는 구성으로 검토했다.\n문제 낭독이 끝난 뒤 선택 시간을 시작한다.",
+    "source": "questions/kiee-a-2026-quiz.md · 1번 — 테슬라와 에디슨 (2026-10-10 저장본)",
+    "sources": [
+      "https://www.energy.gov/articles/war-currents-ac-vs-dc-power"
+    ]
+  },
+  {
+    "text": "전기의 ‘전력’은 힘 력(力) 자를 쓴다.",
+    "answer": "O",
+    "choiceO": "O",
+    "choiceX": "X",
+    "seconds": 10,
+    "explanation": "전력은 電力으로 쓰며, 力은 힘 력이다.",
+    "topic": "전기의 한자",
+    "review": "확정",
+    "note": "문제 낭독이 끝난 뒤 선택 시간을 시작한다.",
+    "source": "questions/kiee-a-2026-quiz.md · 2번 — 전기의 한자 (2026-10-10 저장본)",
+    "sources": []
+  },
+  {
+    "text": "손흥민은 2020–2021 시즌에 23골을 기록하며 EPL 득점왕을 차지했다.",
+    "answer": "X",
+    "choiceO": "O",
+    "choiceX": "X",
+    "seconds": 10,
+    "explanation": "2021–2022 시즌에 23골로 모하메드 살라와 공동 득점왕을 차지했다.",
+    "topic": "스포츠",
+    "review": "번호 임시",
+    "note": "문제 낭독이 끝난 뒤 선택 시간을 시작한다.",
+    "source": "questions/kiee-a-2026-quiz.md · 3번 — 스포츠 (2026-10-10 저장본)",
+    "sources": [
+      "https://www.premierleague.com/en/news/2626553"
+    ]
+  },
+  {
+    "text": "원주율 π는 3.1415926보다 크다.",
+    "answer": "O",
+    "choiceO": "O",
+    "choiceX": "X",
+    "seconds": 10,
+    "explanation": "π는 3.1415926535…이므로 유한소수 3.1415926보다 크다.",
+    "topic": "수학",
+    "review": "번호 임시",
+    "note": "표기: 문제의 비교 대상인 3.1415926 뒤에는 말줄임표를 붙이지 않는다.\n문제 낭독이 끝난 뒤 선택 시간을 시작한다.",
+    "source": "questions/kiee-a-2026-quiz.md · 4번 — 수학 (2026-10-10 저장본)",
+    "sources": []
+  },
+  {
+    "text": "페이커가 아시안게임에서 획득한 금메달은 1개다.",
+    "answer": "X",
+    "choiceO": "O",
+    "choiceX": "X",
+    "seconds": 10,
+    "explanation": "2026년 10월 10일 기준 2개다. 항저우 대회와 2026 아이치·나고야 대회에서 금메달을 획득했다.",
+    "topic": "게임·e스포츠",
+    "review": "제안",
+    "note": "진행: 이 번호의 정답 공개 뒤 패자부활전을 진행한다.\n5번 정답 공개 후 패자부활전. 부활전용 문항은 별도로 선정한다.\n문제 낭독이 끝난 뒤 선택 시간을 시작한다.",
+    "source": "questions/kiee-a-2026-quiz.md · 5번 — 게임·e스포츠 (2026-10-10 저장본)",
+    "sources": [
+      "https://en.yna.co.kr/view/AEN20261002006500320"
+    ]
+  },
+  {
+    "text": "2026 아이치·나고야 아시안게임은 일본에서 두 번째로 열린 아시안게임이다.",
+    "answer": "X",
+    "choiceO": "O",
+    "choiceX": "X",
+    "seconds": 5,
+    "explanation": "일본에서 세 번째로 열린 아시안게임이다. 앞선 대회는 1958년 도쿄와 1994년 히로시마 대회다.",
+    "topic": "아시안게임",
+    "review": "제안",
+    "note": "문제 낭독이 끝난 뒤 선택 시간을 시작한다.",
+    "source": "questions/kiee-a-2026-quiz.md · 6번 — 아시안게임 (2026-10-10 저장본)",
+    "sources": [
+      "https://www.joc.or.jp/aichi_nagoya2026/"
+    ]
+  },
+  {
+    "text": "한 바퀴 달리기 경주에서 2등으로 달리던 사람을 추월하면 나는 1등이 된다.",
+    "answer": "X",
+    "choiceO": "O",
+    "choiceX": "X",
+    "seconds": 5,
+    "explanation": "2등을 추월하면 그 사람의 순위인 2등이 된다.",
+    "topic": "넌센스·순발력",
+    "review": "후보",
+    "note": "7번은 넌센스·5초 제한으로 진행하며, 아래 달리기 지문은 기존 후보로 보관한다.\n제한시간: 5초\n문제 낭독이 끝난 뒤 선택 시간을 시작한다.",
+    "source": "questions/kiee-a-2026-quiz.md · 7번 — 넌센스·순발력 (2026-10-10 저장본)",
+    "sources": []
+  },
+  {
+    "text": "한전 직원이 스웨터를 벗다가 정전기에 찌릿했다. 이때 전기를 공급한 곳은 한전이다.",
+    "answer": "X",
+    "choiceO": "O",
+    "choiceX": "X",
+    "seconds": 5,
+    "explanation": "옷을 벗는 과정에서 몸과 옷에 쌓인 정전기가 방전된 것으로, 한전이 공급한 전기가 아니다.",
+    "topic": "한전과 정전기",
+    "review": "확정",
+    "note": "문제 낭독이 끝난 뒤 선택 시간을 시작한다.",
+    "source": "questions/kiee-a-2026-quiz.md · 8번 — 한전과 정전기 (2026-10-10 저장본)",
+    "sources": []
+  },
+  {
+    "text": "로미오와 줄리엣은 처음 만난 날 키스를 했다.",
+    "answer": "O",
+    "choiceO": "O",
+    "choiceX": "X",
+    "seconds": 5,
+    "explanation": "두 사람이 처음 만나는 무도회 장면인 1막 5장에서 키스를 한다.",
+    "topic": "문학",
+    "review": "번호 임시",
+    "note": "문제 낭독이 끝난 뒤 선택 시간을 시작한다.",
+    "source": "questions/kiee-a-2026-quiz.md · 9번 — 문학 (2026-10-10 저장본)",
+    "sources": [
+      "https://www.folger.edu/explore/shakespeares-works/romeo-and-juliet/read/1/5/"
+    ]
+  },
+  {
+    "text": "한만춘 교수는 우리나라 최초의 전기공학 박사다.",
+    "answer": "O",
+    "choiceO": "O",
+    "choiceX": "X",
+    "seconds": 5,
+    "explanation": "한만춘 교수는 1961년 영국 노팅엄대학교에서 전기공학 박사학위를 받았으며, 우리나라 최초의 전기공학 박사로 소개된다.",
+    "topic": "우리나라 전기공학자",
+    "review": "제안",
+    "note": "문제 낭독이 끝난 뒤 선택 시간을 시작한다.",
+    "source": "questions/kiee-a-2026-quiz.md · 10번 — 우리나라 전기공학자 (2026-10-10 저장본)",
+    "sources": [
+      "https://koreascientists.kr/scientists/merit/merit-list/?boardId=bbs_0000000000000028&cntId=34&mode=view"
+    ]
+  },
+  {
+    "text": "“어떤 것을 측정하고 숫자로 표현할 수 있다면, 그것에 대해 무언가 알고 있는 것이다.” 이 말을 한 사람은 에디슨이다.",
+    "answer": "X",
+    "choiceO": "O",
+    "choiceX": "X",
+    "seconds": 5,
+    "explanation": "켈빈 경(윌리엄 톰슨)의 말이다. 그는 전기 계측과 해저 전신 기술에도 기여했다. 인용문은 원문의 일부를 한국어로 옮긴 것이다.",
+    "topic": "전기공학자의 명언",
+    "review": "제안",
+    "note": "문제 낭독이 끝난 뒤 선택 시간을 시작한다.",
+    "source": "questions/kiee-a-2026-quiz.md · 11번 — 전기공학자의 명언 (2026-10-10 저장본)",
+    "sources": [
+      "https://www.gla.ac.uk/explore/avenue/ourpast/lordkelvin200/thepathtoinnovation/"
+    ]
+  },
+  {
+    "text": "로댕의 조각 「생각하는 사람」은 왼손으로 턱을 괴고 있다.",
+    "answer": "X",
+    "choiceO": "O",
+    "choiceX": "X",
+    "seconds": 5,
+    "explanation": "오른손으로 턱을 괴고 있다.",
+    "topic": "예술",
+    "review": "번호 임시",
+    "note": "연출 후보: 문제를 낼 때는 작품 사진을 숨기고, 정답 공개 때 사진을 보여준다.\n문제 낭독이 끝난 뒤 선택 시간을 시작한다.",
+    "source": "questions/kiee-a-2026-quiz.md · 12번 — 예술 (2026-10-10 저장본)",
+    "sources": [
+      "https://www.nga.gov/artworks/1005-thinker-le-penseur"
+    ]
+  },
+  {
+    "text": "2025년 말 기준, 우리나라의 태양광 발전설비 용량은 원자력 발전설비 용량보다 크다.",
+    "answer": "O",
+    "choiceO": "O",
+    "choiceX": "X",
+    "seconds": 5,
+    "explanation": "전력거래소의 발전사업자 설비 통계 기준으로 태양광은 약 30.76GW, 원자력은 26.05GW다. 비교하는 값은 발전설비 용량이다.",
+    "topic": "우리나라 전력계통 통계",
+    "review": "제안",
+    "note": "기준일: 2025년 12월 31일.\n문제 낭독이 끝난 뒤 선택 시간을 시작한다.",
+    "source": "questions/kiee-a-2026-quiz.md · 13번 — 우리나라 전력계통 통계 (2026-10-10 저장본)",
+    "sources": [
+      "https://www.kpx.or.kr/boardDownload.es?bid=0085&list_no=77820&seq=1"
+    ]
+  },
+  {
+    "text": "AI가 들어 있는 컴퓨터를 깊은 물속에 넣으면 어떻게 될까요?",
+    "answer": "X",
+    "choiceO": "딥러닝",
+    "choiceX": "침수",
+    "seconds": 5,
+    "explanation": "깊은 물에 컴퓨터를 넣으면 침수된다.",
+    "topic": "AI 넌센스·양자 선택",
+    "review": "확정",
+    "note": "원본 A: 딥러닝 / B: 침수. 정답 B — 침수. OX 형식이 아닌 퀴즈는 사용자가 혼자 진행한다.\n진행자 멘트: “깊어진 건 학습이 아니라 개발자의 한숨입니다.”\n문제 낭독이 끝난 뒤 선택 시간을 시작한다.",
+    "source": "questions/kiee-a-2026-quiz.md · 14번 — AI 넌센스·양자 선택 (2026-10-10 저장본)",
+    "sources": []
+  },
+  {
+    "text": "2026년 9월 공고된 3차 ESS 중앙계약시장의 공고 물량은 총 1,180MW이다.",
+    "answer": "O",
+    "choiceO": "O",
+    "choiceX": "X",
+    "seconds": 5,
+    "explanation": "육지 1,100MW와 제주 80MW를 합친 총 1,180MW다.",
+    "topic": "장주기 ESS",
+    "review": "번호 임시",
+    "note": "공고 기준: 2026년 9월 22일.\n문제 낭독이 끝난 뒤 선택 시간을 시작한다.",
+    "source": "questions/kiee-a-2026-quiz.md · 15번 — 장주기 ESS (2026-10-10 저장본)",
+    "sources": [
+      "https://eiec.kdi.re.kr/policy/materialView.do?num=287332&pg=&pp=&topic=C",
+      "https://www3.edaily.co.kr/News/Read?mediaCodeNo=257&newsId=03883526645583072"
+    ]
+  },
+  {
+    "text": "2026년 현재 대한전기학회 회장님은 누구일까요?",
+    "answer": "O",
+    "choiceO": "박종배",
+    "choiceX": "장길수",
+    "seconds": 5,
+    "explanation": "대한전기학회 회장은 박종배 회장님, 전력기술부문회(A부문회) 회장은 장길수 회장님이다.",
+    "topic": "대한전기학회 회장님 고르기",
+    "review": "확정",
+    "note": "원본 O: 박종배 / X: 장길수. 정답 O — 박종배 회장님.\n표시: 문제 화면에는 이름만 넣고, 직함은 정답 공개 때 보여준다.\n확인 기준일: 2026년 10월 10일.\n문제 낭독이 끝난 뒤 선택 시간을 시작한다.",
+    "source": "questions/kiee-a-2026-quiz.md · 16번 — 대한전기학회 회장님 고르기 (2026-10-10 저장본)",
+    "sources": [
+      "https://www.kiee.or.kr/",
+      "https://www.kiee.or.kr/upload/mailing/250_260417110156426.pdf"
+    ]
+  }
+]

@@ -10,6 +10,9 @@
     "web"
   ],
   "scripts": {
+    "build:offline": "node tools/build-offline.mjs",
+    "test:offline": "node --test --test-isolation=none tools/offline-standalone.test.mjs",
+    "offline": "npm run dev -w web -- --host 127.0.0.1 --port 5173 --strictPort --open /offline",
     "dev": "concurrently -n server,web -c blue,green \"npm run dev -w server\" \"npm run dev -w web\"",
     "build": "npm run build -w web && npm run build -w server",
     "typecheck": "npm run typecheck -w shared && npm run typecheck -w server && npm run typecheck -w web",

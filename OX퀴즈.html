@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>OX 퀴즈 · 연회장 진행실</title>
+<style>
+:root{font-family:'Malgun Gothic',system-ui,sans-serif;color:#eef3ff;background:#0b1220;color-scheme:dark}*{box-sizing:border-box}body{margin:0}button,input,textarea,select{font:inherit}button,.file-label{padding:12px 16px;border:1px solid #405272;border-radius:10px;background:#25324b;color:#fff;cursor:pointer}button:hover{background:#354564}button:disabled{opacity:.35;cursor:default}.primary{background:#bcb0ff;color:#171229;border:0;font-weight:800}.primary:hover{background:#d0c6ff}.danger{border-color:#ef8997}.cue-button{width:100%;font-size:23px;padding:20px}main{max-width:1540px;margin:auto;padding:28px}header{display:flex;align-items:center;justify-content:space-between;gap:20px}h1{margin:8px 0;font-size:34px}h2{font-size:20px;margin-top:0}p{line-height:1.6}.eyebrow{font-size:12px;letter-spacing:.16em;color:#98aed0;font-weight:800}.muted{color:#acbbd3}.note{padding:14px 18px;background:#19253a;border-radius:12px}.layout{display:grid;grid-template-columns:370px 1fr;gap:22px;margin:24px 0;align-items:start}.panel{background:#141f32;border:1px solid #2c3a53;border-radius:18px;padding:22px;margin-bottom:20px}.buttons{display:flex;flex-wrap:wrap;gap:9px;margin:16px 0}label{display:flex;flex-direction:column;gap:7px}input,select,textarea{background:#0c1525;border:1px solid #43516a;color:#fff;border-radius:8px;padding:10px;width:100%}input[type=checkbox]{width:auto}label.check{flex-direction:row;align-items:center}textarea{resize:vertical;min-height:80px}.secret{padding:14px;border-left:3px solid #baadff;background:#202c42;white-space:pre-wrap}.review{font-size:13px;color:#ffdd91;white-space:pre-wrap}.editor-row{padding:20px 0;border-top:1px solid #344461}.editor-grid{display:grid;grid-template-columns:2fr 1fr 1fr 100px;gap:14px}.wide{grid-column:span 2}.stage{position:relative;background:radial-gradient(ellipse at top,#233f63,#080e1b 80%);border-radius:18px;min-height:540px;padding:4%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:18px;overflow-wrap:anywhere}.stage h1{font-size:clamp(26px,3.3vw,68px);line-height:1.3;white-space:pre-wrap;margin:0;max-width:100%}.stage p{font-size:clamp(18px,1.8vw,30px);white-space:pre-wrap;margin:0}.hands{display:flex;gap:24px;width:100%;justify-content:center}.hand{border:2px solid currentColor;background:#ffffff05;border-radius:20px;padding:18px;width:46%;display:flex;flex-direction:column;justify-content:center;gap:10px}.hand b{font-size:clamp(30px,4vw,86px);line-height:1.2}.hand.symbol b{font-size:clamp(56px,6vw,112px)}.hand span{font-size:clamp(18px,2vw,34px);font-weight:bold}.O{color:#7bc5ff}.X{color:#ff929b}.answer{font-size:clamp(32px,4.5vw,90px);font-weight:900}.timer{color:#ffe89b;font-size:clamp(22px,2.6vw,42px);min-height:1.4em}.timer.urgent{font-size:clamp(72px,8vw,150px);font-weight:900;color:#ffcf73;line-height:1}.stage small{color:#a6bad6}.black{background:#000}.projection .stage{min-height:100vh;border-radius:0;padding:4vh 5vw}.projection .stage h1{font-size:clamp(34px,4.2vw,80px)}.projection .stage .caption{max-width:1000px}.fullscreen{position:fixed;right:15px;top:15px;opacity:0}.fullscreen:hover,.fullscreen:focus{opacity:1}#status{color:#ffe89b;min-height:1.5em}summary{cursor:pointer;font-size:20px;font-weight:bold}details[open] summary{margin-bottom:20px}.settings-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.caption{font-size:clamp(14px,1.3vw,23px)!important;color:#dce6ff;max-width:92%;white-space:pre-wrap}.cohost{display:flex;align-items:center;justify-content:center;gap:12px;color:#bacbff}.orb{height:48px;width:48px;border:12px solid #8ba8ff;border-radius:50%;position:relative;box-shadow:0 0 20px #7899ff55;flex-shrink:0}.orb:before,.orb:after{content:'';position:absolute;top:3px;width:4px;height:6px;border-radius:3px;background:white}.orb:before{left:-7px}.orb:after{right:-7px}.speaking .orb{animation:bob .4s alternate infinite}.intro .orb{width:100px;height:100px;border-width:26px}.intro .orb:before,.intro .orb:after{top:8px;width:8px;height:10px}.intro .orb:before{left:-13px}.intro .orb:after{right:-13px}@keyframes bob{to{transform:translateY(-5px) scale(1.04)}}.step{font-size:13px;color:#a6c4ed;margin:12px 0}.badge{padding:5px 9px;background:#2c3f5e;border-radius:7px;font-size:13px}.hint{font-size:13px;color:#acbbd3}.offscreen{position:absolute;left:-10000px}@media(prefers-reduced-motion:reduce){.speaking .orb{animation:none}}@media(max-width:1050px){.layout{grid-template-columns:1fr}.editor-grid{grid-template-columns:1fr 1fr}header{align-items:start;flex-direction:column}main{padding:18px}.settings-grid{grid-template-columns:1fr}.stage{min-height:480px}}@media(max-width:550px){.editor-grid{display:block}.editor-grid label{margin:12px 0}.hand{padding:12px}.hands{gap:10px}}
+</style></head>
+<body><main>
+<header><div><div class="eyebrow">BANQUET QUIZ · SCRIPTED COHOST</div><h1>OX 퀴즈 진행실</h1><p class="muted">문제는 화면으로, 선택은 손들기로, 진행은 한 번의 큐로.</p></div><button class="primary" id="open">프로젝션 창 열기 ↗</button></header>
+<p class="note">Windows 화면을 <b>확장</b>으로 설정하고 프로젝션 창을 빔프로젝터로 옮겨 <b>F11</b>을 누르세요. 관리자 창은 계속 열어 두세요.</p>
+<p id="status" role="status"></p>
+<div class="layout"><section class="panel"><h2>사회자 진행</h2>
+<button class="primary cue-button" id="cue">다음 · 큐</button><p class="step" id="step"></p>
+<p class="hint">발표 리모컨: PageDown / → / Space<br>관리자 또는 프로젝션 창을 클릭해 두세요. 낭독 중 중복 큐는 무시합니다.</p>
+<div class="buttons"><button id="repeat">현재 대본 다시 읽기</button><button id="pc-voice">PC 음성으로 읽기</button><button class="danger" id="stop">진행 멈춤</button></div>
+<label>진행할 문제<select id="question-select"></select></label><p class="review" id="review"></p><p class="secret" id="secret"></p>
+<div class="buttons"><button id="show">이 문제 읽기</button><button id="reveal">정답 공개 · 읽기</button><button id="previous">← 이전 문제</button><button id="timer-start">타이머 시작</button><button id="pause">일시정지</button></div>
+<div class="buttons"><button id="ready">시작 화면</button><button id="blank">화면 가리기</button><button id="end">마무리 읽기</button></div>
+<label>손들기 순서<select id="hands"><option value="O">왼손: 첫 번째 보기 / 오른손: 두 번째 보기</option><option value="X">왼손: 두 번째 보기 / 오른손: 첫 번째 보기</option></select></label>
+<p class="hint">참가자 본인의 왼손·오른손 기준입니다. 탈락·부활·수상자는 사회자가 판정합니다.</p></section>
+<section><h2>프로젝션 미리보기</h2><div id="preview"></div><p class="muted" id="connection"></p>
+<section class="panel"><h2>현재 진행 대본</h2><p class="hint" id="script-label"></p><p class="hint" id="audio-current"></p><textarea id="current-script" rows="5" aria-label="현재 대본"></textarea><div class="buttons"><button id="script-save">이 대본 저장</button><button id="script-copy">대본 복사</button></div><p class="hint">대본은 그대로 낭독합니다. 정답 대본은 정답 공개 뒤에만 낭독·프로젝션 자막에 사용됩니다.</p></section></section></div>
+<details class="panel" open><summary>녹음 음성 불러오기 · MP3 / WAV</summary>
+<p>HeyGen에서 만든 음성을 내려받아 연결하세요. <b>생성된 교수님 음성 파일은 아직 포함되어 있지 않습니다.</b> 파일을 연결한 대본만 녹음 음성으로 재생하고, 나머지는 PC 음성으로 읽습니다.</p>
+<p class="hint">1. 아래 JSON의 각 text 또는 전체 대본 TXT를 사용해 음성을 만드세요.<br>2. 파일 이름을 intro.wav, question-01.wav, answer-01.wav, …, closing.wav로 바꾸세요. MP3도 가능합니다.<br>3. 음성 파일과 제작에 쓴 JSON을 함께 선택하세요. JSON 없이 선택할 때는 녹음과 현재 대본이 같은지 직접 확인하고 확인란을 선택하세요.</p>
+<div class="buttons"><button id="export-audio-manifest">음성 제작용 대본 JSON 저장</button></div>
+<label class="check"><input type="checkbox" id="audio-confirm">JSON 없이 불러올 녹음이 현재 대본과 같은지 직접 확인했습니다.</label>
+<div class="buttons"><label class="file-label">음성 파일 + 대본 JSON 함께 불러오기<input id="audio-import" type="file" accept=".mp3,.wav,.json,audio/mpeg,audio/wav,application/json" multiple></label><button id="audio-clear">녹음 파일 연결 모두 해제</button></div>
+<p id="audio-summary"></p><p id="audio-import-result" class="review" role="status"></p><details><summary>불러온 파일별 상태</summary><p id="audio-list" class="hint" style="white-space:pre-wrap"></p></details>
+<p class="hint">JSON은 제작용 대본과 현재 대본의 글자를 비교합니다. 실제 음성 내용은 자동 검증하지 않으므로 행사 전에 각 파일을 직접 들어 확인하세요. 대본이 바뀌면 해당 녹음은 사용을 멈춥니다. 재생 실패 시 “현재 대본 다시 읽기”로 재시도하거나 “PC 음성으로 읽기”를 누르세요.</p>
+<p class="hint"><b>불러온 음성은 현재 창의 메모리에만 보관됩니다.</b> 창을 닫거나 새로고침하면 파일을 다시 선택해야 합니다. HTML·문제 백업에 음성이 저장되지 않으며, 원본 파일은 PC에 보관하세요. 파일은 서버로 업로드되지 않습니다.</p>
+</details>
+<details class="panel" open><summary>아스트라 · 음성 · 음악 설정</summary>
+<div class="settings-grid"><label>공동 사회자 이름<input id="cohost-name" maxlength="40" value="아스트라"></label><label>사회자 이름<input id="host-name" maxlength="40" value="김희진"></label><label>PC에 설치된 한국어 음성<select id="voice"></select></label><label>PC 음성 말하기 속도<input id="rate" type="range" min="0.7" max="1.3" step="0.05" value="1"></label>
+<label class="check"><input id="speak-enabled" type="checkbox" checked>준비된 대본을 음성으로 읽기 (녹음 우선)</label><label class="check"><input id="count-voice" type="checkbox" checked>마지막 5초 숫자도 음성으로 읽기</label><label>소리 크기<input id="volume" type="range" min="0" max="1" step="0.05" value="0.65"></label></div>
+<div class="buttons"><button id="sound-test">소리 · 음성 확인</button><button id="music">배경음악 켜기</button><button id="mic">음성 “큐” 듣기 켜기</button></div>
+<p class="hint" id="voice-status">설치된 한국어 음성을 확인하는 중입니다.</p><p class="hint" id="mic-status">마이크 꺼짐. 음성 큐는 한국어 기기 내 인식을 지원하는 브라우저에서 사용합니다.</p>
+<p class="hint">녹음이 없는 대본과 마지막 숫자는 PC 음성을 사용합니다. 녹음은 파일의 원래 속도로 재생합니다. 원본 프로젝트의 실시간 AI 통화와는 별도입니다. 배경음악과 효과음은 내장되어 있습니다. 낭독 중에는 음악을 낮추며, 마이크가 켜져 있으면 큐 대기 중 음악을 쉽니다.</p>
+</details>
+<details class="panel"><summary>문제 준비 · 편집 · 백업</summary><p class="muted">대한전기학회 A부문회 행사 문제집 16문제를 반영했습니다. 원본의 후보·임시 배치 상태는 관리자에게만 표시됩니다. 수정 후 “문제 적용”을 누르세요.</p>
+<div class="buttons"><button id="event-questions">행사 16문제 불러오기</button><label class="file-label">CSV / JSON 불러오기<input id="import" type="file" accept=".csv,.json"></label><button id="backup">적용된 문제 백업</button><button id="export-scripts">전체 대본 저장</button></div>
+<p class="hint">CSV: 문제,선택지1,선택지2,정답,제한시간,해설. 정답은 O/X, A/B 또는 보기의 내용으로 지정할 수 있습니다. 예전 O/X 파일도 사용할 수 있습니다.</p>
+<div id="editor"></div><div class="buttons"><button id="add">+ 문제 추가</button><button class="primary" id="apply">문제 적용</button></div></details>
+</main>
+<script id="event-data" type="application/json">[{"text":"전류 전쟁에서 테슬라는 교류(AC)를, 에디슨은 직류(DC)를 지지했다.","answer":"O","choiceO":"O","choiceX":"X","seconds":10,"explanation":"테슬라는 교류 전력 시스템 발전에 기여했고, 에디슨은 직류 시스템을 지지했다.","topic":"테슬라와 에디슨","review":"확정","note":"1번은 맛보기로, 틀려도 탈락하지 않는다.\n진행: 맛보기 문제. 테슬라와 에디슨의 사진과 이름을 함께 보여주는 구성으로 검토했다.\n문제 낭독이 끝난 뒤 선택 시간을 시작한다.","source":"questions/kiee-a-2026-quiz.md · 1번 — 테슬라와 에디슨 (2026-10-10 저장본)","sources":["https://www.energy.gov/articles/war-currents-ac-vs-dc-power"]},{"text":"전기의 ‘전력’은 힘 력(力) 자를 쓴다.","answer":"O","choiceO":"O","choiceX":"X","seconds":10,"explanation":"전력은 電力으로 쓰며, 力은 힘 력이다.","topic":"전기의 한자","review":"확정","note":"문제 낭독이 끝난 뒤 선택 시간을 시작한다.","source":"questions/kiee-a-2026-quiz.md · 2번 — 전기의 한자 (2026-10-10 저장본)","sources":[]},{"text":"손흥민은 2020–2021 시즌에 23골을 기록하며 EPL 득점왕을 차지했다.","answer":"X","choiceO":"O","choiceX":"X","seconds":10,"explanation":"2021–2022 시즌에 23골로 모하메드 살라와 공동 득점왕을 차지했다.","topic":"스포츠","review":"번호 임시","note":"문제 낭독이 끝난 뒤 선택 시간을 시작한다.","source":"questions/kiee-a-2026-quiz.md · 3번 — 스포츠 (2026-10-10 저장본)","sources":["https://www.premierleague.com/en/news/2626553"]},{"text":"원주율 π는 3.1415926보다 크다.","answer":"O","choiceO":"O","choiceX":"X","seconds":10,"explanation":"π는 3.1415926535…이므로 유한소수 3.1415926보다 크다.","topic":"수학","review":"번호 임시","note":"표기: 문제의 비교 대상인 3.1415926 뒤에는 말줄임표를 붙이지 않는다.\n문제 낭독이 끝난 뒤 선택 시간을 시작한다.","source":"questions/kiee-a-2026-quiz.md · 4번 — 수학 (2026-10-10 저장본)","sources":[]},{"text":"페이커가 아시안게임에서 획득한 금메달은 1개다.","answer":"X","choiceO":"O","choiceX":"X","seconds":10,"explanation":"2026년 10월 10일 기준 2개다. 항저우 대회와 2026 아이치·나고야 대회에서 금메달을 획득했다.","topic":"게임·e스포츠","review":"제안","note":"진행: 이 번호의 정답 공개 뒤 패자부활전을 진행한다.\n5번 정답 공개 후 패자부활전. 부활전용 문항은 별도로 선정한다.\n문제 낭독이 끝난 뒤 선택 시간을 시작한다.","source":"questions/kiee-a-2026-quiz.md · 5번 — 게임·e스포츠 (2026-10-10 저장본)","sources":["https://en.yna.co.kr/view/AEN20261002006500320"]},{"text":"2026 아이치·나고야 아시안게임은 일본에서 두 번째로 열린 아시안게임이다.","answer":"X","choiceO":"O","choiceX":"X","seconds":5,"explanation":"일본에서 세 번째로 열린 아시안게임이다. 앞선 대회는 1958년 도쿄와 1994년 히로시마 대회다.","topic":"아시안게임","review":"제안","note":"문제 낭독이 끝난 뒤 선택 시간을 시작한다.","source":"questions/kiee-a-2026-quiz.md · 6번 — 아시안게임 (2026-10-10 저장본)","sources":["https://www.joc.or.jp/aichi_nagoya2026/"]},{"text":"한 바퀴 달리기 경주에서 2등으로 달리던 사람을 추월하면 나는 1등이 된다.","answer":"X","choiceO":"O","choiceX":"X","seconds":5,"explanation":"2등을 추월하면 그 사람의 순위인 2등이 된다.","topic":"넌센스·순발력","review":"후보","note":"7번은 넌센스·5초 제한으로 진행하며, 아래 달리기 지문은 기존 후보로 보관한다.\n제한시간: 5초\n문제 낭독이 끝난 뒤 선택 시간을 시작한다.","source":"questions/kiee-a-2026-quiz.md · 7번 — 넌센스·순발력 (2026-10-10 저장본)","sources":[]},{"text":"한전 직원이 스웨터를 벗다가 정전기에 찌릿했다. 이때 전기를 공급한 곳은 한전이다.","answer":"X","choiceO":"O","choiceX":"X","seconds":5,"explanation":"옷을 벗는 과정에서 몸과 옷에 쌓인 정전기가 방전된 것으로, 한전이 공급한 전기가 아니다.","topic":"한전과 정전기","review":"확정","note":"문제 낭독이 끝난 뒤 선택 시간을 시작한다.","source":"questions/kiee-a-2026-quiz.md · 8번 — 한전과 정전기 (2026-10-10 저장본)","sources":[]},{"text":"로미오와 줄리엣은 처음 만난 날 키스를 했다.","answer":"O","choiceO":"O","choiceX":"X","seconds":5,"explanation":"두 사람이 처음 만나는 무도회 장면인 1막 5장에서 키스를 한다.","topic":"문학","review":"번호 임시","note":"문제 낭독이 끝난 뒤 선택 시간을 시작한다.","source":"questions/kiee-a-2026-quiz.md · 9번 — 문학 (2026-10-10 저장본)","sources":["https://www.folger.edu/explore/shakespeares-works/romeo-and-juliet/read/1/5/"]},{"text":"한만춘 교수는 우리나라 최초의 전기공학 박사다.","answer":"O","choiceO":"O","choiceX":"X","seconds":5,"explanation":"한만춘 교수는 1961년 영국 노팅엄대학교에서 전기공학 박사학위를 받았으며, 우리나라 최초의 전기공학 박사로 소개된다.","topic":"우리나라 전기공학자","review":"제안","note":"문제 낭독이 끝난 뒤 선택 시간을 시작한다.","source":"questions/kiee-a-2026-quiz.md · 10번 — 우리나라 전기공학자 (2026-10-10 저장본)","sources":["https://koreascientists.kr/scientists/merit/merit-list/?boardId=bbs_0000000000000028&cntId=34&mode=view"]},{"text":"“어떤 것을 측정하고 숫자로 표현할 수 있다면, 그것에 대해 무언가 알고 있는 것이다.” 이 말을 한 사람은 에디슨이다.","answer":"X","choiceO":"O","choiceX":"X","seconds":5,"explanation":"켈빈 경(윌리엄 톰슨)의 말이다. 그는 전기 계측과 해저 전신 기술에도 기여했다. 인용문은 원문의 일부를 한국어로 옮긴 것이다.","topic":"전기공학자의 명언","review":"제안","note":"문제 낭독이 끝난 뒤 선택 시간을 시작한다.","source":"questions/kiee-a-2026-quiz.md · 11번 — 전기공학자의 명언 (2026-10-10 저장본)","sources":["https://www.gla.ac.uk/explore/avenue/ourpast/lordkelvin200/thepathtoinnovation/"]},{"text":"로댕의 조각 「생각하는 사람」은 왼손으로 턱을 괴고 있다.","answer":"X","choiceO":"O","choiceX":"X","seconds":5,"explanation":"오른손으로 턱을 괴고 있다.","topic":"예술","review":"번호 임시","note":"연출 후보: 문제를 낼 때는 작품 사진을 숨기고, 정답 공개 때 사진을 보여준다.\n문제 낭독이 끝난 뒤 선택 시간을 시작한다.","source":"questions/kiee-a-2026-quiz.md · 12번 — 예술 (2026-10-10 저장본)","sources":["https://www.nga.gov/artworks/1005-thinker-le-penseur"]},{"text":"2025년 말 기준, 우리나라의 태양광 발전설비 용량은 원자력 발전설비 용량보다 크다.","answer":"O","choiceO":"O","choiceX":"X","seconds":5,"explanation":"전력거래소의 발전사업자 설비 통계 기준으로 태양광은 약 30.76GW, 원자력은 26.05GW다. 비교하는 값은 발전설비 용량이다.","topic":"우리나라 전력계통 통계","review":"제안","note":"기준일: 2025년 12월 31일.\n문제 낭독이 끝난 뒤 선택 시간을 시작한다.","source":"questions/kiee-a-2026-quiz.md · 13번 — 우리나라 전력계통 통계 (2026-10-10 저장본)","sources":["https://www.kpx.or.kr/boardDownload.es?bid=0085&list_no=77820&seq=1"]},{"text":"AI가 들어 있는 컴퓨터를 깊은 물속에 넣으면 어떻게 될까요?","answer":"X","choiceO":"딥러닝","choiceX":"침수","seconds":5,"explanation":"깊은 물에 컴퓨터를 넣으면 침수된다.","topic":"AI 넌센스·양자 선택","review":"확정","note":"원본 A: 딥러닝 / B: 침수. 정답 B — 침수. OX 형식이 아닌 퀴즈는 사용자가 혼자 진행한다.\n진행자 멘트: “깊어진 건 학습이 아니라 개발자의 한숨입니다.”\n문제 낭독이 끝난 뒤 선택 시간을 시작한다.","source":"questions/kiee-a-2026-quiz.md · 14번 — AI 넌센스·양자 선택 (2026-10-10 저장본)","sources":[]},{"text":"2026년 9월 공고된 3차 ESS 중앙계약시장의 공고 물량은 총 1,180MW이다.","answer":"O","choiceO":"O","choiceX":"X","seconds":5,"explanation":"육지 1,100MW와 제주 80MW를 합친 총 1,180MW다.","topic":"장주기 ESS","review":"번호 임시","note":"공고 기준: 2026년 9월 22일.\n문제 낭독이 끝난 뒤 선택 시간을 시작한다.","source":"questions/kiee-a-2026-quiz.md · 15번 — 장주기 ESS (2026-10-10 저장본)","sources":["https://eiec.kdi.re.kr/policy/materialView.do?num=287332&pg=&pp=&topic=C","https://www3.edaily.co.kr/News/Read?mediaCodeNo=257&newsId=03883526645583072"]},{"text":"2026년 현재 대한전기학회 회장님은 누구일까요?","answer":"O","choiceO":"박종배","choiceX":"장길수","seconds":5,"explanation":"대한전기학회 회장은 박종배 회장님, 전력기술부문회(A부문회) 회장은 장길수 회장님이다.","topic":"대한전기학회 회장님 고르기","review":"확정","note":"원본 O: 박종배 / X: 장길수. 정답 O — 박종배 회장님.\n표시: 문제 화면에는 이름만 넣고, 직함은 정답 공개 때 보여준다.\n확인 기준일: 2026년 10월 10일.\n문제 낭독이 끝난 뒤 선택 시간을 시작한다.","source":"questions/kiee-a-2026-quiz.md · 16번 — 대한전기학회 회장님 고르기 (2026-10-10 저장본)","sources":["https://www.kiee.or.kr/","https://www.kiee.or.kr/upload/mailing/250_260417110156426.pdf"]}]</script>
+<script>/* Offline media for the administrator window. User-selected audio and local voices; no network requests. */
+(function () {
+  'use strict';
+  const bounded = (value, min, max, fallback) => Number.isFinite(Number(value)) ? Math.min(max, Math.max(min, Number(value))) : fallback;
+  class QuizMedia {
+    constructor(callbacks = {}) {
+      this.callbacks = callbacks;
+      this.context = null; this.master = null; this.musicGain = null;
+      this.volume = 0.65; this.ducking = false; this.speaking = false;
+      this.musicTimer = null; this.musicStep = 0; this.musicAt = 0; this.nodes = new Set();
+      this.speechToken = 0; this.utterance = null; this.recording = null; this.disposed = false;
+      this.micToken = 0; this.micWanted = false; this.recognition = null;
+      this.micRetryTimer = null; this.micRetries = 0; this.lastCueAt = -Infinity; this.suppressUntil = 0;
+      this.synthesis = window.speechSynthesis;
+      this.voiceChanged = () => this.emit('onVoices', this.voices());
+      this.synthesis?.addEventListener('voiceschanged', this.voiceChanged);
+      queueMicrotask(() => { if (!this.disposed) this.voiceChanged(); });
+    }
+    emit(name, ...args) { if (!this.disposed) this.callbacks[name]?.(...args); }
+    status(message) { this.emit('onStatus', message); }
+    voices() { return this.synthesis ? this.synthesis.getVoices().filter(voice => voice.localService === true && /^ko(?:[-_]|$)/i.test(voice.lang)) : []; }
+    async unlock() {
+      if (this.disposed) return false;
+      try {
+        if (!this.context) {
+          const Audio = window.AudioContext || window.webkitAudioContext;
+          if (!Audio) throw Error('오디오 미지원');
+          this.context = new Audio();
+          this.master = this.context.createGain(); this.master.gain.value = this.volume;
+          this.musicGain = this.context.createGain(); this.musicGain.gain.value = this.ducking || this.speaking ? 0.12 : 0.55;
+          this.musicGain.connect(this.master); this.master.connect(this.context.destination);
+        }
+        await this.context.resume();
+        if (this.disposed) return false;
+        if (this.context.state !== 'running') throw Error('오디오 시작 대기');
+        return true;
+      } catch { this.status('소리를 시작하지 못했습니다. 소리 켜기 버튼을 다시 눌러 주세요.'); return false; }
+    }
+    setVolume(value) {
+      this.volume = bounded(value, 0, 1, 0.65);
+      if (this.master && this.context?.state !== 'closed') this.master.gain.setTargetAtTime(this.volume, this.context.currentTime, 0.03);
+    }
+    setDucking(value) { this.ducking = !!value; this.updateMusicGain(); }
+    updateMusicGain() {
+      if (this.musicGain && this.context?.state !== 'closed') this.musicGain.gain.setTargetAtTime(this.ducking || this.speaking ? 0.12 : 0.55, this.context.currentTime, 0.08);
+    }
+    speakingState(value) { this.speaking = value; this.updateMusicGain(); this.emit('onSpeaking', value); }
+    stopSpeech() {
+      this.speechToken += 1;
+      if (this.utterance) { this.utterance.onend = null; this.utterance.onerror = null; this.utterance.onstart = null; }
+      this.utterance = null;
+      if (this.recording) {
+        this.recording.onended = null;
+        try { this.recording.stop(); } catch { /* already ended */ }
+        this.recording.disconnect(); this.recording = null;
+      }
+      this.synthesis?.cancel();
+      this.suppressUntil = performance.now() + 1200;
+      this.speakingState(false);
+    }
+    async loadAudio(file) {
+      if (!await this.unlock()) throw Error('소리를 시작하지 못했습니다. 파일 불러오기를 다시 눌러 주세요.');
+      const buffer = await this.context.decodeAudioData(await file.arrayBuffer());
+      if (this.disposed) throw Error('창을 닫아 음성 불러오기를 중단했습니다.');
+      if (!Number.isFinite(buffer.duration) || buffer.duration <= 0) throw Error('재생할 음성이 없습니다.');
+      return buffer;
+    }
+    async playAudio(buffer, options = {}) {
+      this.stopSpeech();
+      if (this.disposed) return false;
+      const token = this.speechToken;
+      const valid = () => !this.disposed && token === this.speechToken;
+      // Pending browser audio activation also counts as narration for cue suppression.
+      this.speakingState(true);
+      let source = null;
+      try {
+        const unlocked = await this.unlock();
+        if (!valid()) return false;
+        if (!unlocked) throw Error('오디오 시작이 허용되지 않았습니다.');
+        source = this.context.createBufferSource(); source.buffer = buffer;
+        source.connect(this.master); this.recording = source;
+        source.onended = () => {
+          if (!valid() || this.recording !== source) return;
+          this.recording = null; source.disconnect();
+          this.suppressUntil = performance.now() + 1200;
+          this.speakingState(false); options.onEnd?.();
+        };
+        source.start(); return true;
+      } catch {
+        if (!valid()) return false;
+        if (source) { source.onended = null; source.disconnect(); }
+        this.recording = null; this.suppressUntil = performance.now() + 1200; this.speakingState(false);
+        const message = '녹음 음성을 재생하지 못했습니다. 현재 대본 다시 읽기로 재시도하거나 PC 음성으로 읽기를 선택하세요.';
+        this.status(message); options.onError?.(message); return false;
+      }
+    }
+    speak(text, options = {}) {
+      this.stopSpeech();
+      if (this.disposed) return false;
+      const message = String(text || '').trim();
+      const voices = this.voices();
+      const voice = options.voiceURI ? voices.find(item => item.voiceURI === options.voiceURI) : voices[0];
+      const fail = reason => { this.status(reason); options.onError?.(reason); return false; };
+      if (!message) return fail('읽을 대사가 없습니다.');
+      if (!voice || !this.synthesis || !window.SpeechSynthesisUtterance) return fail('설치된 한국어 오프라인 음성을 찾지 못했습니다. 음성을 선택하거나 화면의 대본을 직접 읽어 주세요.');
+      const token = this.speechToken;
+      const utterance = new SpeechSynthesisUtterance(message);
+      utterance.voice = voice; utterance.lang = voice.lang;
+      utterance.rate = bounded(options.rate, 0.5, 1.5, 1);
+      utterance.volume = bounded(options.volume, 0, 1, this.volume);
+      this.utterance = utterance;
+      // Suppress mic cues while queued, too: a delayed start must not double-advance.
+      this.speakingState(true);
+      const finish = error => {
+        if (this.disposed || token !== this.speechToken || this.utterance !== utterance) return;
+        this.utterance = null; this.suppressUntil = performance.now() + 1200;
+        this.speakingState(false);
+        if (error) { const reason = '대사 읽기가 중단되었습니다. 대본을 다시 누르거나 직접 진행해 주세요.'; this.status(reason); options.onError?.(reason); }
+        else options.onEnd?.();
+      };
+      utterance.onend = () => finish(false);
+      utterance.onerror = () => finish(true);
+      try { this.synthesis.resume(); this.synthesis.speak(utterance); return true; }
+      catch { finish(true); return false; }
+    }
+    tone(frequency, duration, delay = 0, gain = 0.07, type = 'sine', music = false) {
+      const ctx = this.context;
+      if (this.disposed || !ctx || ctx.state !== 'running') return;
+      const oscillator = ctx.createOscillator(), envelope = ctx.createGain();
+      const start = ctx.currentTime + Math.max(0, delay);
+      oscillator.type = type; oscillator.frequency.value = frequency;
+      envelope.gain.setValueAtTime(0.0001, start);
+      envelope.gain.exponentialRampToValueAtTime(Math.max(0.0002, gain), start + 0.012);
+      envelope.gain.exponentialRampToValueAtTime(0.0001, start + duration);
+      oscillator.connect(envelope); envelope.connect(music ? this.musicGain : this.master);
+      const node = { oscillator, envelope, music }; this.nodes.add(node);
+      oscillator.onended = () => { oscillator.disconnect(); envelope.disconnect(); this.nodes.delete(node); };
+      oscillator.start(start); oscillator.stop(start + duration + 0.03);
+    }
+    effect(name) {
+      if (!this.context || this.context.state !== 'running') return false;
+      if (name === 'tick') this.tone(1200, 0.09, 0, 0.055, 'triangle');
+      else if (name === 'timeup') { this.tone(660, 0.45, 0, 0.09, 'triangle'); this.tone(880, 0.55, 0.05, 0.06); }
+      else if (name === 'correct') [523, 659, 784, 1047].forEach((f, i) => this.tone(f, 0.24, i * 0.10, 0.07, 'triangle'));
+      else if (name === 'fanfare') [523, 523, 523, 659, 784, 1047, 784, 1047].forEach((f, i) => this.tone(f, 0.28, i * 0.15, 0.065, 'triangle'));
+      else if (name === 'question') [392, 523, 659].forEach((f, i) => this.tone(f, 0.20, i * 0.09, 0.065));
+      else return false;
+      return true;
+    }
+    startMusic() {
+      if (this.disposed || this.context?.state !== 'running') { this.status('배경음악을 재생하려면 먼저 소리를 켜 주세요.'); return false; }
+      if (this.musicTimer !== null) return true;
+      this.musicAt = this.context.currentTime + 0.03; this.musicStep = 0;
+      const notes = [261.63, 329.63, 392, 329.63, 220, 261.63, 329.63, 261.63, 174.61, 220, 261.63, 220, 196, 246.94, 293.66, 246.94];
+      const schedule = () => {
+        const ctx = this.context;
+        if (!ctx || ctx.state !== 'running') return;
+        if (this.musicAt < ctx.currentTime) this.musicAt = ctx.currentTime + 0.03;
+        while (this.musicAt < ctx.currentTime + 0.65) {
+          const delay = this.musicAt - ctx.currentTime;
+          const note = notes[this.musicStep % notes.length];
+          this.tone(note, 0.68, delay, 0.045, 'sine', true);
+          if (this.musicStep % 4 === 0) this.tone(note / 2, 1.75, delay, 0.04, 'sine', true);
+          this.musicStep += 1; this.musicAt += 0.5;
+        }
+      };
+      schedule(); this.musicTimer = setInterval(schedule, 200); return true;
+    }
+    stopMusic() {
+      clearInterval(this.musicTimer); this.musicTimer = null;
+      for (const node of this.nodes) if (node.music) { try { node.oscillator.stop(); } catch { /* already ended */ } }
+    }
+    micState(state, message) { this.emit('onMicState', state); if (message) this.status(message); }
+    stopCueListening() {
+      this.micToken += 1; this.micWanted = false;
+      clearTimeout(this.micRetryTimer); this.micRetryTimer = null;
+      const recognition = this.recognition; this.recognition = null;
+      if (recognition) { recognition.onend = null; recognition.onerror = null; recognition.onresult = null; recognition.onstart = null; try { recognition.abort(); } catch { /* not started */ } }
+      this.micState('off');
+    }
+    async startCueListening() {
+      this.stopCueListening();
+      if (this.disposed) return false;
+      const token = this.micToken;
+      const Recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      const unavailable = () => { this.micState('unavailable', '이 브라우저에서 한국어 오프라인 큐 인식을 사용할 수 없습니다. 다음 버튼 또는 프레젠터를 사용해 주세요.'); return false; };
+      if (!Recognition || typeof Recognition.available !== 'function') return unavailable();
+      let recognition;
+      try {
+        recognition = new Recognition();
+        if (!('processLocally' in recognition)) return unavailable();
+        recognition.processLocally = true;
+        if (recognition.processLocally !== true) return unavailable();
+        this.micState('starting', '설치된 한국어 오프라인 음성 인식을 확인합니다.');
+        const available = await Recognition.available({ langs: ['ko-KR'], processLocally: true });
+        if (this.disposed || token !== this.micToken) return false;
+        if (available !== 'available') return unavailable();
+      } catch { if (this.disposed || token !== this.micToken) return false; return unavailable(); }
+      this.recognition = recognition; this.micWanted = true; this.micRetries = 0;
+      recognition.lang = 'ko-KR'; recognition.continuous = true; recognition.interimResults = false; recognition.maxAlternatives = 1;
+      const valid = () => !this.disposed && this.micWanted && token === this.micToken && this.recognition === recognition;
+      const fail = message => { if (valid()) { this.stopCueListening(); this.micState('error', message); } };
+      let startedAt = 0;
+      const start = () => { if (!valid()) return; try { recognition.start(); } catch { fail('마이크를 시작하지 못했습니다. 권한과 다른 앱의 마이크 사용을 확인해 주세요.'); } };
+      recognition.onstart = () => { if (valid()) { startedAt = performance.now(); this.micState('listening', '오프라인 큐 인식 중 · “큐”라고 말하면 다음 진행 신호를 보냅니다.'); } };
+      recognition.onresult = event => {
+        if (!valid()) return;
+        this.micRetries = 0;
+        for (let i = event.resultIndex; i < event.results.length; i += 1) {
+          const result = event.results[i]; if (!result.isFinal) continue;
+          const text = String(result[0]?.transcript || '').normalize('NFKC').trim();
+          const now = performance.now();
+          if (this.speaking || now < this.suppressUntil || now - this.lastCueAt < 1800) continue;
+          const compact = text.replace(/[\s\p{P}\p{S}]/gu, '');
+          const cue = /(?:^|[\s.!?。！？…])큐[\s.!?。！？…]*$/u.test(text) || /(?:문제나갑니다|자기소개|상품소개|다음문제|시작)큐$/u.test(compact);
+          if (!cue || /하지마|하지말|말하지|아직|취소|예를들|예시|라고|말하면|신호는/u.test(compact)) continue;
+          this.lastCueAt = now; this.emit('onCue', text);
+        }
+      };
+      recognition.onerror = event => {
+        if (!valid()) return;
+        if (event.error === 'no-speech') return;
+        fail(event.error === 'not-allowed' || event.error === 'service-not-allowed' ? '마이크 접근이 허용되지 않았습니다. 다음 버튼 또는 프레젠터로 진행해 주세요.' : `오프라인 큐 인식을 멈췄습니다 (${event.error || '인식 오류'}). 다음 버튼 또는 프레젠터로 진행해 주세요.`);
+      };
+      recognition.onend = () => {
+        if (!valid()) return;
+        if (performance.now() - startedAt > 15000) this.micRetries = 0;
+        this.micRetries += 1;
+        if (this.micRetries > 3) { fail('마이크 인식이 반복해서 종료되어 멈췄습니다. 버튼으로 진행하거나 마이크를 다시 켜 주세요.'); return; }
+        this.micState('starting');
+        this.micRetryTimer = setTimeout(start, 350 * this.micRetries);
+      };
+      start(); return valid();
+    }
+    dispose() {
+      if (this.disposed) return;
+      this.stopCueListening(); this.stopSpeech(); this.stopMusic();
+      this.synthesis?.removeEventListener('voiceschanged', this.voiceChanged);
+      this.disposed = true;
+      for (const node of this.nodes) { try { node.oscillator.stop(); } catch { /* already ended */ } }
+      this.nodes.clear();
+      if (this.context && this.context.state !== 'closed') void this.context.close().catch(() => {});
+    }
+  }
+  window.QuizMedia = QuizMedia;
+}());
+</script>
+<script>'use strict';
+const $ = id => document.getElementById(id);
+const KEY = 'ox-banquet-standalone-v1';
+const DEFAULTS = JSON.parse($('event-data').textContent);
+const defaultSettings = {cohost:'아스트라',host:'김희진',voiceURI:'',rate:1,volume:0.65,speak:true,countVoice:true,intro:'',closing:''};
+const esc = value => String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const validText = value => typeof value === 'string' ? value : '';
+function validate(value) {
+ if(!Array.isArray(value)||!value.length) throw Error('문제를 한 개 이상 넣어 주세요.');
+ return value.map((q,i)=>{
+  if(!q||typeof q.text!=='string'||!q.text.trim()||!Number.isInteger(q.seconds)||q.seconds<1||q.seconds>600||typeof q.explanation!=='string') throw Error((i+1)+'번 문제: 문제·해설·제한시간(1~600초)을 확인해 주세요.');
+  const choiceO=q.choiceO===undefined?'O':validText(q.choiceO).trim(),choiceX=q.choiceX===undefined?'X':validText(q.choiceX).trim();
+  if(!choiceO||!choiceX||choiceO===choiceX) throw Error((i+1)+'번: 서로 다른 보기를 두 개 입력해 주세요.');
+  let answer=String(q.answer).trim();
+  if(!['O','X'].includes(answer)) answer=answer==='A'?'O':answer==='B'?'X':answer===choiceO?'O':answer===choiceX?'X':answer;
+  if(!['O','X'].includes(answer)) throw Error((i+1)+'번 정답은 O/X, A/B 또는 보기의 내용이어야 합니다.');
+  const result={text:q.text.trim(),choiceO,choiceX,answer,seconds:q.seconds,explanation:q.explanation};
+  for(const key of ['topic','review','note','source','scriptQuestion','scriptAnswer']) if(typeof q[key]==='string') result[key]=q[key];
+  if(Array.isArray(q.sources)) result.sources=q.sources.filter(s=>typeof s==='string');
+  return result;
+ });
+}
+const oldSamples=['지구는 태양 주위를 돈다.','문어의 심장은 하나다.','소리는 진공에서도 전달된다.'];
+const isOldSamples=qs=>qs.length===3&&qs.every((q,i)=>q.text===oldSamples[i]&&q.seconds===15&&q.answer===(i===0?'O':'X')&&!q.scriptQuestion&&!q.scriptAnswer&&q.choiceO==='O'&&q.choiceX==='X'&&q.explanation===['지구는 태양 주위를 공전합니다.','문어의 심장은 세 개입니다.','소리는 전달할 매질이 필요합니다.'][i]);
+let questions=validate(DEFAULTS),left='O',settings={...defaultSettings};
+try{
+ const saved=JSON.parse(localStorage.getItem(KEY));
+ if(saved){const qs=validate(saved.questions);questions=isOldSamples(qs)?validate(DEFAULTS):qs;left=saved.left==='X'?'X':'O';
+  if(saved.settings){for(const k of ['cohost','host','voiceURI','intro','closing']) if(typeof saved.settings[k]==='string') settings[k]=saved.settings[k];
+   if(Number.isFinite(saved.settings.rate))settings.rate=Math.max(.7,Math.min(1.3,saved.settings.rate));
+   if(Number.isFinite(saved.settings.volume))settings.volume=Math.max(0,Math.min(1,saved.settings.volume));
+   if(typeof saved.settings.speak==='boolean')settings.speak=saved.settings.speak;
+   if(typeof saved.settings.countVoice==='boolean')settings.countVoice=saved.settings.countVoice;}
+ }
+}catch{$('status').textContent='저장된 문제를 읽지 못해 행사 문제집을 열었습니다. 백업 파일을 불러올 수 있습니다.';}
+let draft=structuredClone(questions),index=0,phase='ready',step='intro',blank=false,deadline=null,remaining=null,screen=null;
+let busy=false,waiting=false,completion=null,narrationToken=0,scriptKind='intro',caption='',spoken=false,music=false,mic=false,lastTick=null,lastKey=0,lastCue=-Infinity,lastStage='',lastScriptKey='';
+const status=text=>{$('status').textContent=text;};
+const audioFiles=new Map();let audioImportToken=0;
+const media=new window.QuizMedia({onStatus:status,onSpeaking:value=>{spoken=value;render();},onVoices:()=>voices(),onCue:()=>nextCue(),onMicState:value=>{mic=value==='listening'||value==='starting';render();}});
+function save(){try{localStorage.setItem(KEY,JSON.stringify({questions,left,settings}));}catch{status('자동 저장을 사용할 수 없습니다. 문제 백업으로 파일을 저장해 주세요.');}}
+function label(q,choice){return choice==='O'?q.choiceO:q.choiceX;}
+function sayLabel(value){return value==='O'?'오':value==='X'?'엑스':value;}
+function timeLeft(){return deadline===null?remaining:Math.max(0,Math.ceil((deadline-Date.now())/1000));}
+function script(kind,q=questions[index],n=index){
+ const right=left==='O'?'X':'O';
+ if(kind==='intro')return settings.intro||`안녕하세요. ${settings.host} 사회자와 함께 진행할 ${settings.cohost}입니다. 오늘은 화면을 보고 손을 들어 정답을 선택해 주세요. 참가자 본인의 왼손과 오른손 기준입니다. 각 문제의 보기와 손 방향은 화면에 표시됩니다. 문제 낭독이 끝나면 선택 시간이 시작됩니다. 첫 번째 문제는 맛보기로, 틀려도 탈락하지 않습니다. 준비되셨나요?`;
+ if(kind==='closing')return settings.closing||`모든 문제를 마쳤습니다. 함께해 주신 여러분께 감사드립니다. 우승자와 참가자 모두에게 큰 박수 부탁드립니다. 지금까지 공동 사회자 ${settings.cohost}였습니다.`;
+ if(kind==='question')return q.scriptQuestion||`${n+1}번 문제입니다. ${q.text} 왼손은 ${sayLabel(label(q,left))}, 오른손은 ${sayLabel(label(q,right))}입니다. 제한시간은 ${q.seconds}초입니다. 지금부터 선택해 주세요.`;
+ if(kind==='answer')return q.scriptAnswer||`정답은 ${sayLabel(label(q,q.answer))}입니다. ${q.explanation}`;
+ return '';
+}
+function cueKey(kind,n=index){return kind==='question'||kind==='answer'?kind+'-'+String(n+1).padStart(2,'0'):kind;}
+function cueManifest(){
+ const cue=(kind,q,n)=>({key:cueKey(kind,n),filename:cueKey(kind,n)+'.wav',text:script(kind,q,n)});
+ return {format:'ox-cue-audio-v1',cues:[cue('intro'),...questions.flatMap((q,n)=>[cue('question',q,n),cue('answer',q,n)]),cue('closing')]};
+}
+function audioProblem(item,text){
+ if(item.text!==text)return '대본이 변경되어 사용 중지 · 새 대본으로 제작 후 다시 불러오세요.';
+ if(item.loading)return '파일을 읽는 중입니다.';
+ return item.error||'';
+}
+function renderAudioFiles(){
+ const cues=cueManifest().cues,available=cues.filter(c=>{const a=audioFiles.get(c.key);return a&&!audioProblem(a,c.text);}).length;
+ const current=audioFiles.get(cueKey(scriptKind));
+ $('audio-current').textContent='현재 대본: '+(current?(audioProblem(current,script(scriptKind))||current.name+' · 녹음 음성 사용'):'등록된 파일 없음 · PC 음성 사용');
+ $('audio-summary').textContent='녹음 음성 '+available+' / '+cues.length+'개 준비됨'+(audioFiles.size>available?' · 확인이 필요한 파일 '+(audioFiles.size-available)+'개':'')+' · 파일은 이 창을 닫으면 사라집니다.';
+ $('audio-list').textContent=Array.from(audioFiles,([key,item])=>{const cue=cues.find(c=>c.key===key);return key+' — '+item.name+' — '+(!cue?'현재 문제 목록에 없는 파일':audioProblem(item,cue.text)||'준비됨');}).join('\n')||'아직 불러온 녹음 파일이 없습니다. 생성된 교수님 음성은 HTML에 포함되어 있지 않습니다.';
+ $('audio-import').disabled=busy||deadline!==null;$('audio-clear').disabled=busy||deadline!==null||!audioFiles.size;
+ $('pc-voice').disabled=busy||deadline!==null||!scriptAllowed(scriptKind);
+}
+async function importAudioFiles(files,confirmed=false){
+ if(!files.length)return;
+ const token=++audioImportToken,cues=cueManifest().cues;
+ try{
+  const manifests=files.filter(f=>/\.json$/i.test(f.name));
+  if(manifests.length>1)throw Error('대본 목록 JSON은 한 개만 선택해 주세요.');
+  let entries=null;
+  if(manifests.length){
+   const manifest=JSON.parse(await manifests[0].text());
+   if(manifest.format!=='ox-cue-audio-v1'||!Array.isArray(manifest.cues))throw Error('이 화면에서 내려받은 음성 제작용 대본 JSON을 선택해 주세요.');
+   entries=new Map();
+   for(const entry of manifest.cues){if(!entry||typeof entry.key!=='string'||typeof entry.text!=='string'||entries.has(entry.key))throw Error('대본 목록의 형식 또는 중복 항목을 확인해 주세요.');entries.set(entry.key,entry.text);}
+  }else if(!confirmed)throw Error('녹음과 현재 대본이 같은지 확인한 뒤 확인란을 선택하거나, 제작에 쓴 대본 JSON을 음성과 함께 불러오세요.');
+  if(token!==audioImportToken)return;
+  const audio=files.filter(f=>! /\.json$/i.test(f.name));
+  if(!audio.length)throw Error('MP3 또는 WAV 음성 파일도 함께 선택해 주세요.');
+  const seen=new Set(),results=[];
+  for(const file of audio){
+   const match=/^(intro|closing|(?:question|answer)-\d{2,})\.(mp3|wav)$/i.exec(file.name);
+   const key=match?.[1].toLowerCase(),cue=cues.find(c=>c.key===key);
+   if(!cue){results.push(file.name+': 파일명 또는 문제 번호를 확인하세요.');continue;}
+   if(seen.has(key)){results.push(file.name+': 같은 대본의 파일을 두 개 선택했습니다. 첫 파일만 사용합니다.');continue;}seen.add(key);
+   if(entries&&entries.get(key)!==cue.text){results.push(file.name+': 제작용 대본과 현재 대본이 다릅니다. 파일을 등록하지 않았습니다.');continue;}
+   const item={name:file.name,text:cue.text,loading:true};audioFiles.set(key,item);renderAudioFiles();
+   try{item.buffer=await media.loadAudio(file);item.loading=false;results.push(file.name+': 준비됨');}
+   catch{item.loading=false;item.error='파일을 읽지 못했습니다. 유효한 MP3/WAV를 다시 불러오세요.';results.push(file.name+': '+item.error);}
+   if(token!==audioImportToken)return;
+   renderAudioFiles();
+  }
+  $('audio-import-result').textContent=results.join('\n');status('녹음 파일 확인을 마쳤습니다. 아래 파일별 결과를 확인하세요.');
+ }catch(error){if(token===audioImportToken){$('audio-import-result').textContent=error.message;status(error.message);}}
+ if(token===audioImportToken)renderAudioFiles();
+}
+function scriptAllowed(kind){return kind!=='answer'||phase==='answer';}
+function updateScript(force=false){
+ const key=index+':'+scriptKind+':'+phase;
+ if(force||key!==lastScriptKey){$('current-script').value=scriptAllowed(scriptKind)?script(scriptKind):'';lastScriptKey=key;}
+ $('script-label').textContent=({intro:'시작 인사',question:(index+1)+'번 문제 낭독',answer:(index+1)+'번 정답·해설',closing:'마무리'})[scriptKind]+' · 수정 후 “이 대본 저장”';
+}
+function invalidateNarration(){narrationToken++;media.stopSpeech();busy=false;waiting=false;completion=null;spoken=false;}
+function runNarration(kind,onComplete,usePC=false){
+ invalidateNarration();scriptKind=kind;caption=script(kind);updateScript(true);const token=narrationToken;completion=()=>{if(token!==narrationToken)return;completion=null;waiting=false;busy=false;spoken=false;caption='';onComplete();render();};
+ const done=completion;waiting=true;media.setDucking(true);
+ if(!settings.speak&&!usePC){status('수동 낭독 모드입니다. 읽기를 마친 뒤 “낭독 완료”를 눌러 주세요.');render();return;}
+ busy=true;waiting=false;render();
+ const playback={voiceURI:settings.voiceURI,rate:settings.rate,volume:settings.volume,onEnd:done,onError:message=>{
+  if(token!==narrationToken)return;busy=false;waiting=true;spoken=false;status(message||'음성을 재생하지 못했습니다. 직접 읽은 뒤 “낭독 완료”를 누르세요.');render();
+ }};
+ const recording=usePC?null:audioFiles.get(cueKey(kind));
+ if(recording){
+  const problem=audioProblem(recording,caption);
+  if(problem){playback.onError(problem+' PC 음성으로 읽기를 선택하거나 직접 읽은 뒤 낭독 완료를 누르세요.');return;}
+  status(recording.name+' 녹음 음성을 재생합니다.');void media.playAudio(recording.buffer,playback);
+ }else{status('PC 음성으로 대본을 읽습니다.');media.speak(caption,playback);}
+}
+function completeNarration(){const done=completion;if(!done)return;media.stopSpeech();busy=false;waiting=false;done();}
+function intro(){phase='ready';step='question';blank=false;runNarration('intro',()=>{step='question';});}
+function readQuestion(n){
+ invalidateNarration();index=n;phase='question';step='timer';blank=false;deadline=null;remaining=null;lastTick=null;media.effect('question');
+ runNarration('question',()=>startTimer());
+}
+function startTimer(){invalidateNarration();caption='';step='timer';remaining=null;deadline=Date.now()+questions[index].seconds*1000;lastTick=null;render();}
+function reveal(){
+ if(phase!=='question'||busy||waiting)return;
+ invalidateNarration();deadline=null;remaining=null;phase='answer';step='next';media.effect('correct');runNarration('answer',()=>{step='next';});
+}
+function closeShow(){invalidateNarration();deadline=null;remaining=null;phase='end';step='finished';blank=false;media.effect('fanfare');runNarration('closing',()=>{music=false;media.stopMusic();});}
+function cueLabel(){
+ if(busy)return '낭독 중…';
+ if(waiting)return scriptKind==='question'?'낭독 완료 · 타이머 시작':'낭독 완료';
+ if(phase==='question'&&deadline!==null)return '선택 시간 진행 중';
+ if(phase==='question'&&remaining>0)return '타이머 계속';
+ if(step==='intro')return '다음 · 시작 인사 읽기';
+ if(step==='question')return '다음 · '+(index+1)+'번 문제 읽기';
+ if(step==='reveal')return '다음 · 정답·해설 읽기';
+ if(step==='next')return index===questions.length-1?'다음 · 마무리 읽기':'다음 · '+(index+2)+'번 문제 읽기';
+ return step==='finished'?'진행 완료':'다음 · 큐';
+}
+function nextCue(){
+ if(busy||deadline!==null||blank)return;
+ const now=Date.now();if(now-lastCue<650)return;lastCue=now;
+ void media.unlock();
+ if(waiting){completeNarration();return;}
+ if(phase==='question'&&remaining>0){deadline=Date.now()+remaining*1000;remaining=null;render();return;}
+ if(step==='intro'){intro();return;}
+ if(step==='question'){readQuestion(index);return;}
+ if(step==='reveal'||(phase==='question'&&remaining===0)){reveal();return;}
+ if(step==='next'){if(index===questions.length-1)closeShow();else readQuestion(index+1);}
+}
+function selectQuestion(n){invalidateNarration();index=n;phase='ready';step='question';scriptKind='question';deadline=null;remaining=null;caption='';blank=false;render();updateScript(true);}
+function stage(){
+ if(blank)return '<div class="stage black"></div>';
+ const q=questions[index],t=timeLeft(),right=left==='O'?'X':'O',active=phase==='question'||phase==='answer';
+ let content=phase==='ready'?'<h1>함께하는 손들기 퀴즈</h1><p>화면의 보기를 보고 정답 쪽의 손을 들어 주세요.</p>':phase==='end'?'<h1>수고하셨습니다!</h1><p>모두 큰 박수로 마무리해 주세요.</p>':'<h1>'+esc(q.text)+'</h1>'+(phase==='answer'?'<div class="answer '+q.answer+'">정답 '+esc(label(q,q.answer))+'</div><p>'+esc(q.explanation)+'</p>':'<div class="timer '+(t!==null&&t>0&&t<=5?'urgent':'')+'">'+(busy||waiting?'문제를 듣고 선택해 주세요':t===null?'선택 준비':t===0?'시간 종료! 손을 그대로 유지해 주세요':t<=5?t:t+'초')+'</div>');
+ const hands=active?'<div class="hands"><div class="hand '+left+(label(q,left).length===1?' symbol':'')+'"><b>'+esc(label(q,left))+'</b><span>왼손</span></div><div class="hand '+right+(label(q,right).length===1?' symbol':'')+'"><b>'+esc(label(q,right))+'</b><span>오른손</span></div></div><small>참가자 본인의 왼손 · 오른손 기준</small>':'';
+ return '<div class="stage"><div class="eyebrow">QUIZ · '+(phase==='ready'?'READY':phase==='end'?'FINISH':(index+1)+' / '+questions.length)+'</div>'+content+hands+'<div class="cohost '+(spoken?'speaking ':'')+(phase==='ready'&&busy?'intro':'')+'"><span class="orb" aria-hidden="true"></span><b>'+esc(settings.cohost)+'</b></div>'+(caption?'<p class="caption">'+esc(caption)+'</p>':'')+'</div>';
+}
+function render(){
+ const t=timeLeft();
+ const html=stage();if(html!==lastStage){$('preview').innerHTML=html;lastStage=html;}
+ if(screen&&!screen.closed){try{const target=screen.document.getElementById('stage');if(target&&target.innerHTML!==html)target.innerHTML=html;}catch{screen=null;status('프로젝션 창을 다시 열어 주세요.');}}
+ $('connection').textContent=screen&&!screen.closed?'● 프로젝션 창 열림 · 리모컨 사용 전 이 창 또는 프로젝션 창을 클릭하세요.':'프로젝션 창을 열어 주세요.';
+ $('question-select').value=index;$('hands').value=left;
+ $('secret').textContent='관리자 전용 정답: '+label(questions[index],questions[index].answer)+'\n'+questions[index].explanation;
+ $('review').textContent=[questions[index].review,questions[index].note].filter(Boolean).join(' · ');
+ $('cue').textContent=cueLabel();$('cue').disabled=busy||deadline!==null||(step==='finished'&&!waiting)||blank;
+ $('step').textContent=busy?'대본 낭독을 마칠 때까지 기다립니다.':waiting?'읽기를 마치면 완료 버튼으로 이어갑니다.':phase==='question'&&t===0?'다음 큐를 받으면 정답을 공개하고 해설을 읽습니다.':'시작 인사 → 문제 낭독 → 타이머 → 정답·해설 → 다음 문제';
+ $('reveal').disabled=phase!=='question'||busy||waiting;
+ $('timer-start').disabled=phase!=='question'||busy;
+ $('pause').disabled=phase!=='question'||busy||waiting||((deadline===null&&remaining===null)||t===0);
+ $('pause').textContent=deadline===null&&remaining>0?'타이머 계속':'일시정지';
+ $('repeat').disabled=deadline!==null||!scriptAllowed(scriptKind);
+ $('show').disabled=busy||deadline!==null;$('previous').disabled=index===0||busy;
+ $('hands').disabled=phase==='question'||phase==='answer';$('blank').textContent=blank?'화면 다시 켜기':'화면 가리기';
+ $('music').textContent=music?'배경음악 끄기':'배경음악 켜기';$('mic').textContent=mic?'음성 큐 듣기 끄기':'음성 “큐” 듣기 켜기';
+ $('mic-status').textContent=mic?'마이크 켜짐 · “큐”라고 말하면 다음 단계로 진행합니다. 낭독 중에는 큐를 무시합니다.':'마이크 꺼짐 · 기기 내 한국어 인식이 지원되어야 합니다. 리모컨과 버튼도 사용할 수 있습니다.';
+ media.setDucking(busy||waiting||(t!==null&&t<=5));
+ // The stage waits quietly for a voice cue, avoiding BGM feedback into the microphone.
+ if(music&&!(mic&&!busy&&deadline===null))media.startMusic();else media.stopMusic();
+ updateScript();renderAudioFiles();
+}
+function tick(){
+ const t=timeLeft();
+ if(phase==='question'&&deadline!==null&&t!==lastTick){lastTick=t;if(t>0&&t<=5){media.effect('tick');if(settings.countVoice&&media.voices().length)media.speak(['','일','이','삼','사','오'][t],{voiceURI:settings.voiceURI,rate:1.1,volume:settings.volume});}
+  if(t===0){deadline=null;remaining=0;step='reveal';media.stopSpeech();media.effect('timeup');status('시간 종료. 다음 큐를 주면 정답·해설을 읽습니다.');}}
+ render();
+}
+function keyboard(e){
+ if(e.defaultPrevented||e.altKey||e.ctrlKey||e.metaKey||e.repeat)return;
+ const el=e.target;if(el?.isContentEditable||/^(INPUT|TEXTAREA|SELECT)$/.test(el?.tagName))return;
+ if(['PageDown','ArrowRight','ArrowDown',' '].includes(e.key)){
+  // A presenter's Space means next, even when a previously clicked control retains focus.
+  // preventDefault also cancels the button's native Space click (Enter remains native).
+  e.preventDefault();const now=Date.now();if(now-lastKey<650)return;lastKey=now;nextCue();
+ }else if(e.key==='Escape'){stopShow();}
+}
+function stopShow(){
+ const done=completion;narrationToken++;media.stopSpeech();busy=false;spoken=false;
+ if(done){waiting=true;completion=null;const kind=scriptKind;completion=()=>{waiting=false;caption='';if(kind==='question')startTimer();else{step=kind==='intro'?'question':kind==='answer'?'next':'finished';render();}};}else waiting=false;
+ if(deadline!==null){remaining=timeLeft();deadline=null;if(remaining===0)step='reveal';}
+ music=false;media.stopMusic();media.stopCueListening();caption='';status('진행을 멈췄습니다. 다시 읽기 또는 다음 버튼으로 이어갈 수 있습니다.');render();
+}
+function voices(){
+ const list=media.voices();const chosen=settings.voiceURI;$('voice').replaceChildren(...(list.length?list.map(v=>new Option(v.name,v.voiceURI)):[new Option('설치된 한국어 음성 없음','')]));
+ if(list.some(v=>v.voiceURI===chosen))$('voice').value=chosen;else if(list.length)settings.voiceURI=list[0].voiceURI;
+ $('voice-status').textContent=list.length?'인터넷 없이 사용할 수 있는 한국어 PC 음성 '+list.length+'개 · 행사 전 “소리 · 음성 확인”을 눌러 주세요.':'한국어 PC 음성을 찾지 못했습니다. Windows 음성 설정에서 한국어 음성을 설치하거나 직접 읽고 낭독 완료 버튼을 사용하세요.';
+}
+function options(){$('question-select').replaceChildren(...questions.map((q,i)=>new Option((i+1)+'. '+q.text,i)));}
+function editor(){
+ $('editor').innerHTML=draft.map((q,i)=>'<div class="editor-row"><p><b>'+(i+1)+'번</b> <span class="badge">'+esc(q.review||'직접 편집')+'</span></p><div class="editor-grid">'+
+  '<label class="wide">문제<textarea data-i="'+i+'" data-key="text">'+esc(q.text)+'</textarea></label><label>첫 번째 보기<input data-i="'+i+'" data-key="choiceO" value="'+esc(q.choiceO)+'"></label><label>두 번째 보기<input data-i="'+i+'" data-key="choiceX" value="'+esc(q.choiceX)+'"></label>'+
+  '<label class="wide">해설<textarea data-i="'+i+'" data-key="explanation">'+esc(q.explanation)+'</textarea></label><label>정답<select data-i="'+i+'" data-key="answer"><option value="O"'+(q.answer==='O'?' selected':'')+'>첫 번째 보기</option><option value="X"'+(q.answer==='X'?' selected':'')+'>두 번째 보기</option></select></label><label>제한시간(초)<input type="number" min="1" max="600" data-i="'+i+'" data-key="seconds" value="'+q.seconds+'"></label>'+
+  '<label class="wide">문제 낭독 대본 (비우면 자동 구성)<textarea data-i="'+i+'" data-key="scriptQuestion">'+esc(q.scriptQuestion||'')+'</textarea></label><label class="wide">정답 낭독 대본 (공개 후 사용)<textarea data-i="'+i+'" data-key="scriptAnswer">'+esc(q.scriptAnswer||'')+'</textarea></label></div><p class="review">'+esc(q.note||'')+'</p><button data-remove="'+i+'" '+(draft.length===1?'disabled':'')+'>삭제</button></div>').join('');
+}
+function csv(text){
+ const rows=[];let row=[],field='',quoted=false;const s=text.replace(/^\uFEFF/,'');
+ for(let i=0;i<s.length;i++){const c=s[i];if(c==='"'){if(quoted&&s[i+1]==='"'){field+='"';i++;}else quoted=!quoted;}else if(!quoted&&[',','\r','\n'].includes(c)){row.push(field);field='';if(c!==','){rows.push(row);row=[];if(c==='\r'&&s[i+1]==='\n')i++;}}else field+=c;}
+ if(quoted)throw Error('CSV 따옴표가 닫히지 않았습니다.');if(field||row.length){row.push(field);rows.push(row);}
+ const header=(rows.shift()||[]).map(c=>c.trim());const get=(r,names)=>r[header.findIndex(h=>names.includes(h))]?.trim()||'';
+ return validate(rows.filter(r=>r.some(c=>c.trim())).map(r=>({text:get(r,['문제','text','question']),choiceO:get(r,['선택지1','보기O','choiceO'])||'O',choiceX:get(r,['선택지2','보기X','choiceX'])||'X',answer:get(r,['정답','answer']),seconds:Number(get(r,['제한시간','seconds','timeLimitSec'])||15),explanation:get(r,['해설','explanation']),scriptQuestion:get(r,['문제대본','scriptQuestion']),scriptAnswer:get(r,['정답대본','scriptAnswer']),review:get(r,['검토상태','review']),note:get(r,['진행메모','note'])})));
+}
+function download(text,name,type){const url=URL.createObjectURL(new Blob([text],{type}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+$('open').onclick=()=>{
+ void media.unlock();if(screen&&!screen.closed){screen.focus();render();return;}
+ screen=window.open('','ox-banquet-projection','popup=yes,width=1280,height=800');
+ if(!screen){status('팝업이 차단되었습니다. 팝업을 허용한 뒤 다시 눌러 주세요.');return;}
+ screen.document.open();screen.document.write('<!doctype html><html lang="ko"><head><meta charset="utf-8"><title>OX 퀴즈 · 프로젝션</title><style>'+document.querySelector('style').textContent+'</style></head><body class="projection"><div id="stage"></div><button class="fullscreen" id="full">전체화면 · F11</button></body></html>');screen.document.close();
+ screen.document.getElementById('full').onclick=()=>screen.document.documentElement.requestFullscreen().catch(()=>status('프로젝션 창에서 F11을 눌러 주세요.'));
+ screen.addEventListener('keydown',keyboard);status('프로젝션 창을 보조 화면으로 옮겨 주세요. 이 창에서도 리모컨으로 진행할 수 있습니다.');render();
+};
+$('cue').onclick=nextCue;$('show').onclick=()=>{void media.unlock();readQuestion(index);};$('reveal').onclick=reveal;$('stop').onclick=stopShow;
+function repeatNarration(usePC=false){const kind=scriptKind;runNarration(kind,()=>{if(kind==='question')startTimer();else{step=kind==='intro'?'question':kind==='answer'?'next':'finished';}},usePC);}
+$('repeat').onclick=()=>repeatNarration();$('pc-voice').onclick=()=>repeatNarration(true);
+$('question-select').onchange=e=>selectQuestion(Number(e.target.value));$('previous').onclick=()=>selectQuestion(Math.max(0,index-1));
+$('timer-start').onclick=()=>{if(waiting)completeNarration();else startTimer();};
+$('pause').onclick=()=>{if(deadline!==null){remaining=timeLeft();deadline=null;}else{deadline=Date.now()+remaining*1000;remaining=null;}render();};
+$('ready').onclick=()=>{invalidateNarration();phase='ready';step='intro';scriptKind='intro';caption='';deadline=null;remaining=null;blank=false;render();};
+$('end').onclick=closeShow;
+$('blank').onclick=()=>{if(!blank){stopShow();blank=true;}else blank=false;render();};
+$('hands').onchange=e=>{left=e.target.value;save();updateScript(true);render();};
+$('editor').oninput=e=>{const el=e.target;if(el.dataset.key)draft[Number(el.dataset.i)][el.dataset.key]=el.dataset.key==='seconds'?Number(el.value):el.value;};
+$('editor').onclick=e=>{if(e.target.dataset.remove!==undefined){draft.splice(Number(e.target.dataset.remove),1);editor();}};
+$('add').onclick=()=>{draft.push({text:'',choiceO:'O',choiceX:'X',answer:'O',seconds:5,explanation:''});editor();};
+$('apply').onclick=()=>{try{const next=validate(draft);if((phase==='question'||phase==='answer')&&!confirm('진행을 멈추고 편집한 문제를 적용할까요?'))return;stopShow();questions=next;draft=structuredClone(questions);selectQuestion(0);save();options();editor();render();status(questions.length+'개 문제를 적용했습니다.');}catch(e){status(e.message);}};
+$('event-questions').onclick=()=>{draft=validate(DEFAULTS);editor();status('행사 16문제를 편집 창에 불러왔습니다. “문제 적용”을 누르면 진행에 반영됩니다.');};
+$('import').onchange=async e=>{const file=e.target.files[0];if(!file)return;try{const text=await file.text();draft=file.name.toLowerCase().endsWith('.json')?validate(JSON.parse(text)):csv(text);editor();status('불러왔습니다. 검토 후 “문제 적용”을 누르세요.');}catch(err){status(err.message);}e.target.value='';};
+$('backup').onclick=()=>download(JSON.stringify(questions,null,2),'OX-questions.json','application/json');
+$('export-scripts').onclick=()=>download(cueManifest().cues.map(c=>'['+c.filename+' 또는 '+c.key+'.mp3]\n'+c.text).join('\n\n'),'OX-cohost-scripts.txt','text/plain;charset=utf-8');
+$('script-save').onclick=()=>{
+ const text=$('current-script').value.trim();
+ const synchronized=JSON.stringify(draft)===JSON.stringify(questions);
+ if(scriptKind==='intro')settings.intro=text;else if(scriptKind==='closing')settings.closing=text;else{const field=scriptKind==='question'?'scriptQuestion':'scriptAnswer';questions[index][field]=text;if(synchronized){draft[index][field]=text;editor();}}
+ save();status(synchronized?'현재 대본을 저장했습니다. 다음 낭독부터 사용합니다.':'현재 적용된 문제의 대본을 저장했습니다. 별도로 편집 중인 문제 목록에는 반영하지 않았습니다.');updateScript(true);renderAudioFiles();
+};
+$('audio-import').onchange=async e=>{await importAudioFiles(Array.from(e.target.files),$('audio-confirm').checked);e.target.value='';};
+$('audio-clear').onclick=()=>{audioImportToken++;audioFiles.clear();$('audio-import-result').textContent='';renderAudioFiles();status('불러온 녹음 파일 연결을 모두 해제했습니다. 다음 낭독부터 PC 음성을 사용합니다.');};
+$('export-audio-manifest').onclick=()=>download(JSON.stringify(cueManifest(),null,2),'OX-audio-manifest.json','application/json');
+$('script-copy').onclick=async()=>{try{await navigator.clipboard.writeText($('current-script').value);status('대본을 복사했습니다.');}catch{$('current-script').select();status('대본을 선택했습니다. Ctrl+C로 복사하세요.');}};
+for(const [id,key] of [['cohost-name','cohost'],['host-name','host']]){$(id).value=settings[key];$(id).onchange=e=>{settings[key]=e.target.value.trim()||defaultSettings[key];save();updateScript(true);render();};}
+$('rate').value=settings.rate;$('volume').value=settings.volume;$('speak-enabled').checked=settings.speak;$('count-voice').checked=settings.countVoice;
+$('rate').oninput=e=>{settings.rate=Number(e.target.value);save();};$('volume').oninput=e=>{settings.volume=Number(e.target.value);media.setVolume(settings.volume);save();};
+$('speak-enabled').onchange=e=>{settings.speak=e.target.checked;save();};$('voice').onchange=e=>{settings.voiceURI=e.target.value;save();};
+$('count-voice').onchange=e=>{settings.countVoice=e.target.checked;save();};
+$('sound-test').onclick=async()=>{if(busy||deadline!==null){status('진행을 멈춘 뒤 음성을 확인해 주세요.');return;}await media.unlock();media.effect('correct');media.speak('안녕하세요. 준비된 대본을 읽겠습니다.',{voiceURI:settings.voiceURI,rate:settings.rate,volume:settings.volume,onEnd:()=>status('음성 확인을 마쳤습니다.'),onError:status});};
+$('music').onclick=async()=>{await media.unlock();music=!music;render();};
+$('mic').onclick=()=>{if(mic)media.stopCueListening();else void media.startCueListening();};
+window.addEventListener('keydown',keyboard);window.addEventListener('beforeunload',e=>{if(screen&&!screen.closed){e.preventDefault();e.returnValue='';}});
+window.addEventListener('pagehide',()=>media.dispose());
+options();editor();media.setVolume(settings.volume);voices();render();setInterval(tick,100);
+</script>
+</body></html>

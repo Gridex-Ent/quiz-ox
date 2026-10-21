@@ -4,6 +4,7 @@ import './shared/styles.css';
 import { JoinApp } from './join/JoinApp';
 import { ScreenApp } from './screen/ScreenApp';
 import { HostApp } from './host/HostApp';
+import { OfflineApp } from './offline/OfflineApp';
 
 function Landing() {
   return (
@@ -19,6 +20,7 @@ function Landing() {
 
 function App() {
   const path = window.location.pathname.replace(/\/+$/, '') || '/';
+  if (path === '/' || path.startsWith('/offline')) return <OfflineApp projection={path === '/offline/screen'} />;
   if (path.startsWith('/join')) return <JoinApp />;
   if (path.startsWith('/screen')) return <ScreenApp />;
   if (path.startsWith('/host')) return <HostApp />;

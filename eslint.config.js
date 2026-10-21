@@ -26,6 +26,14 @@ export default tseslint.config(
     },
   },
   {
+    files: ['web/src/offline/standalone.js', 'tools/offline-media.js'],
+    languageOptions: { globals: { ...globals.browser } },
+  },
+  {
+    files: ['tools/*.mjs'],
+    languageOptions: { globals: { ...globals.node } },
+  },
+  {
     files: ['server/src/**/*.ts', 'tools/**/*.ts'],
     languageOptions: { globals: { ...globals.node } },
   },

@@ -12,3 +12,12 @@ Thumbs.db
 coverage/
 .vite/
 *.tmp.ts
+
+# Local voice assets and GPT-SoVITS runtime (transfer privately)
+/voice-input/
+/voice-output/
+/voice-preparation/
+/professor-reference.wav
+/GPT-SoVITS*/
+/GPT-SoVITS*.7z
+/GPT-SoVITS*.zip
