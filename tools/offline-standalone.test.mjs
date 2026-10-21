@@ -62,6 +62,47 @@ function harness({ saved, speechFails = false, audioFails = false, loadFails = f
   };
 }
 
+test('published 18-question audio manifest matches every executable cue', async () => {
+  const questions = JSON.parse(readFileSync(new URL('../questions/kiee-a-2026-offline.json', import.meta.url), 'utf8'));
+  const manifestText = readFileSync(new URL('../questions/OX-audio-manifest.json', import.meta.url), 'utf8');
+  const manifest = JSON.parse(manifestText);
+  const h = harness({ saved: { questions, left: 'O' } });
+  assert.equal(questions.length, 18);
+  assert.equal(manifest.cues.length, 38);
+  for (const cue of manifest.cues.filter(c => c.key.startsWith('question-'))) {
+    assert.doesNotMatch(cue.text, /^(?:[가-힣]+|\d+)\s*번 문제입니다/);
+  }
+  assert.deepEqual(JSON.parse(h.run('JSON.stringify(cueManifest())')), manifest);
+  // Import the same manifest via the actual manifest validation path.
+  const files = manifest.cues.map(c => ({ name: c.filename }));
+  files.push({ name: 'OX-audio-manifest.json', text: async () => manifestText });
+  h.run('audioFiles.clear()');
+  await h.run('importAudioFiles')(files);
+  assert.match(h.element('audio-summary').textContent, /38 \/ 38개 준비됨/);
+  for (let i = 0; i < questions.length; i++) {
+    h.run(`selectQuestion(${i});repeatNarration()`);
+    assert.equal(h.media.current.recording, true);
+    h.media.finish();
+    assert.equal(h.state().deadline, null);
+    h.run(`readQuestion(${i})`);
+    assert.equal(h.media.current.text, manifest.cues.find(c => c.key === `question-${String(i + 1).padStart(2, '0')}`).filename);
+    assert.equal(h.state().deadline, null);
+    h.media.finish();
+    h.advance(questions[i].seconds * 1000);
+    assert.equal(h.state().phase, 'question');
+    h.run('nextCue()');
+    assert.equal(h.state().phase, 'answer');
+    assert.equal(h.media.current.recording, true);
+    h.media.finish();
+  }
+});
+
+test('automatic question narration begins directly with the question text', () => {
+  const h = harness();
+  assert.ok(h.run("script('question')").startsWith(fixture[0].text));
+  assert.doesNotMatch(h.run("script('question')"), /번 문제입니다/);
+});
+
 test('cue progression waits for narration and timer; duplicate cues do not skip', () => {
   const h = harness();
   h.run('nextCue();nextCue()');
@@ -88,6 +129,43 @@ test('cue progression waits for narration and timer; duplicate cues do not skip'
   assert.equal(h.state().index, 1);
 });
 
+for (const usePC of [false, true]) {
+  for (const stopped of [false, true]) {
+    test(`ready question preview preserves readiness (${usePC ? 'PC' : 'recording'}, ${stopped ? 'stopped/manual' : 'ended'})`, async () => {
+      const h = harness();
+      await h.run('importAudioFiles([{name:"question-01.wav"}],true)');
+      h.run('selectQuestion(0)');
+      h.click(usePC ? 'pc-voice' : 'repeat');
+      assert.equal(Boolean(h.media.current.recording), !usePC);
+      const stale = h.media.current.options.onEnd;
+      if (stopped) {
+        h.run('stopShow()');
+        stale();
+        assert.equal(h.state().waiting, true);
+        assert.equal(h.element('cue').textContent, '낭독 완료');
+        h.click('cue');
+        // A second stop must not resurrect the completed preview continuation.
+        h.run('stopShow()');
+        assert.equal(h.state().waiting, false);
+      } else h.media.finish();
+      h.advance(6000);
+      assert.equal(h.state().phase, 'ready');
+      assert.equal(h.state().step, 'question');
+      assert.equal(h.state().deadline, null);
+      assert.equal(h.element('cue').disabled, false);
+      h.click('cue');
+      assert.equal(h.state().phase, 'question');
+      assert.equal(h.state().deadline, null);
+      h.media.finish();
+      assert.notEqual(h.state().deadline, null);
+      h.advance(5000);
+      assert.equal(h.state().step, 'reveal');
+      h.click('cue');
+      assert.equal(h.state().phase, 'answer');
+    });
+  }
+}
+
 test('answer and explanation never enter projection until reveal', () => {
   const h = harness();
   h.run('readQuestion(0)');
@@ -99,6 +177,28 @@ test('answer and explanation never enter projection until reveal', () => {
   assert.match(h.stage(), /비공개 정답 대본 하나/);
   h.run('selectQuestion(1)');
   assert.doesNotMatch(h.stage(), /비공개/);
+});
+
+test('stopped ready preview retries safely and normal recorded narration still resumes manually', async () => {
+  const h = harness();
+  await h.run('importAudioFiles([{name:"question-01.wav"}],true)');
+  h.run('selectQuestion(0);repeatNarration()');
+  const stale = h.media.current.options.onEnd;
+  h.run('stopShow();repeatNarration()');
+  stale();
+  assert.equal(h.state().busy, true);
+  assert.equal(h.state().deadline, null);
+  h.media.finish();
+  assert.equal(h.state().step, 'question');
+  assert.equal(h.state().deadline, null);
+  h.click('cue');
+  h.run('stopShow()');
+  assert.equal(h.element('cue').textContent, '낭독 완료 · 타이머 시작');
+  h.advance(700);
+  h.click('cue');
+  assert.notEqual(h.state().deadline, null);
+  h.advance(5000);
+  assert.equal(h.state().step, 'reveal');
 });
 
 test('late speech completion after question change cannot start a stale timer', () => {

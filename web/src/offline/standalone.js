@@ -42,17 +42,17 @@ function save(){try{localStorage.setItem(KEY,JSON.stringify({questions,left,sett
 function label(q,choice){return choice==='O'?q.choiceO:q.choiceX;}
 function sayLabel(value){return value==='O'?'오':value==='X'?'엑스':value;}
 function timeLeft(){return deadline===null?remaining:Math.max(0,Math.ceil((deadline-Date.now())/1000));}
-function script(kind,q=questions[index],n=index){
+function script(kind,q=questions[index]){
  const right=left==='O'?'X':'O';
- if(kind==='intro')return settings.intro||`안녕하세요. ${settings.host} 사회자와 함께 진행할 ${settings.cohost}입니다. 오늘은 화면을 보고 손을 들어 정답을 선택해 주세요. 참가자 본인의 왼손과 오른손 기준입니다. 각 문제의 보기와 손 방향은 화면에 표시됩니다. 문제 낭독이 끝나면 선택 시간이 시작됩니다. 첫 번째 문제는 맛보기로, 틀려도 탈락하지 않습니다. 준비되셨나요?`;
+ if(kind==='intro')return settings.intro||`안녕하세요. ${settings.host} 사회자와 함께 진행할 ${settings.cohost}입니다. 오늘은 화면을 보고 손을 들어 정답을 선택해 주세요. 참가자 본인의 왼손과 오른손 기준입니다. 각 문제의 보기와 손 방향은 화면에 표시됩니다. 문제 낭독이 끝나면 선택 시간이 시작됩니다. 맛보기 문제는 틀려도 탈락하지 않습니다. 준비되셨나요?`;
  if(kind==='closing')return settings.closing||`모든 문제를 마쳤습니다. 함께해 주신 여러분께 감사드립니다. 우승자와 참가자 모두에게 큰 박수 부탁드립니다. 지금까지 공동 사회자 ${settings.cohost}였습니다.`;
- if(kind==='question')return q.scriptQuestion||`${n+1}번 문제입니다. ${q.text} 왼손은 ${sayLabel(label(q,left))}, 오른손은 ${sayLabel(label(q,right))}입니다. 제한시간은 ${q.seconds}초입니다. 지금부터 선택해 주세요.`;
+ if(kind==='question')return q.scriptQuestion||`${q.text} 왼손은 ${sayLabel(label(q,left))}, 오른손은 ${sayLabel(label(q,right))}입니다. 제한시간은 ${q.seconds}초입니다. 지금부터 선택해 주세요.`;
  if(kind==='answer')return q.scriptAnswer||`정답은 ${sayLabel(label(q,q.answer))}입니다. ${q.explanation}`;
  return '';
 }
 function cueKey(kind,n=index){return kind==='question'||kind==='answer'?kind+'-'+String(n+1).padStart(2,'0'):kind;}
 function cueManifest(){
- const cue=(kind,q,n)=>({key:cueKey(kind,n),filename:cueKey(kind,n)+'.wav',text:script(kind,q,n)});
+ const cue=(kind,q,n)=>({key:cueKey(kind,n),filename:cueKey(kind,n)+'.wav',text:script(kind,q)});
  return {format:'ox-cue-audio-v1',cues:[cue('intro'),...questions.flatMap((q,n)=>[cue('question',q,n),cue('answer',q,n)]),cue('closing')]};
 }
 function audioProblem(item,text){
@@ -109,8 +109,13 @@ function updateScript(force=false){
  $('script-label').textContent=({intro:'시작 인사',question:(index+1)+'번 문제 낭독',answer:(index+1)+'번 정답·해설',closing:'마무리'})[scriptKind]+' · 수정 후 “이 대본 저장”';
 }
 function invalidateNarration(){narrationToken++;media.stopSpeech();busy=false;waiting=false;completion=null;spoken=false;}
+function setNarrationCompletion(onComplete){
+ const token=narrationToken;
+ completion=()=>{if(token!==narrationToken||!completion)return;completion=null;waiting=false;busy=false;spoken=false;caption='';onComplete();render();};
+ completion.action=onComplete;
+}
 function runNarration(kind,onComplete,usePC=false){
- invalidateNarration();scriptKind=kind;caption=script(kind);updateScript(true);const token=narrationToken;completion=()=>{if(token!==narrationToken)return;completion=null;waiting=false;busy=false;spoken=false;caption='';onComplete();render();};
+ invalidateNarration();scriptKind=kind;caption=script(kind);updateScript(true);const token=narrationToken;setNarrationCompletion(onComplete);
  const done=completion;waiting=true;media.setDucking(true);
  if(!settings.speak&&!usePC){status('수동 낭독 모드입니다. 읽기를 마친 뒤 “낭독 완료”를 눌러 주세요.');render();return;}
  busy=true;waiting=false;render();
@@ -138,7 +143,7 @@ function reveal(){
 function closeShow(){invalidateNarration();deadline=null;remaining=null;phase='end';step='finished';blank=false;media.effect('fanfare');runNarration('closing',()=>{music=false;media.stopMusic();});}
 function cueLabel(){
  if(busy)return '낭독 중…';
- if(waiting)return scriptKind==='question'?'낭독 완료 · 타이머 시작':'낭독 완료';
+ if(waiting)return scriptKind==='question'&&phase==='question'?'낭독 완료 · 타이머 시작':'낭독 완료';
  if(phase==='question'&&deadline!==null)return '선택 시간 진행 중';
  if(phase==='question'&&remaining>0)return '타이머 계속';
  if(step==='intro')return '다음 · 시작 인사 읽기';
@@ -207,7 +212,7 @@ function keyboard(e){
 }
 function stopShow(){
  const done=completion;narrationToken++;media.stopSpeech();busy=false;spoken=false;
- if(done){waiting=true;completion=null;const kind=scriptKind;completion=()=>{waiting=false;caption='';if(kind==='question')startTimer();else{step=kind==='intro'?'question':kind==='answer'?'next':'finished';render();}};}else waiting=false;
+ if(done){waiting=true;setNarrationCompletion(done.action);}else waiting=false;
  if(deadline!==null){remaining=timeLeft();deadline=null;if(remaining===0)step='reveal';}
  music=false;media.stopMusic();media.stopCueListening();caption='';status('진행을 멈췄습니다. 다시 읽기 또는 다음 버튼으로 이어갈 수 있습니다.');render();
 }
@@ -240,7 +245,7 @@ $('open').onclick=()=>{
  screen.addEventListener('keydown',keyboard);status('프로젝션 창을 보조 화면으로 옮겨 주세요. 이 창에서도 리모컨으로 진행할 수 있습니다.');render();
 };
 $('cue').onclick=nextCue;$('show').onclick=()=>{void media.unlock();readQuestion(index);};$('reveal').onclick=reveal;$('stop').onclick=stopShow;
-function repeatNarration(usePC=false){const kind=scriptKind;runNarration(kind,()=>{if(kind==='question')startTimer();else{step=kind==='intro'?'question':kind==='answer'?'next':'finished';}},usePC);}
+function repeatNarration(usePC=false){const kind=scriptKind;runNarration(kind,()=>{if(kind==='question'){if(phase==='question')startTimer();}else{step=kind==='intro'?'question':kind==='answer'?'next':'finished';}},usePC);}
 $('repeat').onclick=()=>repeatNarration();$('pc-voice').onclick=()=>repeatNarration(true);
 $('question-select').onchange=e=>selectQuestion(Number(e.target.value));$('previous').onclick=()=>selectQuestion(Math.max(0,index-1));
 $('timer-start').onclick=()=>{if(waiting)completeNarration();else startTimer();};
