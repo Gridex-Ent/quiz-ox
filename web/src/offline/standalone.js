@@ -43,10 +43,9 @@ function label(q,choice){return choice==='O'?q.choiceO:q.choiceX;}
 function sayLabel(value){return value==='O'?'오':value==='X'?'엑스':value;}
 function timeLeft(){return deadline===null?remaining:Math.max(0,Math.ceil((deadline-Date.now())/1000));}
 function script(kind,q=questions[index]){
- const right=left==='O'?'X':'O';
  if(kind==='intro')return settings.intro||`안녕하세요. ${settings.host} 사회자와 함께 진행할 ${settings.cohost}입니다. 오늘은 화면을 보고 손을 들어 정답을 선택해 주세요. 참가자 본인의 왼손과 오른손 기준입니다. 각 문제의 보기와 손 방향은 화면에 표시됩니다. 문제 낭독이 끝나면 선택 시간이 시작됩니다. 맛보기 문제는 틀려도 탈락하지 않습니다. 준비되셨나요?`;
  if(kind==='closing')return settings.closing||`모든 문제를 마쳤습니다. 함께해 주신 여러분께 감사드립니다. 우승자와 참가자 모두에게 큰 박수 부탁드립니다. 지금까지 공동 사회자 ${settings.cohost}였습니다.`;
- if(kind==='question')return q.scriptQuestion||`${q.text} 왼손은 ${sayLabel(label(q,left))}, 오른손은 ${sayLabel(label(q,right))}입니다. 제한시간은 ${q.seconds}초입니다. 지금부터 선택해 주세요.`;
+ if(kind==='question')return q.scriptQuestion||`${q.text} 제한시간은 ${q.seconds}초입니다.`;
  if(kind==='answer')return q.scriptAnswer||`정답은 ${sayLabel(label(q,q.answer))}입니다. ${q.explanation}`;
  return '';
 }

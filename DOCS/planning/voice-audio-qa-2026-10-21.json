@@ -1,8 +1,8 @@
 {
-  "base_commit": "5aee394a136bfbb1aacbd2c66c22fb8328062d83",
+  "base_commit": "8fc180e56ad313f368423260e701ba4c692163cd",
   "audio_count": 38,
-  "duration_seconds": 458.20000000000005,
-  "narration": "Question recordings start directly with the question, without spoken question numbers or a question-introduction sentence.",
+  "duration_seconds": 373.82000000000005,
+  "narration": "Question recordings start directly with the question, without spoken question numbers, a question-introduction sentence, appended hand directions or selection prompts. Time limits are retained.",
   "human_listening": "Full human listening review pending. User approved a short preview only.",
   "automatic_qa_limit": "ASR similarity is a screening heuristic, not proof of pronunciation accuracy. Number/name differences remain; listen before event use.",
   "priority_review_files": [
@@ -15,10 +15,10 @@
     "question-07.wav",
     "answer-07.wav",
     "answer-09.wav",
+    "question-11.wav",
     "answer-11.wav",
-    "question-13.wav",
+    "question-12.wav",
     "question-14.wav",
-    "question-18.wav",
     "answer-18.wav"
   ],
   "tests": {
@@ -56,14 +56,14 @@
     {
       "key": "question-01",
       "filename": "question-01.wav",
-      "text": "전류 전쟁에서 테슬라는 교류를, 에디슨은 직류를 지지했다. 왼손은 오, 오른손은 엑스입니다. 제한시간은 십 초입니다. 지금부터 선택해 주세요.",
-      "automatic_transcript": "전류전쟁에서 테슬라는 교류를 에디슨은 직류를 지지했다. 왼손은 O, 오른손은 X입니다. 제한시간은 10초입니다. 지금부터 선택해주세요.",
+      "text": "전류 전쟁에서 테슬라는 교류를, 에디슨은 직류를 지지했다. 제한시간은 십 초입니다.",
+      "automatic_transcript": "전류전쟁에서 테슬라는 교류를 에디슨은 직류를 지지했다. 제한시간은 10초입니다.",
       "similarity": 1.0,
-      "duration_seconds": 14.38,
+      "duration_seconds": 8.62,
       "sample_rate": 32000,
       "human_listening_review": "pending",
-      "sha256": "7fba6d6275136a2cc3dbac9df882da0e596026eba6eb4bb1ca51033fe69712a3",
-      "transcript_basis": "Final denoised WAV after removing spoken question number"
+      "sha256": "4ca6be8bb707398870ac4fcaa466c2b76e24311f4144228e7ed8fe7dd7f648f7",
+      "transcript_basis": "Individual synthesized sentence transcripts combined before denoising; question and time limit only"
     },
     {
       "key": "answer-01",
@@ -80,14 +80,14 @@
     {
       "key": "question-02",
       "filename": "question-02.wav",
-      "text": "전기의 전력은 힘 력 자를 쓴다. 왼손은 오, 오른손은 엑스입니다. 제한시간은 십 초입니다. 지금부터 선택해 주세요.",
-      "automatic_transcript": "전기의 전력은 16차를 쓴다. 왼손은 O, 오른손은 X입니다. 제한시간은 10초입니다. 지금부터 선택해주세요.",
-      "similarity": 0.9333333333333333,
-      "duration_seconds": 10.9,
+      "text": "전기의 전력은 힘 력 자를 쓴다. 제한시간은 십 초입니다.",
+      "automatic_transcript": "전기의 전력은 힘욕자를 쓴다. 제한시간은 10초입니다.",
+      "similarity": 0.9545454545454546,
+      "duration_seconds": 5.14,
       "sample_rate": 32000,
       "human_listening_review": "pending",
-      "sha256": "f20e3ac9b036718e3f8da019154f4c6e5bb4793bff74ae2bf8a4530f1ae75d3b",
-      "transcript_basis": "Final denoised WAV after removing spoken question number"
+      "sha256": "61651d2b77c65b5e77b8e5277359443512c9dab3678a1256a4efb7be1c983f4f",
+      "transcript_basis": "Individual synthesized sentence transcripts combined before denoising; question and time limit only"
     },
     {
       "key": "answer-02",
@@ -104,14 +104,14 @@
     {
       "key": "question-03",
       "filename": "question-03.wav",
-      "text": "한국전력 배구단의 이름은 전기스파이크다. 왼손은 오, 오른손은 엑스입니다. 제한시간은 십 초입니다. 지금부터 선택해 주세요.",
-      "automatic_transcript": "한국전력 배구단의 이름은 전기 스파이크다. 왼손은 O, 오른손은 X입니다. 제한시간은 10초입니다. 지금부터 선택해주세요.",
+      "text": "한국전력 배구단의 이름은 전기스파이크다. 제한시간은 십 초입니다.",
+      "automatic_transcript": "한국전력 배구단의 이름은 전기 스파이크다. 제한시간은 10초입니다.",
       "similarity": 1.0,
-      "duration_seconds": 12.76,
+      "duration_seconds": 7.0,
       "sample_rate": 32000,
       "human_listening_review": "pending",
-      "sha256": "7dda7ea3b3cd22cb6f4395135663295b20df036c4ff6e94672c4adc059484528",
-      "transcript_basis": "Final denoised WAV after removing spoken question number"
+      "sha256": "4a5f5fd79617a06f0c39f562285ff9235e7d4acd2fdea6bd8f33343957b8d402",
+      "transcript_basis": "Individual synthesized sentence transcripts combined before denoising; question and time limit only"
     },
     {
       "key": "answer-03",
@@ -128,14 +128,14 @@
     {
       "key": "question-04",
       "filename": "question-04.wav",
-      "text": "손흥민은 이천이십 년에서 이천이십일 년 시즌에 스물세 골을 기록하며 이피엘 득점왕을 차지했다. 왼손은 오, 오른손은 엑스입니다. 제한시간은 십 초입니다. 지금부터 선택해 주세요.",
-      "automatic_transcript": "손흥민은 2020년에서 2021년 시즌에 23골을 기록하며 EPL 득점왕을 차지했다. 왼손은 O, 오른손은 X입니다. 제한시간은 10초입니다. 지금부터 선택해주세요.",
+      "text": "손흥민은 이천이십 년에서 이천이십일 년 시즌에 스물세 골을 기록하며 이피엘 득점왕을 차지했다. 제한시간은 십 초입니다.",
+      "automatic_transcript": "손흥민은 2020년에서 2021년 시즌에 23골을 기록하며 EPL 득점왕을 차지했다. 제한시간은 10초입니다.",
       "similarity": 1.0,
-      "duration_seconds": 16.42,
+      "duration_seconds": 10.66,
       "sample_rate": 32000,
       "human_listening_review": "pending",
-      "sha256": "47b34a2cce1dd9371aa80dd50851768db58684de2b1df474079bd5dff31e230c",
-      "transcript_basis": "Final denoised WAV after removing spoken question number"
+      "sha256": "9a4f306c6e4d35dc63be9a5e877312495664e56dcd51bd21f126387c1de467ce",
+      "transcript_basis": "Individual synthesized sentence transcripts combined before denoising; question and time limit only"
     },
     {
       "key": "answer-04",
@@ -152,14 +152,14 @@
     {
       "key": "question-05",
       "filename": "question-05.wav",
-      "text": "원주율 파이는 삼 점 일 사 일 오 구 이 육보다 크다. 왼손은 오, 오른손은 엑스입니다. 제한시간은 십 초입니다. 지금부터 선택해 주세요.",
-      "automatic_transcript": "원지율 파일은 3.1415, 9526보다 크다. 왼손은 5, 오른손은 X입니다. 제한시간은 10초입니다. 지금부터 선택해주세요.",
-      "similarity": 0.9074074074074074,
-      "duration_seconds": 13.82,
+      "text": "원주율 파이는 삼 점 일 사 일 오 구 이 육보다 크다. 제한시간은 십 초입니다.",
+      "automatic_transcript": "원주일파이는 3.1415, 926보다 크다. 제한시간은 10초입니다.",
+      "similarity": 0.9333333333333333,
+      "duration_seconds": 8.06,
       "sample_rate": 32000,
       "human_listening_review": "pending",
-      "sha256": "55a612f4d623e31593e5ba80f0e73b053c66bda371758aef55c5f6f2a939ddf1",
-      "transcript_basis": "Final denoised WAV after removing spoken question number"
+      "sha256": "6dfa70aa2d9d3589892bebb0710aab278087b40d54daa726585a182c04ae624b",
+      "transcript_basis": "Individual synthesized sentence transcripts combined before denoising; question and time limit only"
     },
     {
       "key": "answer-05",
@@ -176,14 +176,14 @@
     {
       "key": "question-06",
       "filename": "question-06.wav",
-      "text": "페이커가 아시안게임에서 획득한 금메달은 한 개다. 왼손은 오, 오른손은 엑스입니다. 제한시간은 십 초입니다. 지금부터 선택해 주세요.",
-      "automatic_transcript": "페이커가 아시안게임에서 획득한 금메달은 합니다. 왼손은 오른손은 X입니다. 제한시간은 10초입니다. 지금부터 선택해주세요.",
-      "similarity": 0.9532710280373832,
-      "duration_seconds": 11.52,
+      "text": "페이커가 아시안게임에서 획득한 금메달은 한 개다. 제한시간은 십 초입니다.",
+      "automatic_transcript": "케이코가 아시안게임에서 획득한 금메달은 한 개다. 제한시간은 10초입니다.",
+      "similarity": 0.9354838709677419,
+      "duration_seconds": 6.1,
       "sample_rate": 32000,
       "human_listening_review": "pending",
-      "sha256": "82a559802eeb4651a050d924e1e4c2c11b38861b8ece7080343bcb75e2e416c8",
-      "transcript_basis": "Final denoised WAV after removing spoken question number"
+      "sha256": "665451e3650bc3e95421bbd524a8a30c07ac58339587fe65fb3404640c22b561",
+      "transcript_basis": "Individual synthesized sentence transcripts combined before denoising; question and time limit only"
     },
     {
       "key": "answer-06",
@@ -200,14 +200,14 @@
     {
       "key": "question-07",
       "filename": "question-07.wav",
-      "text": "이천이십육 아이치 나고야 아시안게임은 일본에서 두 번째로 열린 아시안게임이다. 왼손은 오, 오른손은 엑스입니다. 제한시간은 오 초입니다. 지금부터 선택해 주세요.",
-      "automatic_transcript": "2026아이 지나고야 아시안게임은 일본에서 두 번째로 열린 아시안게임입니다. 왼손은 O, 오른손은 X입니다. 제한시간은 5초입니다. 지금부터 선택해주세요.",
-      "similarity": 0.9629629629629629,
-      "duration_seconds": 13.46,
+      "text": "이천이십육 아이치 나고야 아시안게임은 일본에서 두 번째로 열린 아시안게임이다. 제한시간은 오 초입니다.",
+      "automatic_transcript": "2022과의 지나고야 아시안게임은 일본에서 두 번째로 열린 아시안게임이다. 제한시간은 5초입니다.",
+      "similarity": 0.9318181818181818,
+      "duration_seconds": 9.72,
       "sample_rate": 32000,
       "human_listening_review": "pending",
-      "sha256": "a7da93e9b1cc5d635e4ef4ea4aecc61057972341ad3a9355b9b17ff4f27d9c8e",
-      "transcript_basis": "Final denoised WAV after removing spoken question number"
+      "sha256": "59e0c6cc4374d88d0f0c5b18fcf076e55f85d441750abf2b2d1478373f901ab4",
+      "transcript_basis": "Individual synthesized sentence transcripts combined before denoising; question and time limit only"
     },
     {
       "key": "answer-07",
@@ -224,14 +224,14 @@
     {
       "key": "question-08",
       "filename": "question-08.wav",
-      "text": "한 바퀴 달리기 경주에서 이 등으로 달리던 사람을 추월하면 나는 일 등이 된다. 왼손은 오, 오른손은 엑스입니다. 제한시간은 오 초입니다. 지금부터 선택해 주세요.",
-      "automatic_transcript": "한 바퀴 달리기 경주에서 이 등으로 달리던 사람을 추월하면 나는 이 등이 된다. 왼손은 O, 오른손은 X입니다. 제한시간은 5초입니다. 지금부터 선택해 주세요.",
-      "similarity": 0.984375,
-      "duration_seconds": 14.54,
+      "text": "한 바퀴 달리기 경주에서 이 등으로 달리던 사람을 추월하면 나는 일 등이 된다. 제한시간은 오 초입니다.",
+      "automatic_transcript": "한 바퀴 달리기 경주에서 이 등으로 달리던 사람을 추월하면 나는 1등이 된다. 제한시간은 5초입니다.",
+      "similarity": 1.0,
+      "duration_seconds": 9.96,
       "sample_rate": 32000,
       "human_listening_review": "pending",
-      "sha256": "7911e4b9514f596fcfe46f8a4562813fb992293ed960c591b75dd9d3ba40910e",
-      "transcript_basis": "Final denoised WAV after removing spoken question number"
+      "sha256": "62cb4e514b6c632660ff5e1ff47c7581a6db5db19ef5b5fac685bc66018691e2",
+      "transcript_basis": "Individual synthesized sentence transcripts combined before denoising; question and time limit only"
     },
     {
       "key": "answer-08",
@@ -248,14 +248,14 @@
     {
       "key": "question-09",
       "filename": "question-09.wav",
-      "text": "노래를 듣고, 빈칸에 들어갈 단어는 무엇일까요? 왼손은 빛, 오른손은 전기입니다. 제한시간은 오 초입니다. 지금부터 선택해 주세요.",
-      "automatic_transcript": "노래를 듣고 긴 칸에 들어갈 단어는 무엇일까요? 왼손은 빛, 오른손은 전기입니다. 제한시간은 5초입니다. 지금부터 선택해주세요.",
-      "similarity": 0.9807692307692307,
-      "duration_seconds": 12.04,
+      "text": "노래를 듣고, 빈칸에 들어갈 단어는 무엇일까요? 제한시간은 오 초입니다.",
+      "automatic_transcript": "노래를 듣고 빈칸에 들어갈 단어는 무엇일까요? 제한시간은 5초입니다.",
+      "similarity": 1.0,
+      "duration_seconds": 7.16,
       "sample_rate": 32000,
       "human_listening_review": "pending",
-      "sha256": "73c21595410a4bcd41e92eb17b861bc77b02beaf71fab71f7e9edd5482b4920e",
-      "transcript_basis": "Final denoised WAV after removing spoken question number"
+      "sha256": "b8112a8faa3cc2aa9d0c2f5bb817bd7012f4365c1cd5170daa5844f74ae3804e",
+      "transcript_basis": "Individual synthesized sentence transcripts combined before denoising; question and time limit only"
     },
     {
       "key": "answer-09",
@@ -272,14 +272,14 @@
     {
       "key": "question-10",
       "filename": "question-10.wav",
-      "text": "한전 직원이 스웨터를 벗다가 정전기에 찌릿했다. 이때 전기를 공급한 곳은 한전이다. 왼손은 오, 오른손은 엑스입니다. 제한시간은 오 초입니다. 지금부터 선택해 주세요.",
-      "automatic_transcript": "한전 직원이 스웨터를 벗다가 전전기에 찌릿했다. 이때 전기를 공급한 곳은 한전이다. 왼손은 O, 오른손은 X입니다. 제한 시간은 5초입니다. 지금부터 선택해주세요.",
-      "similarity": 0.9850746268656716,
-      "duration_seconds": 17.14,
+      "text": "한전 직원이 스웨터를 벗다가 정전기에 찌릿했다. 이때 전기를 공급한 곳은 한전이다. 제한시간은 오 초입니다.",
+      "automatic_transcript": "한 전 직원이 스웨터를 벗다가 정전기에 찌릿했다 이때 전기를 공급한 곳은 한정이다. 제한시간은 5초입니다.",
+      "similarity": 0.9772727272727273,
+      "duration_seconds": 11.38,
       "sample_rate": 32000,
       "human_listening_review": "pending",
-      "sha256": "ea0f20c065e01742c41d0cdd44fca5fe0bf85af915cc14611015165f49214884",
-      "transcript_basis": "Final denoised WAV after removing spoken question number"
+      "sha256": "a4b63b879dcca8f52c66e797fe71c420fd49d4b92a6217f6ecfc9b09a5f06235",
+      "transcript_basis": "Individual synthesized sentence transcripts combined before denoising; question and time limit only"
     },
     {
       "key": "answer-10",
@@ -296,14 +296,14 @@
     {
       "key": "question-11",
       "filename": "question-11.wav",
-      "text": "로미오와 줄리엣은 처음 만난 날 키스를 했다. 왼손은 오, 오른손은 엑스입니다. 제한시간은 오 초입니다. 지금부터 선택해 주세요.",
-      "automatic_transcript": "로미오와 줄리엣은 처음 만난 날치스를 했다. 왼손은 5, 오른손은 X입니다. 제한시간은 5초입니다. 지금부터 선택해주세요.",
-      "similarity": 0.9803921568627451,
-      "duration_seconds": 12.04,
+      "text": "로미오와 줄리엣은 처음 만난 날 키스를 했다. 제한시간은 오 초입니다.",
+      "automatic_transcript": "로미오와 줄리엣은 처음 만난 나의 피스를 했다. 제한시간은 5초입니다.",
+      "similarity": 0.9122807017543859,
+      "duration_seconds": 6.86,
       "sample_rate": 32000,
       "human_listening_review": "pending",
-      "sha256": "edd7a50bc41a84e81b18db76d10677a1848a57b1e24ba97ca952e92133d24626",
-      "transcript_basis": "Final denoised WAV after removing spoken question number"
+      "sha256": "8d30a8f76b021f515bf3d02acc5890ec354eacd52380a7eb06b8187b1c5d8866",
+      "transcript_basis": "Individual synthesized sentence transcripts combined before denoising; question and time limit only"
     },
     {
       "key": "answer-11",
@@ -320,14 +320,14 @@
     {
       "key": "question-12",
       "filename": "question-12.wav",
-      "text": "한만춘 교수는 우리나라 최초의 전기공학 박사다. 왼손은 오, 오른손은 엑스입니다. 제한시간은 오 초입니다. 지금부터 선택해 주세요.",
-      "automatic_transcript": "한만층 교수는 우리나라 최초의 전기공학 박사다. 왼손은 O, 오른손은 X입니다. 제한시간은 5초입니다. 지금부터 선택해주세요.",
-      "similarity": 0.9811320754716981,
-      "duration_seconds": 14.5,
+      "text": "한만춘 교수는 우리나라 최초의 전기공학 박사다. 제한시간은 오 초입니다.",
+      "automatic_transcript": "한만천 교수는 우리나라 최초의 전기공학 박사다. 제한시간은 5초입니다.",
+      "similarity": 0.9666666666666667,
+      "duration_seconds": 8.74,
       "sample_rate": 32000,
       "human_listening_review": "pending",
-      "sha256": "9557f1b37fd054cdb84d65ab3cdd7d4dafde967575c7158b0b0cdbee67610776",
-      "transcript_basis": "Final denoised WAV after removing spoken question number"
+      "sha256": "4e3481f90618960cb7ab4a6735648f56473d7963518d78e8f5f413757b63f170",
+      "transcript_basis": "Individual synthesized sentence transcripts combined before denoising; question and time limit only"
     },
     {
       "key": "answer-12",
@@ -344,14 +344,14 @@
     {
       "key": "question-13",
       "filename": "question-13.wav",
-      "text": "어떤 것을 측정하고 숫자로 표현할 수 있다면, 그것에 대해 무언가 알고 있는 것이다. 이 말을 한 사람은 에디슨이다. 왼손은 오, 오른손은 엑스입니다. 제한시간은 오 초입니다. 지금부터 선택해 주세요.",
-      "automatic_transcript": "어떤 것을 측정하고 숫자로 표현할 수 있다면 그것에 대해 무언가 알고 있는 것이다. 이 말로 해를 한 사람은 A기슨이다. 왼손은 O, 오른손은 X입니다. 제한시간은 5초입니다. 지금부터 선택해주세요.",
-      "similarity": 0.9493670886075949,
-      "duration_seconds": 17.12,
+      "text": "어떤 것을 측정하고 숫자로 표현할 수 있다면, 그것에 대해 무언가 알고 있는 것이다. 이 말을 한 사람은 에디슨이다. 제한시간은 오 초입니다.",
+      "automatic_transcript": "어떤 것을 측정하고 숫자로 표현할 수 있다면 그것에 대해 무언가 알고 있는 것이다. 이 말을 한 사람은 에디슨이다. 제한시간은 5초입니다.",
+      "similarity": 1.0,
+      "duration_seconds": 13.8,
       "sample_rate": 32000,
       "human_listening_review": "pending",
-      "sha256": "8aeb297d61a60d3566a6baa0f913fd7f54b28cf5f7cb1155b5e1c27c166077fe",
-      "transcript_basis": "Final denoised WAV after removing spoken question number"
+      "sha256": "ff34a0cde1cd3a1d630282ac39a839d5c8bc354cc3b29dbdd3216baff7f2edd8",
+      "transcript_basis": "Individual synthesized sentence transcripts combined before denoising; question and time limit only"
     },
     {
       "key": "answer-13",
@@ -368,14 +368,14 @@
     {
       "key": "question-14",
       "filename": "question-14.wav",
-      "text": "로댕의 조각 생각하는 사람은 왼손으로 턱을 괴고 있다. 왼손은 오, 오른손은 엑스입니다. 제한시간은 오 초입니다. 지금부터 선택해 주세요.",
-      "automatic_transcript": "로댕의 조각 생각하는 사람은 왼손으로 턱을 대고 있다. 왼손은 오른손은 X입니다. 제한시간은 5초입니다. 지금부터 선택해 주세요.",
-      "similarity": 0.9724770642201835,
-      "duration_seconds": 11.98,
+      "text": "로댕의 조각 생각하는 사람은 왼손으로 턱을 괴고 있다. 제한시간은 오 초입니다.",
+      "automatic_transcript": "로댕이 조각 생각하는 사람은 왼손으로 턱을 괴고 있다. 제한시간은 5초입니다.",
+      "similarity": 0.96875,
+      "duration_seconds": 9.72,
       "sample_rate": 32000,
       "human_listening_review": "pending",
-      "sha256": "439b06631a20f1f2a337ad13972525162a1df829d11196fe5cb15d927783aba3",
-      "transcript_basis": "Final denoised WAV after removing spoken question number"
+      "sha256": "404101704c2bc9e4e23a9af6635f6bb4968fc24f9d5bdb6bf2e3322fd919d6a1",
+      "transcript_basis": "Individual synthesized sentence transcripts combined before denoising; question and time limit only"
     },
     {
       "key": "answer-14",
@@ -392,14 +392,14 @@
     {
       "key": "question-15",
       "filename": "question-15.wav",
-      "text": "이천이십오 년 말 기준, 우리나라의 태양광 발전설비 용량은 원자력 발전설비 용량보다 크다. 왼손은 오, 오른손은 엑스입니다. 제한시간은 오 초입니다. 지금부터 선택해 주세요.",
-      "automatic_transcript": "2025 연말 기준 우리나라의 태양광 발전설비 용량은 원자력 발전설비 용량보다 크다. 왼손은 O, 오른손은 X입니다. 제한시간은 5초입니다. 지금부터 선택해주세요.",
-      "similarity": 0.9857142857142858,
-      "duration_seconds": 15.7,
+      "text": "이천이십오 년 말 기준, 우리나라의 태양광 발전설비 용량은 원자력 발전설비 용량보다 크다. 제한시간은 오 초입니다.",
+      "automatic_transcript": "2025년 말 기준 우리나라의 태양광 발전설비 용량은 원자력 발전설비 용량보다 크다. 제한시간은 5초입니다.",
+      "similarity": 1.0,
+      "duration_seconds": 12.52,
       "sample_rate": 32000,
       "human_listening_review": "pending",
-      "sha256": "2cb13b04698fe2ca40c7e5ad752fa03b5832f5f625f2cb9dc50539a158a86898",
-      "transcript_basis": "Final denoised WAV after removing spoken question number"
+      "sha256": "3e7bebb1975c10a8fe9230b2727e5c07198d713cd3ecaa4871893c2eb9a69426",
+      "transcript_basis": "Individual synthesized sentence transcripts combined before denoising; question and time limit only"
     },
     {
       "key": "answer-15",
@@ -416,14 +416,14 @@
     {
       "key": "question-16",
       "filename": "question-16.wav",
-      "text": "에이아이가 들어 있는 컴퓨터를 깊은 물속에 넣으면 어떻게 될까요? 왼손은 딥러닝, 오른손은 침수입니다. 제한시간은 오 초입니다. 지금부터 선택해 주세요.",
-      "automatic_transcript": "AI가 들어있는 컴퓨터를 깊은 물속에 넣으면 어떻게 될까요? 왼손은 딥러닝, 오른손은 침수입니다. 제한시간은 5초입니다. 지금부터 선택해주세요.",
+      "text": "에이아이가 들어 있는 컴퓨터를 깊은 물속에 넣으면 어떻게 될까요? 제한시간은 오 초입니다.",
+      "automatic_transcript": "AI가 들어있는 컴퓨터를 깊은 물속에 넣으면 어떻게 될까요? 제한시간은 5초입니다.",
       "similarity": 1.0,
-      "duration_seconds": 12.4,
+      "duration_seconds": 8.0,
       "sample_rate": 32000,
       "human_listening_review": "pending",
-      "sha256": "cacd9d489a48ebd1e4a6f7c74eec3c8d097bbdea4e14a9def449310ff0950630",
-      "transcript_basis": "Final denoised WAV after removing spoken question number"
+      "sha256": "1db6ecfc3e6e5254c764e4232bcfb422c628f443420947c8914652a77c774c39",
+      "transcript_basis": "Individual synthesized sentence transcripts combined before denoising; question and time limit only"
     },
     {
       "key": "answer-16",
@@ -440,14 +440,14 @@
     {
       "key": "question-17",
       "filename": "question-17.wav",
-      "text": "이천이십육 년 구 월 공고된 삼 차 이에스에스 중앙계약시장의 공고 물량은 총 천백팔십 메가와트이다. 왼손은 오, 오른손은 엑스입니다. 제한시간은 오 초입니다. 지금부터 선택해 주세요.",
-      "automatic_transcript": "2022년 9월 공고된 3차 ESS 중앙계약 시장의 공고 물량은 총 1180MW이다. 왼손은 오른손은 X입니다. 제한시간은 5초입니다. 지금부터 선택해주세요.",
-      "similarity": 0.9795918367346939,
-      "duration_seconds": 16.3,
+      "text": "이천이십육 년 구 월 공고된 삼 차 이에스에스 중앙계약시장의 공고 물량은 총 천백팔십 메가와트이다. 제한시간은 오 초입니다.",
+      "automatic_transcript": "2026년 9월 공고된 3차 ESS 중앙계약 시장의 공고 물량은 총 1180MW이다. 제한시간은 5초입니다.",
+      "similarity": 1.0,
+      "duration_seconds": 12.48,
       "sample_rate": 32000,
       "human_listening_review": "pending",
-      "sha256": "551894a66c1a95f525a33f01bfd786d0be0fd28dc51ad573168185eb469bd845",
-      "transcript_basis": "Final denoised WAV after removing spoken question number"
+      "sha256": "cb3c9f208fe9f18d9ac38b6555bc1c3503f50627ea7b70be8b619db1d263b867",
+      "transcript_basis": "Individual synthesized sentence transcripts combined before denoising; question and time limit only"
     },
     {
       "key": "answer-17",
@@ -464,14 +464,14 @@
     {
       "key": "question-18",
       "filename": "question-18.wav",
-      "text": "이천이십육 년 현재 대한전기학회 회장님은 누구일까요? 왼손은 박종배, 오른손은 장길수입니다. 제한시간은 오 초입니다. 지금부터 선택해 주세요.",
-      "automatic_transcript": "2026년 현재 대안정계학회 회장님은 누구일까요? 왼손은 박종배, 오른손은 장길수입니다 제한시간은 5초입니다 지금부터 선택해주세요",
-      "similarity": 0.9491525423728814,
-      "duration_seconds": 11.72,
+      "text": "이천이십육 년 현재 대한전기학회 회장님은 누구일까요? 제한시간은 오 초입니다.",
+      "automatic_transcript": "2026년 현재 대한전기학회 회장님은 누구일까요? 제한시간은 5초입니다.",
+      "similarity": 1.0,
+      "duration_seconds": 8.44,
       "sample_rate": 32000,
       "human_listening_review": "pending",
-      "sha256": "ed4fc98b9bb4c2ed04720ce1644b51354ddf96798ab7760491c07d35e053cf8d",
-      "transcript_basis": "Final denoised WAV after removing spoken question number"
+      "sha256": "e5e6a072d0ca5e26b745c8af9d238bf81a79d042180312deb8fc4c91853bd530",
+      "transcript_basis": "Individual synthesized sentence transcripts combined before denoising; question and time limit only"
     },
     {
       "key": "answer-18",

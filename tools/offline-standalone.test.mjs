@@ -71,6 +71,8 @@ test('published 18-question audio manifest matches every executable cue', async 
   assert.equal(manifest.cues.length, 38);
   for (const cue of manifest.cues.filter(c => c.key.startsWith('question-'))) {
     assert.doesNotMatch(cue.text, /^(?:[가-힣]+|\d+)\s*번 문제입니다/);
+    assert.doesNotMatch(cue.text, /왼손은|오른손은|선택해\s*주세요/);
+    assert.match(cue.text, /제한시간은 (?:십|오) 초입니다\.$/);
   }
   assert.deepEqual(JSON.parse(h.run('JSON.stringify(cueManifest())')), manifest);
   // Import the same manifest via the actual manifest validation path.
@@ -99,7 +101,9 @@ test('published 18-question audio manifest matches every executable cue', async 
 
 test('automatic question narration begins directly with the question text', () => {
   const h = harness();
-  assert.ok(h.run("script('question')").startsWith(fixture[0].text));
+  assert.equal(h.run("script('question')"), `${fixture[0].text} 제한시간은 5초입니다.`);
+  h.run('questions[0].text="왼손으로 턱을 괴고 있다.";left="X"');
+  assert.equal(h.run("script('question')"), '왼손으로 턱을 괴고 있다. 제한시간은 5초입니다.');
   assert.doesNotMatch(h.run("script('question')"), /번 문제입니다/);
 });
 
@@ -257,11 +261,11 @@ test('stop during narration invalidates stale end and manual continuation remain
   assert.equal(h.state().deadline, 15000);
 });
 
-test('swapped hands render and narrate custom labels consistently', () => {
+test('swapped hands update displayed labels without adding spoken directions', () => {
   const h = harness();
   h.element('hands').onchange({ target: { value: 'X' } });
   h.run('readQuestion(0)');
-  assert.match(h.media.current.text, /왼손은 전기, 오른손은 빛/);
+  assert.equal(h.media.current.text, '첫 문제 제한시간은 5초입니다.');
   assert.match(h.stage(), /전기<\/b><span>왼손/);
   assert.match(h.stage(), /빛<\/b><span>오른손/);
 });
@@ -430,10 +434,10 @@ test('stale manifest and unrecognized filenames are never attached to another cu
   assert.match(h.element('audio-import-result').textContent, /파일명 또는 문제 번호/);
 });
 
-test('changing hands invalidates recorded automatic script without silent TTS fallback', async () => {
+test('changing question text invalidates recorded automatic script without silent TTS fallback', async () => {
   const h = harness();
   await h.run('importAudioFiles([{name:"question-01.wav"}],true)');
-  h.run('left="X";readQuestion(0)');
+  h.run('questions[0].text="수정한 문제";readQuestion(0)');
   assert.equal(h.media.history.length, 0);
   assert.equal(h.state().waiting, true);
   assert.equal(h.state().deadline, null);
