@@ -253,7 +253,7 @@ $('editor').oninput=e=>{const el=e.target;if(el.dataset.key)draft[Number(el.data
 $('editor').onclick=e=>{if(e.target.dataset.remove!==undefined){draft.splice(Number(e.target.dataset.remove),1);editor();}};
 $('add').onclick=()=>{draft.push({text:'',choiceO:'O',choiceX:'X',answer:'O',seconds:5,explanation:''});editor();};
 $('apply').onclick=()=>{try{const next=validate(draft);if((phase==='question'||phase==='answer')&&!confirm('진행을 멈추고 편집한 문제를 적용할까요?'))return;stopShow();questions=next;draft=structuredClone(questions);selectQuestion(0);save();options();editor();render();status(questions.length+'개 문제를 적용했습니다.');}catch(e){status(e.message);}};
-$('event-questions').onclick=()=>{draft=validate(DEFAULTS);editor();status('행사 16문제를 편집 창에 불러왔습니다. “문제 적용”을 누르면 진행에 반영됩니다.');};
+$('event-questions').onclick=()=>{draft=validate(DEFAULTS);editor();status('행사 '+DEFAULTS.length+'문제를 편집 창에 불러왔습니다. “문제 적용”을 누르면 진행에 반영됩니다.');};
 $('import').onchange=async e=>{const file=e.target.files[0];if(!file)return;try{const text=await file.text();draft=file.name.toLowerCase().endsWith('.json')?validate(JSON.parse(text)):csv(text);editor();status('불러왔습니다. 검토 후 “문제 적용”을 누르세요.');}catch(err){status(err.message);}e.target.value='';};
 $('backup').onclick=()=>download(JSON.stringify(questions,null,2),'OX-questions.json','application/json');
 $('export-scripts').onclick=()=>download(cueManifest().cues.map(c=>'['+c.filename+' 또는 '+c.key+'.mp3]\n'+c.text).join('\n\n'),'OX-cohost-scripts.txt','text/plain;charset=utf-8');

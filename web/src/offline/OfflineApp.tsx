@@ -67,8 +67,8 @@ export function OfflineApp({ projection }: { projection: boolean }) {
       <p>현재 문제: 왼손 <b>{choiceLabel(q, state.left)}</b> · 오른손 <b>{choiceLabel(q, right)}</b></p>
     </section><section className="off-preview"><h2>프로젝션 미리보기</h2>{display}</section></div>
     <section className="off-panel off-editor"><h2>문제 편집</h2><p>수정 후 적용하면 준비 화면으로 돌아갑니다. 보기 1·보기 2에 ‘빛 / 전기’처럼 문구를 입력할 수 있습니다. 문제는 이 브라우저에 자동 저장됩니다.</p>
-      <p>행사 문제집은 1~5번 10초, 6번부터 5초이며 낭독 후 타이머를 시작합니다. 후보·제안 문항과 진행 메모는 관리자에게만 표시됩니다.</p>
-      <div className="off-buttons"><label>CSV / JSON 불러오기<input type="file" accept=".csv,.json" onChange={e => { void importFile(e.target.files?.[0]); e.target.value = ''; }} /></label><button onClick={() => { setDraft(structuredClone(eventQuestions)); setMessage('행사 문제 16개를 편집란에 불러왔습니다. 후보와 문안을 검토한 뒤 “문제 적용”을 누르세요.'); }}>행사 16문제 불러오기</button><button onClick={backup}>적용된 문제 백업</button></div>
+      <p>행사 문제집은 1~6번 10초, 7번부터 5초이며 낭독 후 타이머를 시작합니다. 노래는 먼저 부른 뒤 문제를 출제하세요. 후보·제안 문항과 진행 메모는 관리자에게만 표시됩니다.</p>
+      <div className="off-buttons"><label>CSV / JSON 불러오기<input type="file" accept=".csv,.json" onChange={e => { void importFile(e.target.files?.[0]); e.target.value = ''; }} /></label><button onClick={() => { setDraft(structuredClone(eventQuestions)); setMessage('행사 문제 '+eventQuestions.length+'개를 편집란에 불러왔습니다. 후보와 문안을 검토한 뒤 “문제 적용”을 누르세요.'); }}>행사 {eventQuestions.length}문제 불러오기</button><button onClick={backup}>적용된 문제 백업</button></div>
       <p>CSV: 문제,선택지1,선택지2,정답,제한시간,해설 · 정답은 O/X, A/B 또는 보기 문구를 사용할 수 있습니다. 선택지 열이 없으면 O/X입니다.</p>
       {draft.map((question, i) => <div className="off-edit-row" key={i}>
         <div className="off-edit-heading"><b>{i + 1}번{question.topic ? ` · ${question.topic}` : ''}</b>{question.review && <span className="off-review-badge">원문: {question.review}</span>}<button disabled={draft.length <= 1} onClick={() => setDraft(draft.filter((_, j) => i !== j))}>삭제</button></div>
