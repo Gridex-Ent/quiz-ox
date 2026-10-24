@@ -1,198 +1,122 @@
 [
   {
-    "id": "catalog-electricity-001",
-    "text": "전류의 SI 단위는 암페어(A)이다.",
-    "category": "전기",
-    "choiceO": "O",
-    "choiceX": "X",
-    "answer": "O",
-    "seconds": 10,
-    "explanation": "암페어(A)는 전류의 SI 기본단위입니다.",
-    "source": "NIST, SI 기본단위 표",
-    "sources": [
-      "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes"
-    ]
-  },
-  {
-    "id": "catalog-electricity-002",
-    "text": "전압의 SI 단위는 옴(Ω)이다.",
-    "category": "전기",
+    "id": "catalog-science-101",
+    "text": "진공에서 같은 높이의 두 물체를 동시에 놓으면 더 무거운 물체가 먼저 떨어진다.",
+    "category": "과학",
+    "difficulty": "중",
     "choiceO": "O",
     "choiceX": "X",
     "answer": "X",
     "seconds": 10,
-    "explanation": "전압은 볼트(V), 전기저항은 옴(Ω)으로 나타냅니다.",
-    "source": "NIST, SI 유도단위 표",
+    "explanation": "공기저항을 없앤 같은 중력장에서는 질량과 관계없이 낙하 가속도가 같습니다.",
+    "source": "NASA, Apollo 15 망치와 깃털 낙하 실험",
     "sources": [
-      "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes"
+      "https://science.nasa.gov/resource/the-apollo-15-hammer-feather-drop-2/"
     ]
   },
   {
-    "id": "catalog-electricity-003",
-    "text": "전기저항의 SI 단위는 옴(Ω)이다.",
-    "category": "전기",
+    "id": "catalog-science-102",
+    "text": "일반적인 대기압에서 순수한 물은 0℃일 때보다 약 4℃일 때 밀도가 높다.",
+    "category": "과학",
+    "difficulty": "중",
     "choiceO": "O",
     "choiceX": "X",
     "answer": "O",
     "seconds": 10,
-    "explanation": "전기저항의 SI 단위는 옴이며 기호는 Ω입니다.",
-    "source": "NIST, SI 유도단위 표",
+    "explanation": "순수한 물은 약 4℃에서 밀도가 최대가 되며, 얼기 직전보다 조금 더 조밀합니다.",
+    "source": "USGS, Water Density",
     "sources": [
-      "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes"
+      "https://www.usgs.gov/water-science-school/science/water-density"
     ]
   },
   {
-    "id": "catalog-electricity-004",
-    "text": "와트(W)는 전력의 단위이다.",
-    "category": "전기",
+    "id": "catalog-science-103",
+    "text": "다이아몬드와 흑연은 모두 탄소로 이루어진 물질이다.",
+    "category": "과학",
+    "difficulty": "중",
     "choiceO": "O",
     "choiceX": "X",
     "answer": "O",
     "seconds": 10,
-    "explanation": "와트는 단위 시간당 에너지를 나타내는 전력의 단위입니다.",
-    "source": "NIST, SI 유도단위 표",
+    "explanation": "탄소 원자의 결합 구조가 달라 단단한 다이아몬드와 무른 흑연의 성질이 달라집니다.",
+    "source": "Royal Society of Chemistry, Carbon",
     "sources": [
-      "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes"
+      "https://periodic-table.rsc.org/element/6/carbon"
     ]
   },
   {
-    "id": "catalog-electricity-005",
-    "text": "1킬로와트(kW)는 1,000와트(W)이다.",
-    "category": "전기",
+    "id": "catalog-science-104",
+    "text": "섭씨와 화씨 온도의 숫자가 같아지는 온도는 영하 40도이다.",
+    "category": "과학",
+    "difficulty": "중",
     "choiceO": "O",
     "choiceX": "X",
     "answer": "O",
     "seconds": 10,
-    "explanation": "접두어 킬로(k)는 1,000배를 뜻하므로 1kW는 1,000W입니다.",
-    "source": "NIST, SI 접두어 표",
+    "explanation": "화씨 F=1.8C+32에 F=C를 넣으면 C=-40입니다. -40℃와 -40℉는 같은 온도입니다.",
+    "source": "NIST, Temperature scales; 변환식 직접 계산",
     "sources": [
-      "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes"
+      "https://www.nist.gov/pml/owm/si-units-temperature"
     ]
   },
   {
-    "id": "catalog-electricity-006",
-    "text": "킬로와트시(kWh)는 전력의 크기만 나타내는 단위이다.",
-    "category": "전기",
-    "choiceO": "O",
-    "choiceX": "X",
-    "answer": "X",
-    "seconds": 10,
-    "explanation": "kWh는 전력에 시간을 곱한 전기에너지의 단위입니다. 전력은 kW 등으로 나타냅니다.",
-    "source": "NIST, 에너지 단위 변환표",
-    "sources": [
-      "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b9"
-    ]
-  },
-  {
-    "id": "catalog-electricity-007",
-    "text": "헤르츠(Hz)는 전하량의 SI 단위이다.",
-    "category": "전기",
-    "choiceO": "O",
-    "choiceX": "X",
-    "answer": "X",
-    "seconds": 10,
-    "explanation": "헤르츠는 주파수 단위이며 전하량 단위는 쿨롱(C)입니다.",
-    "source": "NIST, SI 유도단위 표",
-    "sources": [
-      "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes"
-    ]
-  },
-  {
-    "id": "catalog-science-001",
-    "text": "질량의 SI 기본단위는 킬로그램(kg)이다.",
+    "id": "catalog-science-105",
+    "text": "오래된 창유리의 아래쪽이 두꺼운 것은 상온에서 유리가 흘러내렸기 때문이다.",
     "category": "과학",
+    "difficulty": "상",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "상온의 창유리는 관찰 가능한 시간 규모에서 흘러내리지 않습니다. 오래된 판유리의 두께 차이는 제작 과정에서 생겼습니다.",
+    "source": "Corning Museum of Glass, Does glass continue to flow?",
+    "sources": [
+      "https://info.cmog.org/node/631"
+    ]
+  },
+  {
+    "id": "catalog-science-106",
+    "text": "pH가 1만큼 낮아지면 수소 이온 활동도는 약 10배가 된다.",
+    "category": "과학",
+    "difficulty": "상",
     "choiceO": "O",
     "choiceX": "X",
     "answer": "O",
     "seconds": 10,
-    "explanation": "질량의 SI 기본단위는 킬로그램입니다.",
-    "source": "NIST, SI 기본단위 표",
+    "explanation": "pH는 수소 이온 활동도의 음의 상용로그입니다. pH 6에서 5로 낮아지면 약 10배가 됩니다.",
+    "source": "USGS, pH and Water",
     "sources": [
-      "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes"
+      "https://www.usgs.gov/water-science-school/science/ph-and-water"
     ]
   },
   {
-    "id": "catalog-science-002",
-    "text": "열역학적 온도의 SI 기본단위는 켈빈(K)이다.",
+    "id": "catalog-science-107",
+    "text": "일반적인 원자의 전자는 양성자와 함께 원자핵 안에 들어 있다.",
     "category": "과학",
-    "choiceO": "O",
-    "choiceX": "X",
-    "answer": "O",
-    "seconds": 10,
-    "explanation": "열역학적 온도는 SI에서 켈빈으로 나타냅니다.",
-    "source": "NIST, SI 기본단위 표",
-    "sources": [
-      "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes"
-    ]
-  },
-  {
-    "id": "catalog-science-003",
-    "text": "뉴턴(N)은 힘의 SI 단위이다.",
-    "category": "과학",
-    "choiceO": "O",
-    "choiceX": "X",
-    "answer": "O",
-    "seconds": 10,
-    "explanation": "힘의 SI 단위는 뉴턴이며 1N은 1kg·m/s²입니다.",
-    "source": "NIST, SI 유도단위 표",
-    "sources": [
-      "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes"
-    ]
-  },
-  {
-    "id": "catalog-science-004",
-    "text": "초(s)는 길이의 SI 기본단위이다.",
-    "category": "과학",
+    "difficulty": "중",
     "choiceO": "O",
     "choiceX": "X",
     "answer": "X",
     "seconds": 10,
-    "explanation": "초는 시간의 기본단위이며 길이의 기본단위는 미터(m)입니다.",
-    "source": "NIST, SI 기본단위 표",
+    "explanation": "원자핵에는 양성자와 중성자가 있고, 전자는 원자핵 바깥의 영역에 존재합니다.",
+    "source": "U.S. Nuclear Regulatory Commission, Atom",
     "sources": [
-      "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes"
+      "https://www.nrc.gov/education-regulatory-research/glossary/atom"
     ]
   },
   {
-    "id": "catalog-science-005",
-    "text": "빛은 진공에서 전파될 수 없다.",
+    "id": "catalog-science-108",
+    "text": "바닷물은 같은 기압의 순수한 물보다 높은 온도에서 얼기 시작한다.",
     "category": "과학",
+    "difficulty": "상",
     "choiceO": "O",
     "choiceX": "X",
     "answer": "X",
     "seconds": 10,
-    "explanation": "빛은 전자기파이므로 공기 같은 물질이 없어도 진공에서 전파됩니다.",
-    "source": "NASA, 빛의 전파와 진공",
+    "explanation": "바닷물의 염분은 어는점을 낮춥니다. 보통 바닷물은 약 -1.9℃, 순수한 물은 약 0℃에서 얼기 시작합니다.",
+    "source": "NOAA, Can the ocean freeze?",
     "sources": [
-      "https://science.nasa.gov/big-idea-2-3-intermediate-level-guiding-question/"
-    ]
-  },
-  {
-    "id": "catalog-science-006",
-    "text": "물 분자의 화학식은 CO₂이다.",
-    "category": "과학",
-    "choiceO": "O",
-    "choiceX": "X",
-    "answer": "X",
-    "seconds": 10,
-    "explanation": "물은 수소 원자 두 개와 산소 원자 한 개로 이루어진 H₂O입니다.",
-    "source": "NIH PubChem, Water",
-    "sources": [
-      "https://pubchem.ncbi.nlm.nih.gov/compound/water"
-    ]
-  },
-  {
-    "id": "catalog-science-007",
-    "text": "금의 원소 기호는 Ag이다.",
-    "category": "과학",
-    "choiceO": "O",
-    "choiceX": "X",
-    "answer": "X",
-    "seconds": 10,
-    "explanation": "금의 원소 기호는 Au입니다. Ag는 은의 기호입니다.",
-    "source": "Royal Society of Chemistry, Gold",
-    "sources": [
-      "https://periodic-table.rsc.org/element/79/Gold"
+      "https://oceanservice.noaa.gov/facts/oceanfreeze.html"
     ]
   },
   {
@@ -207,7 +131,8 @@
     "source": "NOAA, 산호의 분류",
     "sources": [
       "https://oceanservice.noaa.gov/facts/coral.html"
-    ]
+    ],
+    "difficulty": "하"
   },
   {
     "id": "catalog-nature-002",
@@ -221,7 +146,8 @@
     "source": "NOAA, 가장 큰 어류",
     "sources": [
       "https://oceanservice.noaa.gov/facts/bigfish.html"
-    ]
+    ],
+    "difficulty": "하"
   },
   {
     "id": "catalog-nature-003",
@@ -235,21 +161,8 @@
     "source": "NOAA, 해마의 번식",
     "sources": [
       "https://oceanservice.noaa.gov/facts/seahorse.html"
-    ]
-  },
-  {
-    "id": "catalog-nature-004",
-    "text": "바다거북은 포유류이다.",
-    "category": "자연",
-    "choiceO": "O",
-    "choiceX": "X",
-    "answer": "X",
-    "seconds": 10,
-    "explanation": "바다거북은 바다에서 생활하는 파충류입니다.",
-    "source": "NOAA Fisheries, Sea Turtles",
-    "sources": [
-      "https://www.fisheries.noaa.gov/sea-turtles"
-    ]
+    ],
+    "difficulty": "하"
   },
   {
     "id": "catalog-nature-005",
@@ -263,21 +176,8 @@
     "source": "NOAA Fisheries, 상어의 특징",
     "sources": [
       "https://www.fisheries.noaa.gov/feature-story/12-shark-facts-may-surprise-you"
-    ]
-  },
-  {
-    "id": "catalog-nature-006",
-    "text": "돌고래는 아가미로 물속의 산소를 직접 호흡한다.",
-    "category": "자연",
-    "choiceO": "O",
-    "choiceX": "X",
-    "answer": "X",
-    "seconds": 10,
-    "explanation": "돌고래는 포유류여서 폐로 공기를 호흡하며 수면으로 올라와 숨을 쉽니다.",
-    "source": "NOAA, 해양 포유류의 호흡",
-    "sources": [
-      "https://repository.library.noaa.gov/view/noaa/37757/noaa_37757_DS1.pdf"
-    ]
+    ],
+    "difficulty": "중"
   },
   {
     "id": "catalog-nature-007",
@@ -291,202 +191,262 @@
     "source": "NOAA Fisheries, Blue Whale",
     "sources": [
       "https://www.fisheries.noaa.gov/species/blue-whale"
-    ]
+    ],
+    "difficulty": "하"
   },
   {
-    "id": "catalog-space-001",
-    "text": "목성은 태양계의 행성 중 가장 크다.",
-    "category": "우주",
+    "id": "catalog-nature-101",
+    "text": "문어의 피가 푸른빛을 띠는 것은 산소 운반 색소에 구리가 들어 있기 때문이다.",
+    "category": "자연",
+    "difficulty": "상",
     "choiceO": "O",
     "choiceX": "X",
     "answer": "O",
     "seconds": 10,
-    "explanation": "목성은 태양계에서 가장 큰 행성입니다.",
-    "source": "NASA, 태양계 행성 소개",
+    "explanation": "문어는 구리를 포함한 헤모시아닌으로 산소를 운반합니다. 사람의 철 기반 헤모글로빈과 다릅니다.",
+    "source": "Smithsonian Ocean, Cephalopods circulatory system",
     "sources": [
-      "https://science.nasa.gov/solar-system/planets/"
+      "https://ocean.si.edu/ocean-life/invertebrates/octopuses-squids-and-relatives"
     ]
   },
   {
-    "id": "catalog-space-002",
-    "text": "토성은 태양에서 여섯 번째에 있는 행성이다.",
+    "id": "catalog-nature-102",
+    "text": "꿀벌 집단에서 꽃꿀을 모으는 일벌은 일반적으로 수컷이다.",
+    "category": "자연",
+    "difficulty": "중",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "일벌은 암컷입니다. 수컷인 수벌은 일벌과 역할이 다릅니다.",
+    "source": "FDA, Helpful Honey Bees",
+    "sources": [
+      "https://www.fda.gov/animal-veterinary/animal-health-literacy/helping-agricultures-helpful-honey-bees"
+    ]
+  },
+  {
+    "id": "catalog-nature-103",
+    "text": "박쥐는 반향정위를 사용하므로 눈으로는 전혀 볼 수 없다.",
+    "category": "자연",
+    "difficulty": "중",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "박쥐는 눈으로 볼 수 있으며 많은 종이 어둠에서도 민감한 시각을 이용합니다.",
+    "source": "USGS, Are bats blind?",
+    "sources": [
+      "https://www.usgs.gov/faqs/are-bats-blind?items_per_page=6&page=1&qt-news_science_products=0"
+    ]
+  },
+  {
+    "id": "catalog-space-101",
+    "text": "금성이 한 바퀴 자전하는 데 걸리는 시간은 태양을 한 바퀴 도는 시간보다 길다.",
     "category": "우주",
+    "difficulty": "상",
     "choiceO": "O",
     "choiceX": "X",
     "answer": "O",
     "seconds": 10,
-    "explanation": "태양에서 가까운 순서는 수성·금성·지구·화성·목성·토성입니다.",
-    "source": "NASA, 태양계 행성 순서",
+    "explanation": "금성의 자전 주기는 지구의 약 243일, 공전 주기는 약 225일입니다. 여기서 하루는 태양일이 아닌 자전 주기입니다.",
+    "source": "NASA, Venus Facts",
     "sources": [
-      "https://science.nasa.gov/solar-system/planets/"
+      "https://science.nasa.gov/venus/venus-facts/"
     ]
   },
   {
-    "id": "catalog-space-003",
-    "text": "수성·금성·지구·화성은 모두 암석형 행성이다.",
+    "id": "catalog-space-102",
+    "text": "수성은 태양에 가장 가까우므로 평균 표면 온도도 금성보다 높다.",
     "category": "우주",
+    "difficulty": "중",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "두꺼운 이산화탄소 대기의 온실효과 때문에 금성이 수성보다 표면 온도가 높습니다.",
+    "source": "NASA, Venus Facts",
+    "sources": [
+      "https://science.nasa.gov/venus/venus-facts/"
+    ]
+  },
+  {
+    "id": "catalog-space-103",
+    "text": "달의 뒷면은 햇빛이 전혀 닿지 않는 면이다.",
+    "category": "우주",
+    "difficulty": "중",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "달의 뒷면에도 낮과 밤이 있습니다. 지구에서 보이지 않는 면이라는 뜻이지 항상 어두운 면이 아닙니다.",
+    "source": "NASA, Moon Facts",
+    "sources": [
+      "https://science.nasa.gov/moon/facts/"
+    ]
+  },
+  {
+    "id": "catalog-space-104",
+    "text": "태양계에서 고리가 있는 행성은 토성뿐이다.",
+    "category": "우주",
+    "difficulty": "중",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "목성·천왕성·해왕성에도 고리가 있습니다. 토성의 고리가 특히 눈에 잘 띕니다.",
+    "source": "NASA, The Solar System — Jovian rings",
+    "sources": [
+      "https://science.nasa.gov/learn/basics-of-space-flight/chapter1-2/"
+    ]
+  },
+  {
+    "id": "catalog-space-105",
+    "text": "태양계의 주 소행성대는 목성과 토성 사이에 있다.",
+    "category": "우주",
+    "difficulty": "중",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "주 소행성대는 화성과 목성 사이에 있습니다.",
+    "source": "NASA, Asteroid Facts",
+    "sources": [
+      "https://science.nasa.gov/solar-system/asteroids/facts/"
+    ]
+  },
+  {
+    "id": "catalog-space-106",
+    "text": "북극성은 지구에서 보는 밤하늘의 별 중 가장 밝다.",
+    "category": "우주",
+    "difficulty": "상",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "북극성은 북쪽을 찾는 데 유용하지만 밤하늘에서 가장 밝은 별은 아닙니다.",
+    "source": "NASA, What is the North Star?",
+    "sources": [
+      "https://science.nasa.gov/solar-system/what-is-the-north-star-and-how-do-you-find-it/"
+    ]
+  },
+  {
+    "id": "catalog-space-107",
+    "text": "태양은 태양계 전체 질량의 99% 이상을 차지한다.",
+    "category": "우주",
+    "difficulty": "상",
     "choiceO": "O",
     "choiceX": "X",
     "answer": "O",
     "seconds": 10,
-    "explanation": "태양에 가까운 이 네 행성은 암석과 금속을 주로 가진 지구형 행성입니다.",
-    "source": "NASA, Solar System Facts",
+    "explanation": "태양의 질량은 태양계 전체 질량의 약 99.8%입니다.",
+    "source": "NASA, Sun Facts",
     "sources": [
-      "https://science.nasa.gov/solar-system/solar-system-facts/"
+      "https://science.nasa.gov/sun/facts/"
     ]
   },
   {
-    "id": "catalog-space-004",
-    "text": "지구는 태양에서 네 번째에 있는 행성이다.",
-    "category": "우주",
-    "choiceO": "O",
-    "choiceX": "X",
-    "answer": "X",
-    "seconds": 10,
-    "explanation": "지구는 세 번째 행성이며 네 번째는 화성입니다.",
-    "source": "NASA, 태양계 행성 순서",
-    "sources": [
-      "https://science.nasa.gov/solar-system/planets/"
-    ]
-  },
-  {
-    "id": "catalog-space-005",
-    "text": "태양은 태양계의 행성 중 하나이다.",
-    "category": "우주",
-    "choiceO": "O",
-    "choiceX": "X",
-    "answer": "X",
-    "seconds": 10,
-    "explanation": "태양은 스스로 에너지를 내는 별, 즉 항성입니다. 태양계의 행성이 아닙니다.",
-    "source": "NASA, Solar System Facts",
-    "sources": [
-      "https://science.nasa.gov/solar-system/solar-system-facts/"
-    ]
-  },
-  {
-    "id": "catalog-space-006",
-    "text": "화성은 지구와 태양 사이에 있는 궤도를 돈다.",
-    "category": "우주",
-    "choiceO": "O",
-    "choiceX": "X",
-    "answer": "X",
-    "seconds": 10,
-    "explanation": "화성은 지구보다 태양에서 더 먼 궤도를 돕니다.",
-    "source": "NASA, 태양계 행성 순서",
-    "sources": [
-      "https://science.nasa.gov/solar-system/planets/"
-    ]
-  },
-  {
-    "id": "catalog-space-007",
-    "text": "천왕성은 수성과 금성 사이에 있는 행성이다.",
-    "category": "우주",
-    "choiceO": "O",
-    "choiceX": "X",
-    "answer": "X",
-    "seconds": 10,
-    "explanation": "천왕성은 태양에서 일곱 번째 행성으로 토성보다 바깥쪽에 있습니다.",
-    "source": "NASA, 태양계 행성 순서",
-    "sources": [
-      "https://science.nasa.gov/solar-system/planets/"
-    ]
-  },
-  {
-    "id": "catalog-geography-001",
-    "text": "태평양은 지구의 대양 중 면적이 가장 넓다.",
+    "id": "catalog-geography-101",
+    "text": "지구 담수의 절반 이상은 강과 호수에 있다.",
     "category": "지리",
+    "difficulty": "중",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "담수의 약 68.7%는 빙하와 만년설에 저장되어 있습니다. 강과 호수에 있는 담수는 그보다 훨씬 적습니다.",
+    "source": "NOAA, Water Cycle — fresh water storage",
+    "sources": [
+      "https://www.noaa.gov/education/resource-collections/freshwater/water-cycle"
+    ]
+  },
+  {
+    "id": "catalog-geography-102",
+    "text": "남극은 강수량이 적어 사막으로 분류된다.",
+    "category": "지리",
+    "difficulty": "중",
     "choiceO": "O",
     "choiceX": "X",
     "answer": "O",
     "seconds": 10,
-    "explanation": "태평양은 대서양과 인도양보다 넓은, 지구에서 가장 큰 대양입니다.",
-    "source": "NOAA, 대양별 면적",
+    "explanation": "사막은 더위가 아니라 적은 강수량으로 구분합니다. 남극은 극지 사막입니다.",
+    "source": "Geoscience Australia, Deserts",
     "sources": [
-      "https://www.noaa.gov/jetstream/ocean"
+      "https://www.ga.gov.au/scientific-topics/national-location-information/landforms/deserts"
     ]
   },
   {
-    "id": "catalog-geography-002",
-    "text": "북극해는 지구의 대양 중 면적이 가장 넓다.",
+    "id": "catalog-geography-103",
+    "text": "지구 중심에서 가장 먼 산 정상은 에베레스트이다.",
     "category": "지리",
+    "difficulty": "상",
     "choiceO": "O",
     "choiceX": "X",
     "answer": "X",
     "seconds": 10,
-    "explanation": "북극해는 주요 대양 중 가장 작으며 가장 넓은 대양은 태평양입니다.",
-    "source": "NOAA, 대양별 면적",
+    "explanation": "지구의 적도 부근이 부푼 형상 때문에, 지구 중심에서는 적도 근처 치므보라소 정상이 더 멉니다. 해발고도 최고봉과는 기준이 다릅니다.",
+    "source": "NOAA, What is the highest point on Earth?",
     "sources": [
-      "https://www.noaa.gov/jetstream/ocean"
+      "https://oceanservice.noaa.gov/facts/highestpoint.html"
     ]
   },
   {
-    "id": "catalog-geography-003",
-    "text": "지구 표면의 약 71%는 바다로 덮여 있다.",
+    "id": "catalog-geography-104",
+    "text": "해저의 밑동부터 정상까지 재면 마우나케아는 에베레스트보다 높다.",
     "category": "지리",
+    "difficulty": "상",
     "choiceO": "O",
     "choiceX": "X",
     "answer": "O",
     "seconds": 10,
-    "explanation": "지구 표면에서 바다가 차지하는 비율은 약 71%입니다.",
-    "source": "NOAA, 바다의 면적",
+    "explanation": "마우나케아는 해저 밑동부터 정상까지 약 10.2km입니다. 해수면을 기준으로 가장 높은 산은 에베레스트입니다.",
+    "source": "NOAA, Highest point — base-to-peak height",
     "sources": [
-      "https://www.noaa.gov/jetstream/ocean"
+      "https://oceanservice.noaa.gov/facts/highestpoint.html"
     ]
   },
   {
-    "id": "catalog-geography-004",
-    "text": "대서양은 태평양보다 면적이 넓다.",
+    "id": "catalog-geography-105",
+    "text": "지구는 극을 잇는 지름보다 적도의 지름이 더 크다.",
     "category": "지리",
+    "difficulty": "중",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "지구는 완전한 구가 아니라 적도 부근이 약간 부푼 모양입니다.",
+    "source": "NASA, Earth Fact Sheet",
+    "sources": [
+      "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+    ]
+  },
+  {
+    "id": "catalog-geography-106",
+    "text": "북반구와 남반구는 같은 시기에 여름을 맞는다.",
+    "category": "지리",
+    "difficulty": "중",
     "choiceO": "O",
     "choiceX": "X",
     "answer": "X",
     "seconds": 10,
-    "explanation": "태평양의 면적이 대서양보다 넓습니다.",
-    "source": "NOAA, 대양별 면적",
+    "explanation": "지구 자전축의 기울기로 인해 북반구가 여름인 시기에 남반구는 겨울을 맞습니다.",
+    "source": "NOAA NESDIS, Changing of the Seasons",
     "sources": [
-      "https://www.noaa.gov/jetstream/ocean"
+      "https://www.nesdis.noaa.gov/our-environment/solar-phenomena/changing-of-the-seasons"
     ]
   },
   {
-    "id": "catalog-geography-005",
-    "text": "남극해는 남극 대륙을 둘러싼 바다이다.",
+    "id": "catalog-geography-107",
+    "text": "태평양의 면적은 지구의 모든 육지 면적을 합친 것보다 작다.",
     "category": "지리",
-    "choiceO": "O",
-    "choiceX": "X",
-    "answer": "O",
-    "seconds": 10,
-    "explanation": "남극해는 남극 대륙 주변의 해역을 말합니다.",
-    "source": "NOAA, 대양의 구분",
-    "sources": [
-      "https://oceanservice.noaa.gov/facts/howmanyoceans.html"
-    ]
-  },
-  {
-    "id": "catalog-geography-006",
-    "text": "바이칼호는 러시아에 있는 호수이다.",
-    "category": "지리",
-    "choiceO": "O",
-    "choiceX": "X",
-    "answer": "O",
-    "seconds": 10,
-    "explanation": "바이칼호는 러시아의 시베리아 남동부에 위치합니다.",
-    "source": "UNESCO, Lake Baikal",
-    "sources": [
-      "https://whc.unesco.org/en/list/754/"
-    ]
-  },
-  {
-    "id": "catalog-geography-007",
-    "text": "그랜드캐니언은 아프리카 대륙에 있다.",
-    "category": "지리",
+    "difficulty": "상",
     "choiceO": "O",
     "choiceX": "X",
     "answer": "X",
     "seconds": 10,
-    "explanation": "그랜드캐니언은 북아메리카의 미국 애리조나주에 있습니다.",
-    "source": "UNESCO, Grand Canyon National Park",
+    "explanation": "태평양의 면적은 지구의 모든 육지 면적을 합친 것보다 넓습니다.",
+    "source": "NOAA Ocean Exploration, How big is the Pacific Ocean?",
     "sources": [
-      "https://whc.unesco.org/en/list/75/"
+      "https://origin.oceanexplorer.noaa.gov/ocean-fact/pacific-size/"
     ]
   },
   {
@@ -501,7 +461,8 @@
     "source": "UNESCO, Taj Mahal",
     "sources": [
       "https://whc.unesco.org/en/list/252/"
-    ]
+    ],
+    "difficulty": "중"
   },
   {
     "id": "catalog-history-002",
@@ -515,7 +476,8 @@
     "source": "UNESCO, Historic Sanctuary of Machu Picchu",
     "sources": [
       "https://whc.unesco.org/en/list/274/"
-    ]
+    ],
+    "difficulty": "하"
   },
   {
     "id": "catalog-history-003",
@@ -529,76 +491,53 @@
     "source": "UNESCO, The Great Wall",
     "sources": [
       "https://whc.unesco.org/en/list/438/"
-    ]
+    ],
+    "difficulty": "중"
   },
   {
-    "id": "catalog-history-004",
-    "text": "앙코르와트는 고대 로마 제국이 세운 유적이다.",
+    "id": "catalog-history-101",
+    "text": "직지는 구텐베르크 성경보다 나중에 인쇄되었다.",
     "category": "역사",
+    "difficulty": "중",
     "choiceO": "O",
     "choiceX": "X",
     "answer": "X",
     "seconds": 10,
-    "explanation": "앙코르와트는 캄보디아의 크메르 제국 유적에 속합니다.",
-    "source": "UNESCO, Angkor",
+    "explanation": "직지는 1377년, 구텐베르크 성경은 1454~1455년경 인쇄되었습니다.",
+    "source": "University of Utah, From Jikji to Gutenberg 연구 기록",
     "sources": [
-      "https://whc.unesco.org/en/list/668/"
+      "https://jikji.utah.edu/",
+      "https://attheu.utah.edu/facultystaff/rejuvenate-refocus-and-reconnect-with-research/"
     ]
   },
   {
-    "id": "catalog-history-005",
-    "text": "스톤헨지는 고대 그리스인이 그리스에 세운 신전이다.",
+    "id": "catalog-history-102",
+    "text": "옥스퍼드에서는 12세기가 시작되기 전부터 교육이 이루어졌다는 기록이 있다.",
     "category": "역사",
-    "choiceO": "O",
-    "choiceX": "X",
-    "answer": "X",
-    "seconds": 10,
-    "explanation": "스톤헨지는 영국 윌트셔에 있는 선사시대의 거석 유적입니다.",
-    "source": "UNESCO, Stonehenge, Avebury and Associated Sites",
-    "sources": [
-      "https://whc.unesco.org/en/list/373/"
-    ]
-  },
-  {
-    "id": "catalog-history-006",
-    "text": "베르사유 궁전은 프랑스 왕들의 거처로 사용되었다.",
-    "category": "역사",
+    "difficulty": "상",
     "choiceO": "O",
     "choiceX": "X",
     "answer": "O",
     "seconds": 10,
-    "explanation": "베르사유 궁전은 루이 14세부터 루이 16세 시기까지 프랑스 왕들의 주요 거처였습니다.",
-    "source": "UNESCO, Palace and Park of Versailles",
+    "explanation": "옥스퍼드의 정확한 설립일은 분명하지 않지만 1096년부터 교육이 이루어졌다는 기록이 있습니다.",
+    "source": "University of Oxford, Our history — 1096 evidence of teaching",
     "sources": [
-      "https://whc.unesco.org/en/list/83/"
+      "https://www.ox.ac.uk/about/the-university/history"
     ]
   },
   {
-    "id": "catalog-history-007",
-    "text": "기자의 피라미드는 멕시코에 있는 마야 문명의 유적이다.",
+    "id": "catalog-history-103",
+    "text": "로제타석에는 서로 다른 세 가지 언어가 적혀 있다.",
     "category": "역사",
+    "difficulty": "상",
     "choiceO": "O",
     "choiceX": "X",
     "answer": "X",
     "seconds": 10,
-    "explanation": "기자의 피라미드는 이집트에 있는 고대 이집트 문명의 유적입니다.",
-    "source": "UNESCO, Memphis and its Necropolis",
+    "explanation": "고대 이집트어와 그리스어라는 두 언어를 이집트 상형문자·민중문자·그리스문자라는 세 가지 서체로 적었습니다.",
+    "source": "British Museum, Rosetta Stone — two languages and three scripts",
     "sources": [
-      "https://whc.unesco.org/en/list/86/"
-    ]
-  },
-  {
-    "id": "catalog-language-001",
-    "text": "한글을 창제한 왕은 세종이다.",
-    "category": "문학·언어",
-    "choiceO": "O",
-    "choiceX": "X",
-    "answer": "O",
-    "seconds": 10,
-    "explanation": "세종은 1443년에 훈민정음이라는 이름으로 한글을 만들었습니다.",
-    "source": "국립한글박물관, 상설 전시",
-    "sources": [
-      "https://www.hangeul.go.kr/exhi/dailyExhibition.do?curr_menu_cd=0102010000"
+      "https://www.britishmuseum.org/blog/eight-lgbtq-objects-celebrate-pride"
     ]
   },
   {
@@ -613,7 +552,8 @@
     "source": "국립한글박물관, 상설 전시",
     "sources": [
       "https://www.hangeul.go.kr/exhi/dailyExhibition.do?curr_menu_cd=0102010000"
-    ]
+    ],
+    "difficulty": "하"
   },
   {
     "id": "catalog-language-003",
@@ -627,62 +567,82 @@
     "source": "국립한글박물관, 상설 전시",
     "sources": [
       "https://www.hangeul.go.kr/exhi/dailyExhibition.do?curr_menu_cd=0102010000"
+    ],
+    "difficulty": "중"
+  },
+  {
+    "id": "catalog-language-101",
+    "text": "훈민정음의 자음 기본자는 하늘·땅·사람의 모양을 본떠 만들었다.",
+    "category": "문학·언어",
+    "difficulty": "중",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "자음 기본자는 발음 기관의 모양을, 모음 기본자는 하늘·땅·사람의 모양을 본떠 만들었습니다.",
+    "source": "국사편찬위원회 우리역사넷, 훈민정음 해례본",
+    "sources": [
+      "https://contents.history.go.kr/mobile/ts/view.do?levelId=ts_b32"
     ]
   },
   {
-    "id": "catalog-language-004",
-    "text": "‘훈민정음’은 ‘백성을 가르치는 바른 소리’라는 뜻이다.",
+    "id": "catalog-language-102",
+    "text": "『어린 왕자』는 프랑스에서 처음 출판되었다.",
     "category": "문학·언어",
+    "difficulty": "중",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "1943년 뉴욕에서 프랑스어·영어판이 먼저 나왔고 프랑스에서는 1946년 출판되었습니다.",
+    "source": "Bibliothèque nationale de France, Le petit prince 작품 서지",
+    "sources": [
+      "https://catalogue.bnf.fr/ark:/12148/cb11962706k"
+    ]
+  },
+  {
+    "id": "catalog-language-103",
+    "text": "타고르는 아시아인 최초의 노벨문학상 수상자이다.",
+    "category": "문학·언어",
+    "difficulty": "중",
     "choiceO": "O",
     "choiceX": "X",
     "answer": "O",
     "seconds": 10,
-    "explanation": "훈민정음은 백성을 가르치는 바른 소리라는 뜻을 담고 있습니다.",
+    "explanation": "인도의 라빈드라나트 타고르는 1913년 노벨문학상을 받아 아시아인 최초 수상자가 되었습니다.",
+    "source": "Library of Congress, Rabindranath Tagore",
+    "sources": [
+      "https://blogs.loc.gov/catbird/2017/02/rabindranath-tagore-a-great-indian-poet-and-writer/"
+    ]
+  },
+  {
+    "id": "catalog-language-104",
+    "text": "노벨문학상을 한 해에 두 사람이 함께 받은 적이 있다.",
+    "category": "문학·언어",
+    "difficulty": "상",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "1904·1917·1966·1974년에 두 작가가 공동 수상했습니다.",
+    "source": "Nobel Prize, Facts on the Nobel Prize in Literature",
+    "sources": [
+      "https://www.nobelprize.org/prizes/facts/facts-on-the-nobel-prize-in-literature/"
+    ]
+  },
+  {
+    "id": "catalog-language-105",
+    "text": "『훈민정음 해례본』은 한글의 원리를 한문으로 설명한 책이다.",
+    "category": "문학·언어",
+    "difficulty": "상",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "새 문자인 훈민정음을 만든 원리와 사용법을 한문으로 설명한 해설서입니다.",
     "source": "국사편찬위원회 우리역사넷, 훈민정음",
     "sources": [
       "https://contents.history.go.kr/mobile/kc/view.do?code=kc_age_30&levelId=kc_r300900"
-    ]
-  },
-  {
-    "id": "catalog-language-005",
-    "text": "한강이 2024년에 받은 노벨상은 평화상이다.",
-    "category": "문학·언어",
-    "choiceO": "O",
-    "choiceX": "X",
-    "answer": "X",
-    "seconds": 10,
-    "explanation": "한강은 2024년 노벨문학상을 받았습니다.",
-    "source": "Nobel Prize, Literature 2024",
-    "sources": [
-      "https://www.nobelprize.org/prizes/literature/2024/summary/"
-    ]
-  },
-  {
-    "id": "catalog-language-006",
-    "text": "밥 딜런은 2016년 노벨물리학상 수상자이다.",
-    "category": "문학·언어",
-    "choiceO": "O",
-    "choiceX": "X",
-    "answer": "X",
-    "seconds": 10,
-    "explanation": "밥 딜런은 2016년 노벨문학상 수상자입니다.",
-    "source": "Nobel Prize, Literature 2016",
-    "sources": [
-      "https://www.nobelprize.org/prizes/literature/2016/summary/"
-    ]
-  },
-  {
-    "id": "catalog-language-007",
-    "text": "타고르가 1913년에 받은 노벨상은 화학상이다.",
-    "category": "문학·언어",
-    "choiceO": "O",
-    "choiceX": "X",
-    "answer": "X",
-    "seconds": 10,
-    "explanation": "라빈드라나트 타고르는 1913년 노벨문학상을 받았습니다.",
-    "source": "Nobel Prize, Literature 1913",
-    "sources": [
-      "https://www.nobelprize.org/prizes/literature/1913/summary/"
     ]
   },
   {
@@ -695,7 +655,8 @@
     "seconds": 10,
     "explanation": "짝수는 2의 정수배입니다. 0=2×0이므로 짝수입니다.",
     "source": "기초 수학 정의와 직접 계산",
-    "sources": []
+    "sources": [],
+    "difficulty": "하"
   },
   {
     "id": "catalog-math-002",
@@ -707,55 +668,8 @@
     "seconds": 10,
     "explanation": "소수는 1보다 큰 자연수 중 양의 약수가 1과 자기 자신뿐인 수입니다. 1은 소수가 아닙니다.",
     "source": "기초 수학 정의와 직접 계산",
-    "sources": []
-  },
-  {
-    "id": "catalog-math-003",
-    "text": "모든 평행사변형은 직사각형이다.",
-    "category": "수학",
-    "choiceO": "O",
-    "choiceX": "X",
-    "answer": "X",
-    "seconds": 10,
-    "explanation": "직사각형은 네 각이 모두 직각인 평행사변형입니다. 직각이 아닌 평행사변형도 있습니다.",
-    "source": "기초 수학 정의와 직접 계산",
-    "sources": []
-  },
-  {
-    "id": "catalog-math-004",
-    "text": "100의 20%는 20이다.",
-    "category": "수학",
-    "choiceO": "O",
-    "choiceX": "X",
-    "answer": "O",
-    "seconds": 10,
-    "explanation": "100×20/100=20입니다.",
-    "source": "기초 수학 정의와 직접 계산",
-    "sources": []
-  },
-  {
-    "id": "catalog-math-005",
-    "text": "음수인 실수를 제곱하면 양수가 된다.",
-    "category": "수학",
-    "choiceO": "O",
-    "choiceX": "X",
-    "answer": "O",
-    "seconds": 10,
-    "explanation": "음수와 음수를 곱하면 양수입니다. 예를 들어 (-3)²=9입니다.",
-    "source": "기초 수학 정의와 직접 계산",
-    "sources": []
-  },
-  {
-    "id": "catalog-math-006",
-    "text": "1/2과 1/3을 더하면 2/5이다.",
-    "category": "수학",
-    "choiceO": "O",
-    "choiceX": "X",
-    "answer": "X",
-    "seconds": 10,
-    "explanation": "통분하면 3/6+2/6=5/6입니다.",
-    "source": "기초 수학 정의와 직접 계산",
-    "sources": []
+    "sources": [],
+    "difficulty": "하"
   },
   {
     "id": "catalog-math-007",
@@ -767,49 +681,60 @@
     "seconds": 10,
     "explanation": "100×1.1×0.9=99이므로 최종 가격은 99원입니다.",
     "source": "기초 수학 정의와 직접 계산",
-    "sources": []
+    "sources": [],
+    "difficulty": "중"
   },
   {
-    "id": "catalog-sports-001",
-    "text": "일반적인 11인제 축구에서 한 팀은 골키퍼를 포함해 최대 11명이 경기한다.",
-    "category": "스포츠",
+    "id": "catalog-math-101",
+    "text": "생일이 365일에 독립·균등하게 분포한다면, 23명 중 생일이 같은 두 사람이 있을 확률은 50%를 넘는다.",
+    "category": "수학",
+    "difficulty": "상",
     "choiceO": "O",
     "choiceX": "X",
     "answer": "O",
     "seconds": 10,
-    "explanation": "IFAB 규칙에서 한 팀의 최대 경기 인원은 골키퍼를 포함해 11명입니다.",
-    "source": "IFAB, Law 3 — The Players",
-    "sources": [
-      "https://www.theifab.com/laws/latest/the-players/"
-    ]
+    "explanation": "모두 다를 확률은 (365×364×…×343)/365²³입니다. 이를 1에서 빼면 약 50.73%입니다. 윤일은 제외하고 생일은 서로 독립이라고 가정합니다.",
+    "source": "기초 수학 정의와 직접 계산",
+    "sources": []
   },
   {
-    "id": "catalog-sports-002",
-    "text": "일반적인 5인제 농구에서 한 팀은 코트에 6명으로 경기한다.",
-    "category": "스포츠",
+    "id": "catalog-math-102",
+    "text": "공정한 동전을 독립적으로 5번 던져 모두 앞면이면, 다음에는 뒷면이 나올 가능성이 더 높다.",
+    "category": "수학",
+    "difficulty": "중",
     "choiceO": "O",
     "choiceX": "X",
     "answer": "X",
     "seconds": 10,
-    "explanation": "5인제 농구에서는 각 팀에서 5명이 코트에 나섭니다.",
-    "source": "FIBA WABC, 코치 매뉴얼 기본 규칙",
-    "sources": [
-      "https://assets.fiba.basketball/image/upload/documents-corporate-wabc-coaches-manual-eng.pdf"
-    ]
+    "explanation": "독립 시행에서는 앞선 결과가 다음 결과를 바꾸지 않습니다. 다음 앞면·뒷면 확률은 각각 1/2입니다.",
+    "source": "기초 수학 정의와 직접 계산",
+    "sources": []
   },
   {
-    "id": "catalog-sports-003",
-    "text": "실내 6인제 배구에서 한 팀의 코트 위 선수는 6명이다.",
-    "category": "스포츠",
+    "id": "catalog-math-103",
+    "text": "둘레가 같은 원과 정사각형의 넓이는 항상 같다.",
+    "category": "수학",
+    "difficulty": "상",
     "choiceO": "O",
     "choiceX": "X",
-    "answer": "O",
+    "answer": "X",
     "seconds": 10,
-    "explanation": "실내 6인제 배구에서는 각 팀에서 6명이 코트 위에 경기합니다.",
-    "source": "FIVB, Basic Rules",
-    "sources": [
-      "https://www.fivb.com/volleyball/the-game/basic-rules/"
-    ]
+    "explanation": "둘레를 L이라 하면 원의 넓이는 L²/(4π), 정사각형은 L²/16입니다. 원의 넓이가 더 큽니다.",
+    "source": "기초 수학 정의와 직접 계산",
+    "sources": []
+  },
+  {
+    "id": "catalog-math-104",
+    "text": "같은 거리를 갈 때 시속 60km, 돌아올 때 40km로 달리면 전체 평균 속력은 시속 50km이다.",
+    "category": "수학",
+    "difficulty": "상",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "편도 120km라면 총 240km를 2시간+3시간에 이동하므로 평균 속력은 시속 48km입니다. 멈춘 시간은 없다고 가정합니다.",
+    "source": "기초 수학 정의와 직접 계산",
+    "sources": []
   },
   {
     "id": "catalog-sports-004",
@@ -823,7 +748,8 @@
     "source": "World Athletics, Marathon",
     "sources": [
       "https://worldathletics.org/disciplines/race-walks/marathon"
-    ]
+    ],
+    "difficulty": "하"
   },
   {
     "id": "catalog-sports-005",
@@ -837,21 +763,8 @@
     "source": "USA Table Tennis, Scoring and Games",
     "sources": [
       "https://www.usatt.org/rules-of-table-tennis"
-    ]
-  },
-  {
-    "id": "catalog-sports-006",
-    "text": "올림픽 오륜기의 고리 수는 6개이다.",
-    "category": "스포츠",
-    "choiceO": "O",
-    "choiceX": "X",
-    "answer": "X",
-    "seconds": 10,
-    "explanation": "올림픽 상징은 서로 연결된 다섯 개의 고리로 이루어져 있습니다.",
-    "source": "IOC, Olympic rings",
-    "sources": [
-      "https://www.olympics.com/ioc/olympic-rings"
-    ]
+    ],
+    "difficulty": "중"
   },
   {
     "id": "catalog-sports-007",
@@ -865,26 +778,134 @@
     "source": "ITF, Tennis Glossary",
     "sources": [
       "https://www.itftennis.com/en/about-us/organisation/tennis-glossary/"
-    ]
+    ],
+    "difficulty": "하"
   },
   {
-    "id": "catalog-culture-001",
-    "text": "김장은 김치를 만들어 함께 나누는 문화이다.",
-    "category": "문화·생활",
+    "id": "catalog-sports-101",
+    "text": "축구에서 골킥을 직접 받은 선수에게는 오프사이드 반칙이 적용되지 않는다.",
+    "category": "스포츠",
+    "difficulty": "상",
     "choiceO": "O",
     "choiceX": "X",
     "answer": "O",
     "seconds": 10,
-    "explanation": "김장은 겨울을 대비해 김치를 함께 만들고 나누는 공동체 문화입니다.",
-    "source": "UNESCO, Kimjang",
+    "explanation": "IFAB 규칙은 골킥·스로인·코너킥을 직접 받는 경우를 오프사이드 반칙의 예외로 둡니다.",
+    "source": "IFAB, Law 11.3 — No offence",
     "sources": [
-      "https://ich.unesco.org/en/RL/kimjang-making-and-sharing-kimchi-in-the-republic-of-korea-00881?RL=00881"
+      "https://www.theifab.com/laws/latest/offside/"
+    ]
+  },
+  {
+    "id": "catalog-sports-102",
+    "text": "실내 6인제 배구에서는 블로킹 터치 뒤에도 팀이 공을 세 번 더 칠 수 있다.",
+    "category": "스포츠",
+    "difficulty": "상",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "실내 배구에서 블로킹 접촉은 팀의 세 번 터치에 포함되지 않습니다. 비치발리볼과는 다릅니다.",
+    "source": "FIVB, Basic Rules",
+    "sources": [
+      "https://www.fivb.com/volleyball/the-game/basic-rules/"
+    ]
+  },
+  {
+    "id": "catalog-sports-103",
+    "text": "마라톤 세계기록 공인에는 출발점과 결승점의 표고 차이도 영향을 준다.",
+    "category": "스포츠",
+    "difficulty": "상",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "결승점이 낮아지는 정도는 코스 1km당 1m를 넘을 수 없습니다. 거리만 맞는다고 세계기록 코스가 되는 것은 아닙니다.",
+    "source": "World Athletics, Certified Road Events — elevation drop",
+    "sources": [
+      "https://worldathletics.org/records/certified-roadevents"
+    ]
+  },
+  {
+    "id": "catalog-sports-104",
+    "text": "육상 100m에서 뒷바람이 초속 3m여도 세계기록으로 공인될 수 있다.",
+    "category": "스포츠",
+    "difficulty": "상",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "100m 세계기록 공인을 위한 뒷바람 한도는 초속 2m입니다. 초속 3m의 순풍 기록은 해당 기준을 넘습니다.",
+    "source": "World Athletics, 100 Metres — wind legal limit",
+    "sources": [
+      "https://worldathletics.org/disciplines/jumps/100-metres"
+    ]
+  },
+  {
+    "id": "catalog-art-101",
+    "text": "『모나리자』는 천으로 된 캔버스에 그려졌다.",
+    "category": "예술·문화",
+    "difficulty": "중",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "레오나르도 다빈치는 모나리자를 포플러 나무판에 그렸습니다.",
+    "source": "Musée du Louvre, Mona Lisa",
+    "sources": [
+      "https://www.louvre.fr/en/explore/the-palace/from-the-mona-lisa-to-the-wedding-feast-at-cana"
+    ]
+  },
+  {
+    "id": "catalog-art-102",
+    "text": "로댕의 『생각하는 사람』은 처음부터 독립된 조각으로 기획되었다.",
+    "category": "예술·문화",
+    "difficulty": "상",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "처음에는 『지옥의 문』 위쪽에 놓일 인물로 구상했고, 나중에 독립 작품으로 제작했습니다.",
+    "source": "Musée Rodin, The Thinker",
+    "sources": [
+      "https://www.musee-rodin.fr/en/musee/collections/oeuvres/penseur-meudon"
+    ]
+  },
+  {
+    "id": "catalog-art-103",
+    "text": "호쿠사이의 『가나가와 해변의 높은 파도 아래』는 캔버스에 그린 유화이다.",
+    "category": "예술·문화",
+    "difficulty": "중",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "종이에 잉크와 색을 찍은 다색 목판화입니다.",
+    "source": "The Metropolitan Museum of Art, Under the Wave off Kanagawa",
+    "sources": [
+      "https://www.metmuseum.org/art/collection/search/45434"
+    ]
+  },
+  {
+    "id": "catalog-art-104",
+    "text": "미켈란젤로는 시스티나 성당의 천장화와 제단벽 『최후의 심판』을 모두 그렸다.",
+    "category": "예술·문화",
+    "difficulty": "중",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "천장화는 1508~1512년, 제단벽의 『최후의 심판』은 1536~1541년에 그렸습니다.",
+    "source": "Vatican Museums, Sistine Chapel vault and Last Judgement",
+    "sources": [
+      "https://www.museivaticani.va/content/museivaticani/en/collezioni/musei/cappella-sistina/volta.html",
+      "https://www.museivaticani.va/content/museivaticani/en/collezioni/musei/cappella-sistina/giudizio-universale.html"
     ]
   },
   {
     "id": "catalog-culture-002",
     "text": "탱고는 아르헨티나와 우루과이의 문화유산으로 함께 등재되었다.",
-    "category": "문화·생활",
+    "category": "예술·문화",
     "choiceO": "O",
     "choiceX": "X",
     "answer": "O",
@@ -893,26 +914,13 @@
     "source": "UNESCO, Tango",
     "sources": [
       "https://ich.unesco.org/en/rl/tango-00258"
-    ]
-  },
-  {
-    "id": "catalog-culture-003",
-    "text": "플라멩코는 노르웨이를 대표하는 전통 예술이다.",
-    "category": "문화·생활",
-    "choiceO": "O",
-    "choiceX": "X",
-    "answer": "X",
-    "seconds": 10,
-    "explanation": "플라멩코는 스페인, 특히 안달루시아 지역을 중심으로 발전한 노래·춤·기타 연주의 예술입니다.",
-    "source": "UNESCO, 인류무형문화유산 플라멩코 소개",
-    "sources": [
-      "https://ich.unesco.org/doc/src/17331-EN.pdf"
-    ]
+    ],
+    "difficulty": "중"
   },
   {
     "id": "catalog-culture-004",
     "text": "레게 음악은 자메이카의 문화유산으로 유네스코에 등재되었다.",
-    "category": "문화·생활",
+    "category": "예술·문화",
     "choiceO": "O",
     "choiceX": "X",
     "answer": "O",
@@ -921,48 +929,112 @@
     "source": "UNESCO, Reggae music of Jamaica",
     "sources": [
       "https://ich.unesco.org/en/RL/reggae-music-of-jamaica-01398?call=film&id=45069&include=film_inc.php&width=700"
-    ]
+    ],
+    "difficulty": "중"
   },
   {
-    "id": "catalog-culture-005",
-    "text": "택견은 피아노 연주 기법을 뜻한다.",
-    "category": "문화·생활",
+    "id": "catalog-technology-101",
+    "text": "월드와이드웹(WWW)과 인터넷은 정확히 같은 개념이다.",
+    "category": "기술",
+    "difficulty": "중",
     "choiceO": "O",
     "choiceX": "X",
     "answer": "X",
     "seconds": 10,
-    "explanation": "택견은 한국의 전통 무예입니다.",
-    "source": "UNESCO, Taekkyeon 등재 결정",
+    "explanation": "인터넷은 서로 연결된 네트워크이며 웹은 그 위에서 작동하는 서비스입니다. 이메일 등 웹이 아닌 인터넷 서비스도 있습니다.",
+    "source": "CERN, First International Conference on the World-Wide Web",
     "sources": [
-      "https://ich.unesco.org/doc/src/17331-EN.pdf?t=1344431867"
+      "https://home.cern/first-international-conference-on-the-world-wide-web/"
     ]
   },
   {
-    "id": "catalog-culture-006",
-    "text": "와쇼쿠는 이탈리아의 전통 식문화를 뜻한다.",
-    "category": "문화·생활",
+    "id": "catalog-technology-102",
+    "text": "QR 코드는 오류 정정 기능 때문에 일부가 손상되어도 데이터를 복원할 수 있다.",
+    "category": "기술",
+    "difficulty": "중",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "QR 코드에는 오류 정정 데이터가 있습니다. 복원 가능 범위는 정정 수준과 손상 위치·정도에 따라 달라 모든 훼손을 복구하는 것은 아닙니다.",
+    "source": "DENSO WAVE, Error Correction Feature",
+    "sources": [
+      "https://www.qrcode.com/en/about/error_correction.html"
+    ]
+  },
+  {
+    "id": "catalog-technology-103",
+    "text": "블루투스라는 이름은 과거 북유럽 왕의 별명에서 따왔다.",
+    "category": "기술",
+    "difficulty": "중",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "하랄 블루투스 왕의 이름에서 따왔으며 기기들을 하나로 연결한다는 뜻을 담았습니다.",
+    "source": "Bluetooth SIG, Origin of the Bluetooth Name",
+    "sources": [
+      "https://www.bluetooth.com/bluetooth-origin/"
+    ]
+  },
+  {
+    "id": "catalog-technology-104",
+    "text": "GPS 위성은 내비게이션에 표시할 도로 지도를 직접 전송한다.",
+    "category": "기술",
+    "difficulty": "상",
     "choiceO": "O",
     "choiceX": "X",
     "answer": "X",
     "seconds": 10,
-    "explanation": "와쇼쿠는 일본의 전통 식문화를 뜻합니다.",
-    "source": "일본 농림수산성, What is Washoku?",
+    "explanation": "GPS 위성은 위치 계산용 신호를 보냅니다. 지도와 경로 정보는 기기·앱의 지도 제공자가 별도로 공급합니다.",
+    "source": "GPS.gov, Address, Route, and Map Problems",
     "sources": [
-      "https://www.maff.go.jp/e/policies/market/washoku-world-challenge/en/learning_01.html"
+      "https://archive.gps.gov/support/user/mapfix/"
     ]
   },
   {
-    "id": "catalog-culture-007",
-    "text": "나폴리의 전통 피자 장인 기술은 프랑스의 문화유산이다.",
-    "category": "문화·생활",
+    "id": "catalog-technology-105",
+    "text": "일반적인 GPS 수신기는 3차원 위치와 시계 오차를 함께 구할 때 위성 4개 이상의 신호를 쓴다.",
+    "category": "기술",
+    "difficulty": "상",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "위치 좌표 세 개와 수신기 시계 오차를 구해야 하므로 통상 네 개 이상의 위성 관측이 필요합니다.",
+    "source": "ESA, How satellite navigation works",
+    "sources": [
+      "https://www.esa.int/Applications/Satellite_navigation/Galileo/First_Galileo_Launch/How_satellite_navigation_works"
+    ]
+  },
+  {
+    "id": "catalog-technology-106",
+    "text": "웹주소가 HTTPS로 시작하면 그 사이트의 내용도 사실이라고 보장된다.",
+    "category": "기술",
+    "difficulty": "중",
     "choiceO": "O",
     "choiceX": "X",
     "answer": "X",
     "seconds": 10,
-    "explanation": "나폴리는 이탈리아의 도시이며 나폴리 피자 장인의 기술은 이탈리아의 문화유산입니다.",
-    "source": "UNESCO, Art of Neapolitan Pizzaiuolo 공동체 동의 자료",
+    "explanation": "HTTPS는 통신 연결을 보호하지만 사이트 내용의 진실성이나 운영자의 신뢰성을 보증하지 않습니다.",
+    "source": "Chromium, An Update on the Lock Icon",
     "sources": [
-      "https://ich.unesco.org/doc/src/33446.pdf"
+      "https://blog.chromium.org/2023/05/an-update-on-lock-icon.html?m=1"
+    ]
+  },
+  {
+    "id": "catalog-technology-107",
+    "text": "파이썬의 튜플은 생성한 뒤 특정 위치의 원소에 새 값을 대입할 수 있다.",
+    "category": "기술",
+    "difficulty": "상",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "튜플의 원소 참조는 불변이므로 t[0]=새값 같은 대입은 불가능합니다. 내부에 담긴 가변 객체 자체의 변화와는 구분합니다.",
+    "source": "Python, Data Structures — Tuples and Sequences",
+    "sources": [
+      "https://docs.python.org/3/tutorial/datastructures.html?highlight=list+append"
     ]
   }
 ]

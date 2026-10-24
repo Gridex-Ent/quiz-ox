@@ -26,6 +26,10 @@ export function validateQuestions(value) {
     const answer = ['O', 'X'].includes(raw) ? raw : raw === 'A' || raw === choiceO ? 'O' : raw === 'B' || raw === choiceX ? 'X' : null;
     if (!answer) throw Error(`${i + 1}번: 정답은 O/X, A/B 또는 보기의 내용이어야 합니다.`);
     const result = { text: q.text.trim(), choiceO, choiceX, answer, seconds: questionSeconds(i), explanation: q.explanation };
+    if (q.difficulty !== undefined) {
+      if (!['상', '중', '하'].includes(q.difficulty)) throw Error(`${i + 1}번: 난이도는 상·중·하 중 하나로 입력해 주세요.`);
+      result.difficulty = q.difficulty;
+    }
     for (const key of ['topic', 'category', 'review', 'note', 'source', 'imageAlt', 'imageSource', 'imageCredit', 'imageLicense', 'imageLicenseUrl', 'musicTitle', 'openAnswer']) {
       if (q[key] !== undefined && typeof q[key] !== 'string') throw Error(`${i + 1}번: ${key}는 문자열이어야 합니다.`);
       if (typeof q[key] === 'string') result[key] = q[key];
@@ -126,6 +130,6 @@ export function importCsv(text) {
     text: get(r, ['문제', 'text', 'question']), choiceO: get(r, ['선택지1', '보기1', '보기O', 'choiceO']) || 'O', choiceX: get(r, ['선택지2', '보기2', '보기X', 'choiceX']) || 'X',
     answer: get(r, ['정답', 'answer']), seconds: Number(get(r, ['제한시간', 'seconds', 'timeLimitSec']) || questionSeconds()), explanation: get(r, ['해설', 'explanation']),
     topic: get(r, ['분야', 'topic']), review: get(r, ['검토상태', 'review']), note: get(r, ['진행메모', 'note']),
-    category: get(r, ['주제', 'category']),
+    category: get(r, ['주제', 'category']), difficulty: get(r, ['난이도', 'difficulty']) || undefined,
   })));
 }

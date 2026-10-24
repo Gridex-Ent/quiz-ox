@@ -14,7 +14,7 @@ const bank = validateQuestions(Array.from({ length: 31 }, (_, i) => ({
   text: `기존 문제 ${i + 1}`, answer: i % 2 ? 'O' : 'X', choiceO: 'O', choiceX: 'X', seconds: 10,
   explanation: `기존 해설 ${i + 1}`, category: '상식', note: `보존할 메모 ${i + 1}`,
 })));
-const candidate = index => ({ text: `candidate-sentinel-for-bank-only ${index}`, answer: 'O', choiceO: 'O', choiceX: 'X', seconds: 10, explanation: `후보 해설 ${index}`, category: '수학' });
+const candidate = index => ({ text: `candidate-sentinel-for-bank-only ${index}`, answer: 'O', choiceO: 'O', choiceX: 'X', seconds: 10, explanation: `후보 해설 ${index}`, category: '수학', difficulty: ['하', '중', '상'][(index - 1) % 3] });
 const catalog = Array.from({ length: 70 }, (_, i) => ({ id: `catalog-test-${i + 1}`, ...candidate(i + 1) }));
 const shell = readFileSync(new URL('../web/host-shell.html', import.meta.url), 'utf8');
 const bundled = await build({
@@ -34,7 +34,7 @@ const bundled = await build({
 const bundle = bundled.outputFiles[0].text;
 function deferred() { let resolve, reject; const promise = new Promise((yes, no) => { resolve = yes; reject = no; }); return { promise, resolve, reject }; }
 
-function harness({ saveBank, local = new Map(), failStorage = false } = {}) {
+function harness({ saveBank, local = new Map(), failStorage = false, serverBank = bank } = {}) {
   const elements = new Map([...shell.matchAll(/<[^>]*\bid="([^"]+)"[^>]*>/g)].map(([tag, id]) => [id, {
     innerHTML: '', textContent: '', value: '', disabled: false, hidden: /\bhidden\b/.test(tag),
     scrollIntoView() {}, focus() {}, replaceChildren(...children) { this.children = children; },
@@ -46,7 +46,7 @@ function harness({ saveBank, local = new Map(), failStorage = false } = {}) {
   elements.get('asset-updates').textContent = '[]';
   const listeners = new Map(), calls = [], session = new Map();
   let callbacks, controller, revision = 1, bankVersion = 1, refreshes = 0;
-  let currentState = { ...createState(bank), phase: 'question', index: 4, deadline: 7000 };
+  let currentState = { ...createState(serverBank), phase: 'question', index: 4, deadline: 7000 };
   const meta = () => ({ revision, bankVersion, prizeVersion: 0, offsetMs: 0, serverNow: 1000, event: clone(DEFAULT_EVENT_INFO), audio: { muted: false, music: true, volume: .35 }, screenPath: '' });
   const connection = busy => callbacks.onConnection({ connected: true, busy, authenticated: true });
   const emit = () => { revision++; callbacks.onState(clone(currentState), meta()); };
@@ -123,6 +123,7 @@ test('imported questions become the confirmed bank and dropdown only after an ex
   ack.resolve(); await saving;
   assert.equal(h.elements.get('question-select').children.length, 32);
   assert.deepEqual(h.state.questions.slice(0, 31), bank); assert.equal(h.state.questions[31].seconds, 10);
+  assert.equal(h.state.questions[31].difficulty, '하');
   assert.equal(h.state.phase, 'ready'); assert.equal(h.state.index, 0);
   assert.equal(h.storedDraft().length, 32); assert.match(h.elements.get('edit-status').textContent, /클라우드에 저장했습니다/);
 });
@@ -135,6 +136,7 @@ test('a failed cloud save retains imported draft questions and the original conf
   assert.deepEqual(h.state.questions, bank); assert.equal(h.elements.get('question-select').children.length, 31);
   const reloaded = harness({ local: h.local }); reloaded.click('bank-nav');
   assert.equal(reloaded.controller.getDraft().length, 32); assert.equal(reloaded.controller.getDraft()[31].text, candidate(1).text);
+  assert.equal(reloaded.controller.getDraft()[31].difficulty, '하');
 });
 
 test('an import made during a pending save ACK is kept as a follow-up edit and can be saved next', async () => {
@@ -152,6 +154,24 @@ test('local quota failure reports an unpersisted import without dropping it or t
   const h = harness({ failStorage: true }); h.click('bank-nav');
   assert.throws(() => h.import(), /브라우저에 보관하지 못했으니/);
   assert.equal(h.controller.getDraft().length, 32); assert.equal(h.calls.length, 0); assert.deepEqual(h.state.questions, bank);
+});
+
+test('difficulty editing stays a draft until ACK, survives reload, and can be cleared back to unclassified', async () => {
+  const h = harness(); h.click('bank-nav');
+  assert.equal(Object.hasOwn(h.state.questions[0], 'difficulty'), false);
+  h.edit(0, 'difficulty', '상');
+  assert.equal(h.controller.getDraft()[0].difficulty, '상'); assert.equal(h.storedDraft()[0].difficulty, '상');
+  assert.equal(Object.hasOwn(h.state.questions[0], 'difficulty'), false); assert.equal(h.calls.length, 0);
+  await h.click('apply-top'); assert.equal(h.state.questions[0].difficulty, '상');
+  const reloaded = harness({ local: h.local, serverBank: h.state.questions }); reloaded.click('bank-nav');
+  assert.equal(reloaded.controller.getDraft()[0].difficulty, '상');
+  h.edit(0, 'difficulty', '');
+  assert.equal(Object.hasOwn(h.controller.getDraft()[0], 'difficulty'), false);
+  assert.equal(Object.hasOwn(h.storedDraft()[0], 'difficulty'), false);
+  assert.equal(h.state.questions[0].difficulty, '상');
+  await h.click('apply-top');
+  assert.equal(Object.hasOwn(h.state.questions[0], 'difficulty'), false);
+  assert.equal(Object.hasOwn(JSON.parse(h.local.get(draftKey)).questions[0], 'difficulty'), false);
 });
 
 test('the full candidate catalog is bundled only into the authenticated presenter, not the screen client', async () => {

@@ -23,6 +23,7 @@ export function restoreQuestionDraft(saved, questions) {
   if (!saved?.editorDraft) return structuredClone(questions);
   if (!Array.isArray(saved.editorDraft) || !saved.editorDraft.length) throw Error('보관된 편집 내용을 읽지 못했습니다.');
   const check = q => {
+    if (q.difficulty !== undefined && !['상', '중', '하'].includes(q.difficulty)) throw Error('보관된 편집 난이도를 읽지 못했습니다. 저장된 문제는 유지합니다.');
     const strings = ['text', 'choiceO', 'choiceX', 'answer', 'explanation'];
     const metadata = ['topic', 'category', 'review', 'note', 'source', 'imageData', 'imageAlt', 'imageSource', 'imageCredit', 'imageLicense', 'imageLicenseUrl', 'imageReveal', 'musicTitle', 'musicYoutubeId', 'kind', 'openAnswer', 'timerMode'];
     if (strings.some(key => typeof q[key] !== 'string') || !Number.isInteger(q.seconds) || metadata.some(key => q[key] !== undefined && typeof q[key] !== 'string') || (q.sources !== undefined && (!Array.isArray(q.sources) || q.sources.some(value => typeof value !== 'string')))) throw Error('보관된 편집 내용을 읽지 못했습니다. 저장된 문제는 유지합니다.');

@@ -2,11 +2,13 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { appendCatalogSelection, createQuestionBank, filterCatalog, validateCatalog } from '../web/src/quiz/question-bank.js';
+import { validateQuestions } from '../web/src/quiz/manual-model.js';
+import { encodeQuestionStore, restoreQuestionDraft } from '../web/src/quiz/question-storage.js';
 
 const catalog = [
-  { id: 'math-one', category: '수학', text: '삼각형에는 변이 세 개 있다.', answer: 'O', choiceO: 'O', choiceX: 'X', seconds: 10, explanation: '세 개의 변으로 이루어진 도형이다.', source: '도형의 정의', sources: [] },
-  { id: 'science-one', category: '과학', text: '소리는 진공에서도 전달된다.', answer: 'X', choiceO: 'O', choiceX: 'X', seconds: 10, explanation: '소리는 전달할 매질이 필요하다.', source: '음파 설명', sources: ['https://example.org/sound'] },
-  { id: 'math-two', category: '수학', text: '1은 소수이다.', answer: 'X', choiceO: 'O', choiceX: 'X', seconds: 10, explanation: '소수는 양의 약수가 두 개 있는 자연수이다.', source: '소수의 정의', sources: [] },
+  { id: 'math-one', category: '수학', difficulty: '하', text: '삼각형에는 변이 세 개 있다.', answer: 'O', choiceO: 'O', choiceX: 'X', seconds: 10, explanation: '세 개의 변으로 이루어진 도형이다.', source: '도형의 정의', sources: [] },
+  { id: 'science-one', category: '과학', difficulty: '중', text: '소리는 진공에서도 전달된다.', answer: 'X', choiceO: 'O', choiceX: 'X', seconds: 10, explanation: '소리는 전달할 매질이 필요하다.', source: '음파 설명', sources: ['https://example.org/sound'] },
+  { id: 'math-two', category: '수학', difficulty: '상', text: '1은 소수이다.', answer: 'X', choiceO: 'O', choiceX: 'X', seconds: 10, explanation: '소수는 양의 약수가 두 개 있는 자연수이다.', source: '소수의 정의', sources: [] },
 ];
 const clone = value => structuredClone(value);
 
@@ -16,7 +18,9 @@ test('published reusable bank has 70 unique, balanced candidates and preserves t
   assert.equal(validated.length, 70);
   const categories = new Map();
   for (const question of validated) categories.set(question.category, (categories.get(question.category) || 0) + 1);
-  assert.equal(categories.size, 10); assert.deepEqual([...categories.values()], Array(10).fill(7));
+  assert(categories.size >= 8, '여덟 개 이상의 주제를 준비해야 합니다.');
+  assert(validated.filter(question => question.category.includes('전기')).length <= 7, '전기 주제는 일곱 개 이하여야 합니다.');
+  assert.deepEqual([...new Set(validated.map(question => question.difficulty))].sort(), ['상', '중', '하'].sort());
   const trueCount = validated.filter(question => question.answer === 'O').length;
   assert(trueCount >= 30 && trueCount <= 40, `O/X 답의 균형 확인: O ${trueCount}개`);
   const normalize = text => text.normalize('NFKC').replace(/\s+/gu, '').toLowerCase();
@@ -37,10 +41,11 @@ test('catalog validation normalizes valid candidate questions but never modifies
   assert.deepEqual(source, before);
   assert.equal(result[0].text, catalog[0].text); assert.equal(result[0].seconds, 10);
   assert.equal(result[0].id, 'math-one'); assert.equal(result.length, 3);
+  assert.equal(result[0].difficulty, '하');
 });
 
-test('duplicate IDs, duplicate normalized statements, invalid questions and missing categories fail before display', () => {
-  for (const bad of [null, [], [{ ...catalog[0], id: 'bad"id' }], [{ ...catalog[0], category: ' ' }], [{ ...catalog[0], answer: 'unknown' }], [catalog[0], { ...catalog[1], id: catalog[0].id }], [catalog[0], { ...catalog[1], text: '삼각형에는\n변이  세 개 있다.' }]]) assert.throws(() => validateCatalog(bad));
+test('duplicate IDs, duplicate normalized statements, invalid questions, categories and difficulties fail before display', () => {
+  for (const bad of [null, [], [{ ...catalog[0], id: 'bad"id' }], [{ ...catalog[0], category: ' ' }], [{ ...catalog[0], difficulty: undefined }], [{ ...catalog[0], difficulty: '쉬움' }], [{ ...catalog[0], difficulty: '<script>' }], [{ ...catalog[0], answer: 'unknown' }], [catalog[0], { ...catalog[1], id: catalog[0].id }], [catalog[0], { ...catalog[1], text: '삼각형에는\n변이  세 개 있다.' }]]) assert.throws(() => validateCatalog(bad));
 });
 
 test('search combines category and answer filters and matches spaced explanation text', () => {
@@ -48,6 +53,13 @@ test('search combines category and answer filters and matches spaced explanation
   assert.deepEqual(filterCatalog(catalog, { search: '전달할매질' }).map(question => question.id), ['science-one']);
   assert.equal(filterCatalog(catalog, { search: '수학' }).length, 2);
   assert.equal(filterCatalog(catalog, { category: '수학', search: '진공' }).length, 0);
+});
+
+test('difficulty combines with search, theme and answer using all selected filters', () => {
+  assert.deepEqual(filterCatalog(catalog, { category: '수학', answer: 'X', search: '소수', difficulty: '상' }).map(question => question.id), ['math-two']);
+  assert.equal(filterCatalog(catalog, { category: '수학', answer: 'X', search: '소수', difficulty: '하' }).length, 0);
+  assert.deepEqual(filterCatalog(catalog, { difficulty: '중' }).map(question => question.id), ['science-one']);
+  assert.equal(filterCatalog(catalog, { difficulty: '' }).length, 3);
 });
 
 test('appending uses catalog order and preserves every existing unfinished edit, media field and object reference', () => {
@@ -59,6 +71,7 @@ test('appending uses catalog order and preserves every existing unfinished edit,
   assert.equal(result.questions[0], incomplete); assert.equal(result.questions[1], existing);
   assert.deepEqual(result.questions.slice(2).map(question => question.text), [catalog[0].text, catalog[2].text]);
   assert.equal(result.questions[2].id, undefined);
+  assert.deepEqual(result.questions.slice(2).map(question => question.difficulty), ['하', '상']);
   result.questions[2].sources.push('https://example.org/new'); assert.equal(catalog[0].sources.length, 0);
 });
 
@@ -72,6 +85,18 @@ test('normalized same-text questions are skipped even when edited answers differ
   assert.equal(appendCatalogSelection([{ text: 'AB' }], [{ ...catalog[0], text: 'Ａ Ｂ' }], ['math-one']).added, 0);
 });
 
+test('imported difficulty survives saved-bank validation and local draft restoration with unfinished edits intact', () => {
+  const applied = validateQuestions([catalog[0]]);
+  const unfinished = { ...catalog[1], text: '', note: '작성 중인 문제', imageData: 'data:image/png;base64,YQ==' };
+  const result = appendCatalogSelection([...applied, unfinished], catalog, ['math-two']);
+  const saved = JSON.parse(encodeQuestionStore(applied, 'O', result.questions));
+  const restored = restoreQuestionDraft(saved, saved.questions);
+  assert.deepEqual(restored.map(question => question.difficulty), ['하', '중', '상']);
+  assert.equal(restored[1].text, ''); assert.equal(restored[1].note, unfinished.note); assert.equal(restored[1].imageData, unfinished.imageData);
+  restored[1].text = catalog[1].text;
+  assert.deepEqual(validateQuestions(restored).map(question => question.difficulty), ['하', '중', '상']);
+});
+
 test('empty selection changes nothing and unknown IDs or exceeding 300 questions cannot partially append', () => {
   const draft = Array.from({ length: 299 }, (_, index) => ({ text: `기존 ${index}`, note: '보존' })), before = clone(draft);
   assert.equal(appendCatalogSelection(draft, catalog, []).added, 0);
@@ -83,7 +108,7 @@ test('empty selection changes nothing and unknown IDs or exceeding 300 questions
 });
 
 function harness({ source = catalog, draft = [], onImport, onEdit } = {}) {
-  const names = ['search', 'category', 'answer', 'count', 'select-visible', 'clear', 'import', 'edit', 'message', 'list'];
+  const names = ['search', 'category', 'answer', 'difficulty', 'count', 'select-visible', 'clear', 'import', 'edit', 'message', 'list'];
   const elements = Object.fromEntries(names.map(name => [name, { value: '', innerHTML: '', textContent: '', disabled: false, listeners: new Map(), addEventListener(type, listener) { this.listeners.set(type, listener); }, removeEventListener(type, listener) { if (this.listeners.get(type) === listener) this.listeners.delete(type); } }]));
   let html = '', mounts = 0, editCount = 0, currentDraft = draft;
   const calls = [];
@@ -118,6 +143,20 @@ test('checking an existing or unknown candidate has no effect, and clear cancels
   h.choose('math-one', true, true); h.choose('missing-id'); assert.match(h.elements.count.textContent, /선택 0개/);
   h.choose('science-one'); h.filter('category', '수학'); h.event('clear'); assert.match(h.elements.count.textContent, /선택 0개/);
   h.event('edit'); assert.equal(h.editCount, 1);
+});
+
+test('difficulty labels are visible and selecting filtered results preserves selections outside the current level', async () => {
+  const h = harness();
+  assert.match(h.root.innerHTML, /일반 성인 행사 기준/); assert.match(h.root.innerHTML, /data-qb-difficulty/);
+  assert.match(h.elements.list.innerHTML, /난이도 하/); assert.match(h.elements.list.innerHTML, /난이도 중/); assert.match(h.elements.list.innerHTML, /난이도 상/);
+  h.choose('science-one'); h.filter('difficulty', '하');
+  assert.match(h.elements.count.textContent, /검색 결과 1개/); assert.match(h.elements.count.textContent, /선택 1개/); assert.match(h.elements.count.textContent, /필터 밖 선택 1개/);
+  h.event('select-visible'); assert.match(h.elements.count.textContent, /선택 2개/);
+  h.filter('difficulty', '상'); h.book.render(); h.filter('category', '수학'); h.filter('answer', 'X'); h.filter('search', '소수');
+  assert.equal(h.mounts, 1); assert.match(h.elements.count.textContent, /선택 2개/); assert.match(h.elements.count.textContent, /필터 밖 선택 2개/);
+  h.event('select-visible'); assert.match(h.elements.count.textContent, /선택 3개/);
+  await h.event('import'); assert.equal(h.calls[0].added, 3);
+  assert.deepEqual(h.draft.map(question => question.difficulty), ['하', '중', '상']);
 });
 
 test('pending import prevents double submission, reports no premature success and preserves selection on rejection', async () => {
