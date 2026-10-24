@@ -42,18 +42,15 @@
 
 최종 scripts는 `dev/build/test/lint/start`와 `build:cloud/test:cloud/start:cloud` 호환 별칭이다. Node.js22.13 이상, 운영 GCS 의존성8.1.0을 기준으로 정리한다. 운영은 Secret Manager의 PIN/키·GCS·진행실 IAP·별도 읽기 전용 스크린 경계를 유지한다.
 
-최종164/164 검사·lint·build와 모바일/노트북/프로젝션 UI를 통과했다. 상품 업로드4MiB·prizeVersion·10초/노래 무타이머·똑딱·진행자 전용 팁을 포함한다. [최종 검증](DOCS/validation/2026-10-24/cloud-events.md). 운영 Cloud 반영은 재인증 필요 상태다.
+최종164/164 검사·lint·build와 모바일/노트북/프로젝션 UI를 통과했다. 상품 업로드4MiB·prizeVersion·10초/노래 무타이머·똑딱·진행자 전용 팁을 포함한다. [최종 검증](DOCS/validation/2026-10-24/cloud-events.md). 사용자 지시로 운영 배포는 이번 범위에서 제외했다.
 
 검증은 행사 정보 편집/저장/새로고침·대문/종료 동기화, O 주먹/X 보자기·선택형 표시, 주제2초/일반·번외 자동10초/노래 무타이머·직접 정답 공개, 런북 복귀, 명단 ACK/공개 경계와31/33 데이터 보존을 포함한다. 실제 휴대폰/프로젝터/스피커는 브라우저 크기 검사와 구분한다.
 
 ## 운영 상태와 다음 작업
 
-2026-10-24 현재 기존 Cloud Run의 실제 가동·최신 리비전·자정 예약 실행 결과는10월23일 인증 실패 이후 미확인이다. 현재 가동·정지 여부는 재확인이 필요하다. 이번 코드의 운영 배포도 별도 확인이 필요하다.
+사용자가 배포는 필요 없다고 명시했다. Cloud Run 배포나 인증 갱신은 진행하지 않는다. 현재 작업은 GitHub 저장소 첫 화면의 소개/README/사용 매뉴얼 게시다. 기존 코드 커밋 b7f9e9c와 발행 확인 67617eb는 main에 push·검증 완료했다. 운영 가동 상태의 미확인 기록은 이전 검증의 한계로 남긴다.
 
-1. 소스 이동·불필요 실행기 삭제와 단일 패키지/Docker 정리를 마친다.
-2. 전체 test/lint/build와 localhost:4190·두 화면 UI/저장 검증을 완료한다.
-3. 발행 안전 검사 후 통합 커밋과 push 결과를 기록한다.
-4. 인증 복구 후 실제 Cloud Run 상태와 새 코드 반영 여부를 조회해 별도 운영 결과로 남긴다.
+공개 사용 설명은 README와 DOCS/USER_GUIDE.md를 우선하고, 다음 변경도 현재 코드와 화면의 실제 동작을 대조한다.
 
 [현재 대시보드](DOCS/index.md) · [설계](DOCS/design/manual-cloud.md) · [로드맵](DOCS/planning/roadmap.md) · [배포 절차](DOCS/planning/manual-cloud-deploy.md)
 
