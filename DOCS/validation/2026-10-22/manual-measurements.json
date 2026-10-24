@@ -1,0 +1,36 @@
+[
+  {
+    "allInside": true,
+    "documentHeight": 720,
+    "height": 720,
+    "horizontalOverflow": false,
+    "rows": 7,
+    "screen": "prizes",
+    "width": 1280
+  },
+  {
+    "childrenInside": true,
+    "documentHeight": 720,
+    "height": 720,
+    "horizontalOverflow": false,
+    "screen": "question1",
+    "width": 1280
+  },
+  {
+    "childrenInside": true,
+    "documentHeight": 1080,
+    "height": 1080,
+    "horizontalOverflow": false,
+    "screen": "question1",
+    "width": 1920
+  },
+  {
+    "allInside": true,
+    "documentHeight": 1080,
+    "height": 1080,
+    "horizontalOverflow": false,
+    "rows": 7,
+    "screen": "prizes",
+    "width": 1920
+  }
+]

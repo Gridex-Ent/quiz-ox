@@ -1,0 +1,225 @@
+{
+  "capturedAtUtc": "2026-10-22T03:43:50.598Z",
+  "requirement": "사용자 제공 전기 OX 7문항과 진행 멘트 원문 추가",
+  "implementation": {
+    "groupId": "user-electric-ox",
+    "newQuestions": 7,
+    "totalBonusQuestions": 33,
+    "mainQuestions": 20,
+    "answers": [
+      "O",
+      "O",
+      "X",
+      "X",
+      "X",
+      "O",
+      "X"
+    ],
+    "userTextAndHostNotesUnchanged": true,
+    "privateHostNotes": true,
+    "publicExplanationsEmpty": true,
+    "sharedPublicInterfaceUnchanged": true,
+    "offlineHtmlRegenerated": true
+  },
+  "tests": {
+    "offline": 91,
+    "cloud": 49,
+    "total": 140,
+    "passed": true,
+    "lint": true,
+    "cloudBuild": true,
+    "offlineHtmlBuild": true,
+    "independentInMemoryServiceCheckAllSeven": true
+  },
+  "build": {
+    "id": "d2f15ce4-6e05-4b1b-80c2-37ac9e20c99c",
+    "status": "SUCCESS",
+    "finishTime": "2026-10-22T03:38:35.828315Z",
+    "imageDigest": "sha256:898d7af0f5d07f4cc22e215418ac84cd177330d77c1230743f3907e2fabc1446",
+    "tag": "20261022-033657-52128f6c",
+    "presenterRevision": "ox-manual-quiz-00006-889",
+    "readyAtUtc": "2026-10-22T03:39:08.175961Z",
+    "screenRedeployed": false,
+    "screenRevision": "ox-manual-screen-00002-crf"
+  },
+  "source": {
+    "capturedAtUtc": "2026-10-22T03:38:01.268Z",
+    "sourceDirectory": "data/manual-cloud-deploy/20261022-033657-52128f6c/source",
+    "sourceFileCount": 49,
+    "sourceHashes": [
+      {
+        "path": "questions/bonus-quiz-2026.json",
+        "sha256": "81803cc39f7d9f19709746c40d418896a234e1ed06426b1dd4f10808b755ef45",
+        "equalsDeployedSource": true
+      },
+      {
+        "path": "web/src/offline/runbook.js",
+        "sha256": "46a734ef12dc44499228bbf506bffcc9644342449ef35c741a8c91f1e658b372",
+        "equalsDeployedSource": true
+      }
+    ],
+    "allSourceHashesMatch": true
+  },
+  "legacy": {
+    "original26Unchanged": true,
+    "originalCount": 26,
+    "newCount": 7,
+    "legacySha256": "aea645e831d7ff2e47a942e80329b2051fc510d1b31f231de41c5cbc77446fc3"
+  },
+  "liveUi": {
+    "tool": "CUA",
+    "testedItems": [
+      "electric-ox-01",
+      "electric-ox-03"
+    ],
+    "newGroupVisible": true,
+    "privateNotesInPresenter": true,
+    "topicBeforeQuestion": true,
+    "questionAndHandsShown": true,
+    "expiredTimerStillHidesAnswer": true,
+    "answersManuallyRevealed": [
+      "O",
+      "X"
+    ],
+    "privateNotesHiddenBeforeAndAfterReveal": true,
+    "longXQuestionWrapped": true,
+    "mainRestored": {
+      "index": 0,
+      "phase": "cover",
+      "count": 20
+    },
+    "coverTimingInstructionsPreserved": true,
+    "localHtmlNewGroupVisible": true,
+    "allSevenLiveFlowsTested": false,
+    "physicalPhoneOrProjectorTested": false,
+    "screenshots": [
+      "electric-ox-drip-presenter.jpg",
+      "electric-ox-drip-answer-o.jpg",
+      "electric-ox-drip-question-x.jpg",
+      "electric-ox-drip-answer-x.jpg"
+    ]
+  },
+  "preservation": {
+    "observedAtUtc": "2026-10-22T03:43:15.450Z",
+    "project": "gridex-companyinfo",
+    "projectNumber": "953995790322",
+    "cloudOperations": "read-only",
+    "scope": [
+      "two owned service Ready revisions, selected runtime/access settings and main image digest",
+      "fresh GCS complete main bank and recipient empty-state counts",
+      "existing task schedule and workflow ACTIVE/fixed-target/local-source equality"
+    ],
+    "services": [
+      {
+        "name": "ox-manual-quiz",
+        "region": "asia-northeast3",
+        "readyRevision": "ox-manual-quiz-00006-889",
+        "latestCreatedRevision": "ox-manual-quiz-00006-889",
+        "expectedReadyRevision": "ox-manual-quiz-00006-889",
+        "ready": true,
+        "serviceMinInstances": 1,
+        "revisionMinInstances": 1,
+        "cpuThrottling": false,
+        "iapEnabled": true,
+        "invokerIamCheckDisabled": false,
+        "imageDigest": "sha256:898d7af0f5d07f4cc22e215418ac84cd177330d77c1230743f3907e2fabc1446",
+        "expectedImageDigest": "sha256:898d7af0f5d07f4cc22e215418ac84cd177330d77c1230743f3907e2fabc1446",
+        "expectedSettingsMatch": true
+      },
+      {
+        "name": "ox-manual-screen",
+        "region": "asia-northeast3",
+        "readyRevision": "ox-manual-screen-00002-crf",
+        "latestCreatedRevision": "ox-manual-screen-00002-crf",
+        "expectedReadyRevision": "ox-manual-screen-00002-crf",
+        "ready": true,
+        "serviceMinInstances": 1,
+        "revisionMinInstances": 1,
+        "cpuThrottling": false,
+        "iapEnabled": false,
+        "invokerIamCheckDisabled": true,
+        "expectedSettingsMatch": true
+      }
+    ],
+    "allServiceSettingsMatch": true,
+    "questionBank": {
+      "freshGcsRead": true,
+      "wholeObjectsCompared": true,
+      "seedFile": "questions/kiee-a-2026-cloud-seed.json",
+      "seedCount": 20,
+      "liveCount": 20,
+      "equal": true,
+      "seedSha256": "55194fd8228b0cfbbe89f064f737988274d65a3122ceeeb0986e4963e3d0c753",
+      "liveSha256": "55194fd8228b0cfbbe89f064f737988274d65a3122ceeeb0986e4963e3d0c753",
+      "valuesOutput": false
+    },
+    "gamePosition": {
+      "mode": "main",
+      "phase": "cover",
+      "index": 0
+    },
+    "recipientState": {
+      "expectedCount": 28,
+      "count": 28,
+      "emptyNameAndPhoneCount": 28,
+      "nonemptyNameOrPhoneCount": 0,
+      "all28Empty": true,
+      "userValuesPreserved": true,
+      "valuesOutput": false
+    },
+    "readRecovery": {
+      "attempts": 2,
+      "firstFailure": "GcsNotFoundError",
+      "latestObjectMetadataReadSucceeded": true,
+      "successfulSnapshot": "data/cloud-deployment/electric-ox-drip-live-state-retry1.json",
+      "noOriginalOrPreviousSnapshotOverwritten": true
+    },
+    "nightStopTask": {
+      "name": "projects/gridex-companyinfo/locations/asia-northeast3/queues/ox-manual-ops/tasks/a0c16796318f5067-20261023-night-stop",
+      "scheduleTime": "2026-10-22T15:00:00Z",
+      "expectedScheduleTime": "2026-10-22T15:00:00Z",
+      "expectedKst": "2026-10-23T00:00:00+09:00",
+      "unchanged": true,
+      "executionCompletionVerified": false
+    },
+    "workflow": {
+      "name": "projects/gridex-companyinfo/locations/asia-northeast3/workflows/ox-manual-night-stop",
+      "state": "ACTIVE",
+      "revisionId": "000004-58d",
+      "updatedAt": "2026-10-22T03:01:58.724558487Z",
+      "fixedProject": "gridex-companyinfo",
+      "fixedRegion": "asia-northeast3",
+      "fixedServiceTargets": [
+        "ox-manual-quiz",
+        "ox-manual-screen"
+      ],
+      "fixedStop": "2026-10-22T15:00:00Z",
+      "sourceMatchesLocal": true,
+      "sourceSha256": "e6e7415569ce98b70c3045ad54e203bf9e89755cea2e30fade94d0c1729a20aa",
+      "otherServicesRejectedGuardPresent": true,
+      "executionCompletionVerified": false,
+      "expectedFixedTargetsMatch": true
+    },
+    "otherServices": {
+      "rechecked": false,
+      "priorPreservationEvidence": "data/cloud-deployment/public-screen-preservation.json"
+    },
+    "defaultConfiguration": {
+      "explicitProjectOnEveryCloudCommand": true,
+      "configMutationsPerformed": false
+    },
+    "privacy": {
+      "rawStateOrRecipientOrKeyOrPinOrSecretOrEnvironmentValuesOutput": false,
+      "rawSnapshotOnlyUnderGitIgnoredData": true
+    },
+    "allRequestedChecksPass": true
+  },
+  "futureExecution": {
+    "scheduledKst": "2026-10-23T00:00:00+09:00",
+    "completionVerified": false
+  },
+  "publication": {
+    "gitCommitOrPush": false,
+    "credentialsOrRecipientValuesIncludedInArtifact": false
+  }
+}

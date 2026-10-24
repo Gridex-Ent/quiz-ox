@@ -1,0 +1,26 @@
+{
+  "before": {
+    "position": "현재 본게임: 6 / 20번 · 문제 공개",
+    "mainPreview": "QUIZ · 6 / 20손흥민은 2020–2021 시즌에 23골을 기록하며 EPL 득점왕을 차지했다.Ujishadow (Commons crop: DvTor8303) · 사진 출처 · CC BY-SA 4.05초 · 일시정지O왼손X오른손참가자 본인의 왼손 · 오른손 기준",
+    "adminAnswer": "관리자 전용 정답: 스타 워즈",
+    "groups": [
+      {
+        "count": 14,
+        "label": "사용자 제공 넌센스 14개"
+      },
+      {
+        "count": 4,
+        "label": "기존 경품 번외 4개"
+      }
+    ]
+  },
+  "question": "BONUS QUIZ · 번외 퀴즈\n연예인들이 싸우는 모습을 보고 뭐라고 할까?\n시간 종료! 정답 공개를 기다려 주세요\n정답을 생각하고 진행자의 안내에 따라 답해 주세요",
+  "answerHidden": true,
+  "after": {
+    "mainPreview": "QUIZ · 6 / 20\n손흥민은 2020–2021 시즌에 23골을 기록하며 EPL 득점왕을 차지했다.\nUjishadow (Commons crop: DvTor8303) · 사진 출처 · CC BY-SA 4.0\n5초 · 일시정지\nO\n왼손\nX\n오른손\n참가자 본인의 왼손 · 오른손 기준",
+    "mainIndex": "5",
+    "questionCount": 20,
+    "timerPaused": true
+  },
+  "exactPreviewRestored": true
+}

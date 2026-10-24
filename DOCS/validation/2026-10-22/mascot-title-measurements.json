@@ -1,0 +1,72 @@
+{
+  "userEditableFieldsUnchanged": true,
+  "notebook": {
+    "image": [
+      {
+        "naturalHeight": 712,
+        "naturalWidth": 1272,
+        "srcLength": 61787
+      }
+    ],
+    "overflowX": false,
+    "text": "QUIZ · 6 / 20\n한국전력 마스코트의 이름은 ?\n한국전력공사 캐릭터 · 사내 극장 안내영상 제작 포트폴리오 · 사진 출처\n5초\n해피\n왼손\n번개\n오른손\n참가자 본인의 왼손 · 오른손 기준"
+  },
+  "longTitleNotebook": {
+    "height": 163,
+    "lineHeight": "54.3928px",
+    "splitWords": [],
+    "text": "“어떤 것을 측정하고 숫자로 표현할 수 있다면, 그것에 대해 무언가 알고 있는 것이다.” 이 말을 한 사람은 에디슨이다.",
+    "width": 910,
+    "wordBreak": "keep-all"
+  },
+  "projection": [
+    {
+      "type": "long-title",
+      "headingHeight": 100.20833587646484,
+      "overflowX": false,
+      "overflowY": false,
+      "splitWords": [],
+      "viewport": [
+        1280,
+        720
+      ],
+      "wordBreak": "keep-all"
+    },
+    {
+      "type": "long-title",
+      "headingHeight": 150.3125,
+      "overflowX": false,
+      "overflowY": false,
+      "splitWords": [],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "wordBreak": "keep-all"
+    },
+    {
+      "type": "mascot",
+      "headingHeight": 75.15625,
+      "overflowX": false,
+      "overflowY": false,
+      "splitWords": [],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "wordBreak": "keep-all"
+    },
+    {
+      "type": "mascot",
+      "headingHeight": 50.10416793823242,
+      "overflowX": false,
+      "overflowY": false,
+      "splitWords": [],
+      "viewport": [
+        1280,
+        720
+      ],
+      "wordBreak": "keep-all"
+    }
+  ]
+}

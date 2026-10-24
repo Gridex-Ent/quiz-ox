@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-24",
+  "implementation": "cloud-only configurable event quiz",
+  "mainQuestions": 31,
+  "bonusQuestions": 33,
+  "questionImages": 11,
+  "ordinaryAndBonusSeconds": 10,
+  "singingTimerModePreserved": true,
+  "original31PreservedExceptSeconds": true,
+  "changedTimingFields": 26,
+  "bonusBytesPreserved": true,
+  "originalSnapshotFilesVerified": 211,
+  "remoteBase": "f20163a34c28d6b83cd279885ea8a24a514674a3",
+  "originalBase": "ee085c992ace385a6e3b0c8a00803ce2a69027ee",
+  "testsPassed": 164,
+  "testsFailed": 0,
+  "lintPassed": true,
+  "cloudBuildQuestions": 31,
+  "dockerfileTargets": [
+    "presenter",
+    "screen"
+  ],
+  "localUi": {
+    "profileOrigin": "http://127.0.0.1:4190",
+    "event4FieldsSavedAndReloaded": true,
+    "coverAndEndEventMetadataVerified": true,
+    "gestureMapping": "O=주먹 X=보자기",
+    "gestureGuideOneLine": true,
+    "coverTenSecondRuleVerified": true,
+    "lateMain31Auto10Observed": true,
+    "bonusAuto10Observed": true,
+    "manualAnswerRevealVerified": true,
+    "clockAudioScreenEnabled": true,
+    "clockSynthesisAlternationAndDedupeTests": true,
+    "uploadedPrize": {
+      "fileBytes": 2631788,
+      "width": 1536,
+      "height": 1024,
+      "captionSavedAndReloaded": true,
+      "genericImageOnlyProjection": true
+    },
+    "presenterTipExactTextVisible": true,
+    "tipAbsentFromProjection": true,
+    "viewportTests": [
+      {
+        "viewportWidth": 390,
+        "clientWidth": 375,
+        "height": 844,
+        "formHorizontalOverflow": false
+      },
+      {
+        "width": 1366,
+        "height": 768,
+        "coverOverflow": false
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "coverOverflow": false
+      }
+    ],
+    "finalPosition": "main cover index0",
+    "preciseLatencyOrPhysicalSpeakersTested": false,
+    "physicalPhoneOrProjectorTested": false,
+    "observations": [
+      "At a topic-to-question boundary one cover action did not complete; after observing confirmed state, explicit return-to-main restored cover. No replay was inferred as success."
+    ]
+  },
+  "publication": {
+    "state": "ready-to-commit",
+    "origin": "https://github.com/Gridex-Ent/quiz-ox.git",
+    "forcePush": false,
+    "secretsAndRecipientDataIncluded": false
+  },
+  "production": {
+    "newDeployment": false,
+    "reason": "Google Cloud CLI requires reauthentication; actual existing service state unconfirmed."
+  }
+}

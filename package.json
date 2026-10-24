@@ -1,41 +1,29 @@
 {
-  "name": "ox-quiz-live",
+  "name": "ox-quiz-cloud",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
-  "description": "행사용 OX 퀴즈 라이브: 참가자 폰 + 대형 스크린 + 사회자 콘솔",
-  "workspaces": [
-    "shared",
-    "server",
-    "web"
-  ],
+  "description": "여러 행사를 위한 클라우드 OX 퀴즈 진행실과 프로젝션",
   "scripts": {
-    "build:offline": "node tools/build-offline.mjs",
-    "test:offline": "node --test --test-isolation=none tools/offline-standalone.test.mjs",
-    "offline": "npm run dev -w web -- --host 127.0.0.1 --port 5173 --strictPort --open /offline",
-    "dev": "concurrently -n server,web -c blue,green \"npm run dev -w server\" \"npm run dev -w web\"",
-    "build": "npm run build -w web && npm run build -w server",
-    "typecheck": "npm run typecheck -w shared && npm run typecheck -w server && npm run typecheck -w web",
+    "dev": "node tools/dev-cloud.mjs",
+    "build": "node tools/build-cloud.mjs",
+    "build:cloud": "node tools/build-cloud.mjs",
+    "test": "node --test --test-isolation=none tools/*.test.mjs",
+    "test:cloud": "node --test --test-isolation=none tools/cloud-*.test.mjs",
     "lint": "eslint .",
-    "test": "npm run test -w server",
-    "start": "node server/dist/index.js",
-    "simulate": "node --import tsx tools/simulate.ts",
-    "bots": "node --import tsx tools/bots.ts",
-    "autoplay": "node --import tsx tools/autoplay.ts"
+    "start": "node cloud/server.mjs",
+    "start:cloud": "node cloud/server.mjs"
   },
   "engines": {
     "node": ">=22.13"
   },
+  "dependencies": {
+    "@google-cloud/storage": "^8.1.0"
+  },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@types/node": "^22.20.3",
-    "concurrently": "^10.0.5",
     "esbuild": "^0.28.2",
     "eslint": "^10.10.0",
-    "eslint-plugin-react-hooks": "^7.1.1",
-    "globals": "^17.12.0",
-    "tsx": "^4.23.13",
-    "typescript": "^6.0.3",
-    "typescript-eslint": "^8.70.0"
+    "globals": "^17.12.0"
   }
 }

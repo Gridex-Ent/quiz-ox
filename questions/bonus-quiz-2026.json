@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "source": {
+    "path": "D:\\Codex_Personal\\ox_quiz\\quiz-ox\\DOCS\\planning\\runbook.md",
+    "recordedAt": "2026-10-10",
+    "restoredAt": "2026-10-22",
+    "sha256": "26d9f9a60bd040f82a8674463fb4f9caa53d0f8c94678a3dee4d4099099af521",
+    "bytes": 26391
+  },
+  "groups": [
+    {
+      "id": "user-nonsense",
+      "label": "사용자 제공 넌센스 14개",
+      "items": [
+        { "id": "user-01", "number": 1, "line": 147, "kind": "open", "text": "서울시민 모두가 동시에 고함지르면 무슨 말이 될까?", "openAnswer": "천만의 말씀", "explanation": "" },
+        { "id": "user-02", "number": 2, "line": 148, "kind": "open", "text": "금은 금인데 도둑고양이에게 가장 어울리는 금은?", "openAnswer": "야금야금", "explanation": "" },
+        { "id": "user-03", "number": 3, "line": 149, "kind": "open", "text": "별 중에 가장 슬픈 별은?", "openAnswer": "이별", "explanation": "" },
+        { "id": "user-04", "number": 4, "line": 150, "kind": "open", "text": "진짜 새의 이름은?", "openAnswer": "참새", "explanation": "" },
+        { "id": "user-05", "number": 5, "line": 151, "kind": "open", "text": "A젖소와 B젖소가 싸움을 했는데 싸움에서 B젖소가 이겼다. 왜일까?", "openAnswer": "A젖소는 “에이~, 졌소”이고 B젖소는 “삐졌소?”", "explanation": "" },
+        { "id": "user-06", "number": 6, "line": 152, "kind": "open", "text": "(그녀를) 보내기 싫다면……", "openAnswer": "가위를 낸다.", "explanation": "" },
+        { "id": "user-07", "number": 7, "line": 153, "kind": "open", "text": "‘개가 사람을 가르친다’를 4자로 줄이면?", "openAnswer": "개인지도", "explanation": "" },
+        { "id": "user-08", "number": 8, "line": 154, "kind": "open", "text": "연예인들이 싸우는 모습을 보고 뭐라고 할까?", "openAnswer": "스타 워즈", "explanation": "" },
+        { "id": "user-09", "number": 9, "line": 155, "kind": "open", "text": "라면은 라면인데 달콤한 라면은?", "openAnswer": "그대와 함께라면.", "explanation": "원문 부연: “(허걱) 닭살 왕창 솟는군..”" },
+        { "id": "user-10", "number": 10, "line": 156, "kind": "open", "text": "토끼가 제일 잘하는 것은?", "openAnswer": "토끼기…", "explanation": "(도망치기)" },
+        { "id": "user-11", "number": 11, "line": 157, "kind": "open", "text": "먹고살기 위해 하는 내기?", "openAnswer": "모내기", "explanation": "" },
+        { "id": "user-12", "number": 12, "line": 158, "kind": "open", "text": "가슴의 무게는?", "openAnswer": "두근 두근 해서 총 네근", "explanation": "" },
+        { "id": "user-13", "number": 13, "line": 159, "kind": "open", "text": "똥의 성은?", "openAnswer": "응가", "explanation": "" },
+        { "id": "user-14", "number": 14, "line": 160, "kind": "open", "text": "아홉 명의 자식을 세 자로 줄이면?", "openAnswer": "아이구", "explanation": "" }
+      ]
+    },
+    {
+      "id": "prize-bonus",
+      "label": "기존 경품 번외 4개",
+      "items": [
+        { "id": "prize-01", "number": 1, "line": 95, "kind": "ox", "text": "‘전력질주’에서 ‘전력’은 전기에서 말하는 전력과 같은 뜻이다.", "answer": "X", "explanation": "전력질주의 전력(全力)은 온 힘, 전기의 전력(電力)은 전기적 일률이다." },
+        { "id": "prize-02", "number": 2, "line": 96, "kind": "open", "text": "전기공학자가 가장 좋아하는 소는?", "openAnswer": "발전소", "explanation": "" },
+        { "id": "prize-03", "number": 3, "line": 97, "kind": "open", "text": "배터리가 휴가를 떠나는 이유는?", "openAnswer": "재충전하려고", "explanation": "" },
+        { "id": "prize-04", "number": 4, "line": 98, "kind": "open", "text": "전기공학자들의 친목 모임에서 가장 중요한 것은?", "openAnswer": "교류", "explanation": "" }
+      ]
+    },
+    {
+      "id": "host-drip",
+      "label": "진행자 드립 번외 8개",
+      "category": "드립 퀴즈",
+      "source": { "kind": "authored", "label": "행사용 드립 퀴즈 추가 구성", "createdAt": "2026-10-22" },
+      "items": [
+        {
+          "id": "drip-01", "number": 1, "kind": "open",
+          "text": "연구자들이 가장 반기는 비는?", "openAnswer": "연구비",
+          "explanation": "‘비’로 끝나는 연구비를 이용한 말장난입니다.",
+          "hostNote": "정답 공개 후 한마디: “이 비는 많이 내려도 우산 안 씁니다.”"
+        },
+        {
+          "id": "drip-02", "number": 2, "kind": "open",
+          "text": "논문 마감 날, 연구자가 가장 갖고 싶은 전선은?", "openAnswer": "연장선",
+          "explanation": "전선을 늘려 쓰는 연장선과 마감 연장을 연결한 말장난입니다.",
+          "hostNote": "정답 공개 후 한마디: “전기는 됐고, 마감만 일주일 연장 부탁드립니다.”"
+        },
+        {
+          "id": "drip-03", "number": 3, "kind": "open",
+          "text": "연구자가 실험에서 가장 피하고 싶은 차는?", "openAnswer": "오차",
+          "explanation": "실험의 오차와 ‘차’를 연결한 말장난입니다.",
+          "hostNote": "정답 공개 후 한마디: “정답은 쉬운데, 줄이는 건 쉽지 않죠.”"
+        },
+        {
+          "id": "drip-04", "number": 4, "kind": "open",
+          "text": "연구실 파일 이름 중 가장 믿기 어려운 세 글자는?", "openAnswer": "최종본",
+          "explanation": "최종본이라 저장한 뒤에도 수정본이 계속 생기는 상황을 표현한 공감 퀴즈입니다.",
+          "hostNote": "공감형 문제이므로 ‘최종판’ 등 뜻이 통하는 답도 받아 주세요. 정답 공개 후 한마디: “그 옆에 ‘진짜최종’ 파일도 있죠?”"
+        },
+        {
+          "id": "drip-05", "number": 5, "kind": "open", "category": "수학 드립",
+          "text": "미분 한 번에 0이 되어 버리는 함수는?", "openAnswer": "상수함수",
+          "explanation": "x에 대해 일정한 상수함수를 미분하면 0이 됩니다.",
+          "hostNote": "‘상수’도 정답으로 받아 주세요. 정답 공개 후 한마디: “제 긴장도 한 번만 미분해 주시면 감사하겠습니다.”"
+        },
+        {
+          "id": "drip-06", "number": 6, "kind": "open", "category": "전기 드립",
+          "text": "‘말이 잘 통하는 사이’를 전기공학식으로 말하면?", "openAnswer": "주파수가 맞는 사이",
+          "explanation": "‘주파수가 맞다’라는 비유를 이용한 말장난입니다.",
+          "hostNote": "‘주파수가 같다’ 등 비슷한 표현도 받아 주세요. 정답 공개 후 한마디: “오늘은 웃음 주파수부터 맞춰 보겠습니다.”"
+        },
+        {
+          "id": "drip-07", "number": 7, "kind": "open",
+          "text": "세상에서 가장 뜨거운 바다는?", "openAnswer": "열바다",
+          "explanation": "‘열 받아’와 ‘바다’의 발음을 활용한 넌센스입니다.",
+          "hostNote": "정답 공개 후 한마디: “정답 듣고 열받으시면, 문제는 성공입니다.”"
+        },
+        {
+          "id": "drip-08", "number": 8, "kind": "open",
+          "text": "차가 깜짝 놀라면?", "openAnswer": "카놀라유",
+          "explanation": "‘카, 놀라유’와 ‘카놀라유’의 비슷한 발음을 이용한 말장난입니다.",
+          "hostNote": "‘카, 놀라유’를 천천히 읽어 주세요. 정답 공개 후 한마디: “웃음이 안 나와도 분위기에 기름칠은 됐습니다.”"
+        }
+      ]
+    },
+    {
+      "id": "user-electric-ox",
+      "label": "사용자 제공 전기 OX 드립 7개",
+      "category": "전기 OX 드립",
+      "source": { "kind": "user-provided", "label": "사용자 제공 전기 OX 드립", "createdAt": "2026-10-22" },
+      "items": [
+        {
+          "id": "electric-ox-01", "number": 1, "kind": "ox",
+          "text": "전기는 눈에 보이지 않는다.", "answer": "O", "explanation": "",
+          "hostNote": "그런데 전기요금 고지서를 보면 눈앞이 캄캄해집니다."
+        },
+        {
+          "id": "electric-ox-02", "number": 2, "kind": "ox",
+          "text": "사람의 몸에도 전기가 흐른다.", "answer": "O", "explanation": "",
+          "hostNote": "옆 사람한테 설레는 건 누전이 아닙니다. 고백은 행사 끝나고 해주세요."
+        },
+        {
+          "id": "electric-ox-03", "number": 3, "kind": "ox",
+          "text": "전기차에는 엔진오일을 정기적으로 교환해야 하는 내연기관 엔진이 있다.", "answer": "X", "explanation": "",
+          "hostNote": "엔진오일 갈아주겠다는 친구가 있으면… 친구부터 교체하세요."
+        },
+        {
+          "id": "electric-ox-04", "number": 4, "kind": "ox",
+          "text": "태양광 발전은 달빛만으로도 낮과 같은 전력을 생산할 수 있다.", "answer": "X", "explanation": "",
+          "hostNote": "태양광도 밤에는 퇴근합니다. 여러분보다 근무 여건이 좋네요."
+        },
+        {
+          "id": "electric-ox-05", "number": 5, "kind": "ox",
+          "text": "전력과 전력량은 같은 뜻이다.", "answer": "X", "explanation": "",
+          "hostNote": "월급과 통장 잔액이 다른 것과 같습니다. 분명히 들어왔는데 없어요."
+        },
+        {
+          "id": "electric-ox-06", "number": 6, "kind": "ox",
+          "text": "새가 전선 한 가닥에 앉아 있다고 반드시 감전되는 것은 아니다.", "answer": "O", "explanation": "",
+          "hostNote": "새는 가능합니다. 여러분은 시도하지 마세요. 오늘 상품에 날개는 없습니다."
+        },
+        {
+          "id": "electric-ox-07", "number": 7, "kind": "ox",
+          "text": "‘너만 보면 찌릿해’라는 말을 들으면 반드시 감전 사고다.", "answer": "X", "explanation": "",
+          "hostNote": "일단 고백인지 확인하시고, 작업 중이었다면 안전부터 확인하세요."
+        }
+      ]
+    }
+  ]
+}

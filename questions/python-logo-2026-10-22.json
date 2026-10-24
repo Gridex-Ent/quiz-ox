@@ -1,0 +1,20 @@
+{
+  "text": "파이썬의 로고는 뱀 두 마리이다.",
+  "choiceO": "O",
+  "choiceX": "X",
+  "answer": "O",
+  "seconds": 5,
+  "explanation": "파이썬의 로고는 파란색 뱀과 노란색 뱀이 맞물린 두 뱀 형태입니다.",
+  "category": "컴퓨터",
+  "topic": "파이썬 로고",
+  "review": "확정",
+  "note": "사용자 지정 정답: O. 정답 공개 때 공식 로고를 함께 보여 줍니다.",
+  "source": "2026-10-22 사용자 제공 문항·정답 · python-logo-main · PSF 공식 로고 자료 확인",
+  "sources": ["https://www.python.org/community/logos/", "https://www.python.org/psf/trademarks-faq/"],
+  "imageAlt": "파란색과 노란색의 두 뱀으로 구성된 파이썬 공식 로고",
+  "imageSource": "https://www.python.org/community/logos/",
+  "imageCredit": "Python Software Foundation (PSF). Python과 Python 로고는 PSF의 상표입니다.",
+  "imageLicense": "PSF Trademark Usage Policy",
+  "imageLicenseUrl": "https://www.python.org/psf/trademarks/",
+  "imageReveal": "answer"
+}

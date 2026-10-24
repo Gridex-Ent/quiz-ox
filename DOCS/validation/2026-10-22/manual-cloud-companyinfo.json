@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-22",
+  "userSelectedProjectName": "companyinfo",
+  "projectIdCandidate": "gridex-companyinfo",
+  "projectIdSource": "prior-project-records-not-live-verified",
+  "liveProjectLookup": "reauthentication-required",
+  "googleUi": "user-two-step-verification-required",
+  "cloudMutations": 0,
+  "planDirectory": "data/manual-cloud-deploy/20261022-004331-f719be09",
+  "sourceFiles": 48,
+  "checks": {
+    "powershellAst": "passed",
+    "prepareOnly": "passed-no-gcloud-calls",
+    "explicitBuildIdentity": "passed",
+    "runtimeBuildSeparation": "passed",
+    "localRuntimeExclusions": "passed",
+    "diffWhitespace": "passed"
+  },
+  "next": "Complete user Google sign-in, verify live project, provision quiz-only resources and deploy then validate HTTPS"
+}

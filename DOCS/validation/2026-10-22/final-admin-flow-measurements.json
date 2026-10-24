@@ -1,0 +1,43 @@
+{
+  "layout": [
+    {
+      "name": "cover",
+      "height": 720,
+      "scrollHeight": 720,
+      "scrollWidth": 1280,
+      "width": 1280
+    },
+    {
+      "name": "song-no-timer",
+      "height": 720,
+      "scrollHeight": 720,
+      "scrollWidth": 1280,
+      "width": 1280
+    },
+    {
+      "name": "cover",
+      "height": 1080,
+      "scrollHeight": 1080,
+      "scrollWidth": 1920,
+      "width": 1920
+    },
+    {
+      "name": "song-no-timer",
+      "height": 1080,
+      "scrollHeight": 1080,
+      "scrollWidth": 1920,
+      "width": 1920
+    }
+  ],
+  "returnedMain": {
+    "modeBannerHidden": true,
+    "selected": "5",
+    "text": "손흥민은 2020–2021 시즌에 23골을 기록하며 EPL 득점왕을 차지했다.",
+    "timer": "5초 · 일시정지"
+  },
+  "customEditsPreserved": true,
+  "userQuestionCount": 20,
+  "recipientTest": "localhost only; synthetic entry restored, then fields cleared",
+  "songTimerAbsent": true,
+  "followingTimerSeconds": 5
+}

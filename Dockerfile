@@ -1,27 +1,36 @@
-# OX 퀴즈 라이브 — 서버 1개가 웹(web/dist)과 API·소켓을 함께 제공한다.
-# Cloud Run: --min-instances=1 --max-instances=1 --no-cpu-throttling --timeout=3600 --session-affinity (DOCS/decisions/ADR-0004)
-
+# Cloud quiz: default presenter image, or --target screen for public projection.
 FROM node:24-slim AS build
 WORKDIR /app
 COPY package.json package-lock.json ./
-COPY shared/package.json shared/
-COPY server/package.json server/
-COPY web/package.json web/
 RUN npm ci --no-audit --no-fund
 COPY . .
 RUN npm run build && npm prune --omit=dev --no-audit --no-fund
 
-FROM node:24-slim
+# Public projection image contains only the display assets and read-only gateway.
+FROM node:24-slim AS screen
 ENV NODE_ENV=production \
-    PORT=8080 \
-    DB_PATH=/data/ox.sqlite
+    PORT=8080
 WORKDIR /app
-COPY --from=build /app/package.json ./package.json
-COPY --from=build /app/node_modules ./node_modules
-COPY --from=build /app/server/dist ./server/dist
-COPY --from=build /app/web/dist ./web/dist
-RUN mkdir -p /data && chown -R node:node /data /app
+COPY --from=build /app/cloud/screen-server.mjs ./cloud/screen-server.mjs
+COPY --from=build /app/dist/cloud/screen.html ./dist/cloud/screen.html
+COPY --from=build /app/dist/cloud/screen.js ./dist/cloud/screen.js
+COPY --from=build /app/dist/cloud/prize-data.json ./dist/cloud/prize-data.json
 USER node
 EXPOSE 8080
 HEALTHCHECK --interval=30s --timeout=3s CMD node -e "fetch('http://127.0.0.1:'+process.env.PORT+'/api/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"
-CMD ["node", "server/dist/index.js"]
+CMD ["node", "cloud/screen-server.mjs"]
+
+# The final stage is the authenticated presenter service.
+FROM node:24-slim AS presenter
+ENV NODE_ENV=production \
+    PORT=8080
+WORKDIR /app
+COPY --from=build /app/package.json ./package.json
+COPY --from=build /app/node_modules ./node_modules
+COPY --from=build /app/cloud ./cloud
+COPY --from=build /app/web/src/quiz ./web/src/quiz
+COPY --from=build /app/dist/cloud ./dist/cloud
+USER node
+EXPOSE 8080
+HEALTHCHECK --interval=30s --timeout=3s CMD node -e "fetch('http://127.0.0.1:'+process.env.PORT+'/api/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"
+CMD ["node", "cloud/server.mjs"]

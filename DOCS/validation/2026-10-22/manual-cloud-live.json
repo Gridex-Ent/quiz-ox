@@ -1,0 +1,152 @@
+{
+  "capturedAtUtc": "2026-10-22T01:40:53.3811783Z",
+  "project": "gridex-companyinfo",
+  "projectNumber": "953995790322",
+  "region": "asia-northeast3",
+  "service": "ox-manual-quiz",
+  "url": "https://ox-manual-quiz-953995790322.asia-northeast3.run.app",
+  "buildId": "0b43158c-857c-46f9-8f06-4babfd2eab9c",
+  "imageDigest": "sha256:85a740c1c23c8bc6431d1222f00cbac97e5fab65f67f7807476575542ab83dcd",
+  "revision": "ox-manual-quiz-00002-jng",
+  "health": {
+    "mode": "manual",
+    "authenticatedBrowser": true,
+    "persistence": "gcs",
+    "ok": true
+  },
+  "warm": {
+    "cpuThrottling": false,
+    "revisionMin": 1,
+    "serviceMin": 1,
+    "max": 1,
+    "iap": true
+  },
+  "nightStop": {
+    "task": "projects/gridex-companyinfo/locations/asia-northeast3/queues/ox-manual-ops/tasks/a0c16796318f5067-20261023-night-stop",
+    "workflowRevision": "000003-6d8",
+    "actualMidnightExecution": "future-unverified",
+    "scheduleTime": "2026-10-22T15:00:00Z",
+    "dryRunExecution": "projects/953995790322/locations/asia-northeast3/workflows/ox-manual-night-stop/executions/60f86a61-4bb8-47f7-b348-60f0e5ea5d57",
+    "dryRunResult": {
+      "before": {
+        "cpuIdle": null,
+        "revisionMin": 1,
+        "serviceMin": 1
+      },
+      "expectedStop": "2026-10-22T15:00:00Z",
+      "operationName": "projects/gridex-companyinfo/locations/asia-northeast3/operations/d3afa154-fec6-4b06-850f-998bc8b8a258",
+      "patchValidated": false,
+      "reason": "Validate-only PATCH was accepted; terminal validation completion is unconfirmed.",
+      "status": "DRY_RUN_ACCEPTED",
+      "target": "projects/gridex-companyinfo/locations/asia-northeast3/services/ox-manual-quiz",
+      "updateMask": "scaling.minInstanceCount,template.scaling.minInstanceCount,template.containers",
+      "validationAccepted": true,
+      "validationCompleted": false
+    },
+    "workflow": "ox-manual-night-stop",
+    "codexBackupLocalTime": "2026-10-23T00:02:00+09:00",
+    "dryRunExecutionState": "SUCCEEDED",
+    "codexBackupAutomation": "ox-off",
+    "localTime": "2026-10-23T00:00:00+09:00"
+  },
+  "tests": {
+    "offline": 90,
+    "lint": true,
+    "cloudBuild": true,
+    "offlineBuild": true,
+    "cloud": 40
+  },
+  "preservation": {
+    "capturedAtUtc": "2026-10-22T01:36:09.88Z",
+    "project": "gridex-companyinfo",
+    "projectNumber": "953995790322",
+    "cloudOperations": "read-only",
+    "services": {
+      "scope": "all regions",
+      "fields": [
+        "name",
+        "region",
+        "readyRevision",
+        "traffic"
+      ],
+      "baselineCount": 10,
+      "currentTotal": 11,
+      "excludedNewServices": [
+        {
+          "name": "ox-manual-quiz",
+          "region": "asia-northeast3"
+        }
+      ],
+      "comparedCount": 10,
+      "unchanged": true,
+      "missing": [],
+      "unexpected": [],
+      "changed": [],
+      "normalization": "Traffic array order ignored; optional missing/null/empty tag and url compare equally."
+    },
+    "questionBank": {
+      "bucket": "gridex-companyinfo-ox-manual-state-953995790322",
+      "object": "manual/state-v1.json",
+      "seedFile": "questions/kiee-a-2026-cloud-seed.json",
+      "wholeObjectsCompared": true,
+      "seedCount": 20,
+      "liveCount": 20,
+      "equal": true,
+      "seedSha256": "55194fd8228b0cfbbe89f064f737988274d65a3122ceeeb0986e4963e3d0c753",
+      "liveSha256": "55194fd8228b0cfbbe89f064f737988274d65a3122ceeeb0986e4963e3d0c753",
+      "differingIndices": [],
+      "freshPostCleanupWholeBankEqual": true,
+      "freshPostCleanupCount": 20
+    },
+    "privacy": {
+      "recipientValuesOutput": false,
+      "secretsOrEnvironmentValuesOutput": false,
+      "rawStateStoredOnlyUnderGitIgnoredData": true
+    },
+    "defaultConfiguration": {
+      "verification": "Compared stored named configuration, not effective --project override",
+      "fields": [
+        "name",
+        "properties.core.project",
+        "properties.run.region",
+        "properties.run.platform"
+      ],
+      "unchanged": true,
+      "configMutationsPerformed": false
+    },
+    "recipientCleanup": {
+      "checkedAtUtc": "2026-10-22T01:36:09.876Z",
+      "freshGcsReadAfterUiSave": true,
+      "expectedCount": 28,
+      "count": 28,
+      "emptyNameAndPhoneCount": 28,
+      "all28Empty": true,
+      "valuesOutput": false
+    }
+  },
+  "ui": {
+    "responsiveHostScreenshotSize": "375x812",
+    "lastState": "cover-first-question-audio-muted",
+    "syntheticNameRefresh": true,
+    "singingNoTimer": true,
+    "physicalPhoneAndVenueDevices": "unverified",
+    "actualCloudOrigin": true,
+    "syntheticRecipientsCleared": true,
+    "mainBankRestored": true,
+    "phoneDomEquality": "unconfirmed-tool-privacy-redaction",
+    "screenSizes": [
+      "1366x768",
+      "1920x1080"
+    ],
+    "mainReturnFromBonus": true,
+    "questionEditAnswerOrderRefresh": true,
+    "oneObservedAnswerRoundtripMs": 591
+  },
+  "screenshots": [
+    "cloud-live-host-375.jpg",
+    "cloud-live-prizes-1366.jpg",
+    "cloud-live-prizes-1920.jpg",
+    "cloud-live-first-question-1366.jpg",
+    "cloud-live-first-answer-1366.jpg"
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "preparedAt": "2026-10-22",
+  "scope": "사용자가 지정한 퀴즈 사진 자료. 질문/HTML/공통 문서는 수정하지 않음.",
+  "assets": [
+    {
+      "subject": "니콜라 테슬라",
+      "file": "nikola-tesla.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Tesla,_Nikola,_1856-1943_LCCN2004672772.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Tesla%2C_Nikola%2C_1856-1943_LCCN2004672772.jpg",
+      "author": "Library of Congress; Napoleon Sarony 사진 / T. Johnson 판화",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "imageReveal": "question",
+      "alt": "니콜라 테슬라의 흑백 초상화",
+      "changes": "원본 파일 그대로 사용",
+      "note": "1906년 목판화. 초상화 하단에 NIKOLA TESLA 이름 표기. 교류/직류 정답을 표시하지 않음.",
+      "dimensions": {
+        "width": 936,
+        "height": 1536
+      },
+      "bytes": 172588,
+      "sha256": "20b82be30ba9f54db4d9a698ce254e3566e2aa44426d129fd9e68c3d584630ff",
+      "visuallyInspected": true
+    },
+    {
+      "subject": "토머스 에디슨",
+      "file": "thomas-edison.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Portrait_of_Thomas_Edison_seated,_hands_clasped._(3cd1441cfd3949ff86f88fbde6531d65).jpg",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Portrait_of_Thomas_Edison_seated%2C_hands_clasped._%283cd1441cfd3949ff86f88fbde6531d65%29.jpg/500px-Portrait_of_Thomas_Edison_seated%2C_hands_clasped._%283cd1441cfd3949ff86f88fbde6531d65%29.jpg",
+      "author": "Unknown photographer / U.S. National Park Service",
+      "license": "Public domain (Commons PD-US-expired)",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Portrait_of_Thomas_Edison_seated,_hands_clasped._(3cd1441cfd3949ff86f88fbde6531d65).jpg",
+      "imageReveal": "question",
+      "alt": "손을 모으고 앉은 토머스 에디슨의 흑백 사진",
+      "changes": "Commons에서 제공한 500px 축소본. 추가 편집 없음",
+      "note": "1912년 11월 3일 사진. 테슬라와 같은 문제에 병렬 표시할 경우 활용 가능.",
+      "dimensions": {
+        "width": 500,
+        "height": 621
+      },
+      "bytes": 59792,
+      "sha256": "59bd0f810f984d8927c7f31f0645d50771ad017c44c2dba2ba698fed4ff893cc",
+      "visuallyInspected": true
+    },
+    {
+      "subject": "한국전력 빅스톰 배구단 로고",
+      "file": "kepco-vixtorm.png",
+      "sourcePage": "https://www.suwon.go.kr/sw-www/deptHome/dep_tour/culture03/culture03_05.jsp",
+      "imageUrl": "https://www.suwon.go.kr/webcontent/ckeditor/2016/3/22/b082c306-3902-4a90-8291-5a27e92ccf92.png",
+      "author": "한국전력공사 / 수원시 제공",
+      "license": "권리자 소유; 별도 공개 이용허락 미표기",
+      "licenseUrl": "",
+      "imageReveal": "answer",
+      "alt": "한국전력 빅스톰 배구단 로고",
+      "changes": "수원시 제공 PNG 원본 그대로 사용",
+      "note": "로고에 VIXTORM 정답 단서가 있어 정답 공개 후 표시 권고. 100x77 저해상도이므로 원본 SVG도 보관.",
+      "officialSourcePage": "https://www.kepco.co.kr/sports/volley/team/playerList.do",
+      "originalVector": "kepco-vixtorm-original.svg",
+      "originalVectorUrl": "https://www.kepco.co.kr/assets/sports/images/pages/volley/team/volley_logo.svg",
+      "dimensions": {
+        "width": 100,
+        "height": 77
+      },
+      "bytes": 10685,
+      "sha256": "58c5a0a6b7e713f76bd30efecbb910883e795de6d36589011c7e5e3870a58ac8",
+      "visuallyInspected": true
+    },
+    {
+      "subject": "페이커",
+      "file": "faker.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Faker_2020_interview.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Faker_2020_interview.jpg",
+      "author": "Fomos Esports",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "imageReveal": "question",
+      "alt": "2020년 인터뷰에서 엄지를 들어 보이는 페이커",
+      "changes": "Commons 원본 파일 그대로 사용",
+      "note": "2020년 Fomos Esports 인터뷰 화면. 원본 영상 https://www.youtube.com/watch?v=m9fE9m--_A0 (3:15). 메달 개수를 암시하는 사진 아님.",
+      "dimensions": {
+        "width": 506,
+        "height": 660
+      },
+      "bytes": 111710,
+      "sha256": "121a25a86251bab3b6b319d1715ef27931b533712458f4000d0f593a4ed61505",
+      "visuallyInspected": true
+    },
+    {
+      "subject": "한만춘 교수",
+      "file": "han-manchun.jpg",
+      "sourcePage": "https://koreascientists.kr/scientists/merit/merit-list/?boardId=bbs_0000000000000028&cntId=34&mode=view",
+      "imageUrl": "https://koreascientists.kr/upload/editUpload/20180126/2018012614505327812.jpg",
+      "author": "대한민국 과학기술유공자 제공 (사진 저작자 미표기)",
+      "license": "권리자 소유; 별도 공개 이용허락 미표기",
+      "licenseUrl": "",
+      "imageReveal": "question",
+      "alt": "한만춘 교수의 초상 사진",
+      "changes": "공식 인물 소개의 사진 파일 그대로 사용",
+      "note": "공식 페이지에서 이미지 대체텍스트가 한만춘 교수임을 확인. 사진에는 박사 1호 등의 정답 문구가 없음.",
+      "dimensions": {
+        "width": 258,
+        "height": 313
+      },
+      "bytes": 26290,
+      "sha256": "667eceb8b072d713b4d0cec9a4c92e4baceebd51c987d661eca269c809293e15",
+      "visuallyInspected": true
+    },
+    {
+      "subject": "로댕의 생각하는 사람",
+      "file": "rodin-thinker-close.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Le_Penseur_(1881-82)_by_Rodin.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Le_Penseur_%281881-82%29_by_Rodin.jpg/500px-Le_Penseur_%281881-82%29_by_Rodin.jpg",
+      "author": "Beyond My Ken",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "imageReveal": "answer",
+      "alt": "오른손으로 턱을 받친 로댕의 생각하는 사람",
+      "changes": "Commons에서 제공한 500px 축소본. 추가 편집 없음",
+      "note": "손 위치가 정답 단서이므로 정답 공개 후 표시 권고. 로댕 미술관 소장 작품.",
+      "dimensions": {
+        "width": 500,
+        "height": 691
+      },
+      "bytes": 73283,
+      "sha256": "de1cbeec65d3095345626d504744997d8b333f4a4bb5ff28d208d9e5a1b42845",
+      "visuallyInspected": true
+    },
+    {
+      "subject": "손흥민",
+      "file": "son-heungmin.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Best_Footballer_in_Asia_2022_Son_Heung-min_(cropped).jpg",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Best_Footballer_in_Asia_2022_Son_Heung-min_%28cropped%29.jpg/500px-Best_Footballer_in_Asia_2022_Son_Heung-min_%28cropped%29.jpg",
+      "author": "Ujishadow (Commons crop: DvTor8303)",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "imageReveal": "question",
+      "alt": "트로피를 들고 웃는 손흥민",
+      "changes": "Commons 공개 crop의 500px 축소본. 추가 편집 없음",
+      "note": "2023년 아시아 최우수축구선수상 사진으로 EPL 득점왕 트로피 사진이 아님. 문제에서 인물 참고로만 쓰며 사진 행사/트로피를 EPL 수상 증거로 설명하지 말 것.",
+      "dimensions": {
+        "width": 500,
+        "height": 643
+      },
+      "bytes": 47654,
+      "sha256": "cf664fe61087e9c41382cf72aa27938fa732e7db24f2364618f9e8160ef60746",
+      "visuallyInspected": true,
+      "supplemental": true
+    },
+    {
+      "subject": "켈빈 경",
+      "file": "lord-kelvin.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sir_William_Thomson,_Baron_Kelvin_by_T._%26_R._Annan_%26_Sons_-_Original.jpg",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Sir_William_Thomson%2C_Baron_Kelvin_by_T._%26_R._Annan_%26_Sons_-_Original.jpg/500px-Sir_William_Thomson%2C_Baron_Kelvin_by_T._%26_R._Annan_%26_Sons_-_Original.jpg",
+      "author": "T. & R. Annan & Sons / National Galleries of Scotland",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "imageReveal": "answer",
+      "alt": "계측 장치를 곁에 둔 켈빈 경의 초상 사진",
+      "changes": "Commons 원본의 500px 축소본. 추가 편집 없음",
+      "note": "윌리엄 톰슨(1824–1907), 약1900년 사진. 명언의 주인공이 정답 단서이므로 정답 공개 후 표시 권고.",
+      "dimensions": {
+        "width": 500,
+        "height": 647
+      },
+      "bytes": 70758,
+      "sha256": "02ffcc29cb86c3c94e81a8821aabf9d4f307b5da636e4f079c4a3bc7e09d1494",
+      "visuallyInspected": true,
+      "supplemental": true
+    }
+  ],
+  "alternatives": [
+    {
+      "subject": "생각하는 사람 야외 전경 대안",
+      "file": "rodin-thinker.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:The_Thinker.jpg",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/The_Thinker.jpg/500px-The_Thinker.jpg",
+      "author": "Cyberjunkie",
+      "license": "CC BY 2.5 (선택)",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.5/",
+      "dimensions": {
+        "width": 500,
+        "height": 665
+      },
+      "bytes": 75885,
+      "sha256": "a566bb89618efe0f52b657a40cd4bef4ce19852ec1af9d65693c44a2435e6249",
+      "imageReveal": "answer",
+      "note": "야외 전체 전경으로 손 위치가 작게 보임. 본 적용에는 가까운 사진 권고."
+    },
+    {
+      "subject": "한국전력 빅스톰 공식 벡터 로고",
+      "file": "kepco-vixtorm-original.svg",
+      "sourcePage": "https://www.kepco.co.kr/sports/volley/team/playerList.do",
+      "imageUrl": "https://www.kepco.co.kr/assets/sports/images/pages/volley/team/volley_logo.svg",
+      "author": "한국전력공사",
+      "license": "권리자 소유; 별도 공개 이용허락 미표기",
+      "licenseUrl": "",
+      "bytes": 13445,
+      "sha256": "36c3edefa0cfa5798ad84dec941263e8064fe53eccd6acb382a7442ad363549f",
+      "imageReveal": "answer",
+      "note": "공식 SVG 원본 보관. 기존 raster-only 문제 검증기에는 그대로 적용하지 않음. PNG는 수원시 원본 100x77."
+    }
+  ],
+  "totalPrimaryBytes": 572760,
+  "verification": "다운로드 바이트, PIL 포맷/크기 확인 및 view_image 육안 확인. 특정 이용허락이 표기되지 않은 공식 이미지에 CC 라이선스를 추정하지 않음."
+}

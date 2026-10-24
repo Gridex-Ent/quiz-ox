@@ -1,0 +1,16 @@
+{
+  "bytes": 5075797,
+  "sha256": "021373f2a459aa6e86003d1ff5e413737d2874e7663a1ec832f4da0b8e52ec47",
+  "defaultQuestionCount": 20,
+  "embeddedEqualsValidatedSource": true,
+  "original19CoreAndRelativeOrderPreserved": true,
+  "embeddedPhotoQuestions": 9,
+  "mascotImageEqualsNewFile": true,
+  "mascotSource": "https://kmong.com/portfolio/view/95381",
+  "oldGifRetainedForExactImageMigrationOnly": true,
+  "hasSpeechRuntime": false,
+  "testsPassed": 80,
+  "userBrowser119EditableFieldsPreserved": true,
+  "projectionWordSplits": 0,
+  "projectionOverflow": 0
+}

@@ -1,40 +1,15 @@
 import js from '@eslint/js';
-import tseslint from 'typescript-eslint';
-import reactHooks from 'eslint-plugin-react-hooks';
 import globals from 'globals';
 
-export default tseslint.config(
+export default [
   { ignores: ['**/dist/**', '**/node_modules/**', 'DOCS/**', 'data/**'] },
   js.configs.recommended,
-  ...tseslint.configs.recommended,
   {
-    files: ['**/*.{ts,tsx}'],
-    rules: {
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
-      '@typescript-eslint/no-explicit-any': 'warn',
-    },
-  },
-  {
-    files: ['web/src/**/*.{ts,tsx}'],
-    plugins: { 'react-hooks': reactHooks },
-    languageOptions: { globals: { ...globals.browser } },
-    rules: {
-      ...reactHooks.configs.recommended.rules,
-      // React Compiler 계열 규칙: 소켓 상태를 props/외부 시스템과 동기화하는 훅에서 setState·ref 접근이 필요하다.
-      'react-hooks/set-state-in-effect': 'off',
-      'react-hooks/refs': 'off',
-    },
-  },
-  {
-    files: ['web/src/offline/standalone.js', 'tools/offline-media.js'],
+    files: ['web/src/quiz/*.js', 'web/src/cloud/*.js'],
     languageOptions: { globals: { ...globals.browser } },
   },
   {
-    files: ['tools/*.mjs'],
+    files: ['tools/*.mjs', 'cloud/**/*.mjs'],
     languageOptions: { globals: { ...globals.node } },
   },
-  {
-    files: ['server/src/**/*.ts', 'tools/**/*.ts'],
-    languageOptions: { globals: { ...globals.node } },
-  },
-);
+];

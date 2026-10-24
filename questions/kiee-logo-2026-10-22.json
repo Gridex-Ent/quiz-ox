@@ -1,0 +1,20 @@
+{
+  "text": "대한전기학회 로고는 전압, 전류, 저항으로 만들어졌다.",
+  "choiceO": "O",
+  "choiceX": "X",
+  "answer": "X",
+  "seconds": 5,
+  "explanation": "전압과 저항이 합쳐진 로고입니다. 전압 단위 볼트(V)와 전기저항 단위 옴(Ω)을 포갠 모양입니다.",
+  "category": "전기",
+  "topic": "대한전기학회 로고",
+  "review": "확정",
+  "note": "사용자 지정 정답: X. 공식 CI 설명에서 Ω와 V의 조합을 확인했습니다. 정답 공개 때 공식 로고를 함께 보여 줍니다.",
+  "source": "2026-10-22 사용자 제공 문항·정답 · kiee-logo-main · 대한전기학회 공식 CI 소개 확인",
+  "sources": ["https://www.kiee.or.kr/pages_introduce/ci.vm"],
+  "imageAlt": "저항 단위 옴의 Ω와 전압 단위 볼트의 V를 포갠 대한전기학회 공식 로고",
+  "imageSource": "https://www.kiee.or.kr/pages_introduce/ci.vm",
+  "imageCredit": "대한전기학회(KIEE), 공식 CI 소개의 원본 심볼",
+  "imageLicense": "대한전기학회 공식 CI 자료 · 원본 출처 표기",
+  "imageLicenseUrl": "https://www.kiee.or.kr/pages_introduce/ci.vm",
+  "imageReveal": "answer"
+}

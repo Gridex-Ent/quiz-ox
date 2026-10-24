@@ -1,0 +1,437 @@
+{
+  "capturedAtUtc": "2026-10-22T07:58:55.208Z",
+  "requirement": "사용자 지정 1번 심재웅 교수 문항/X, 2번 사전등록520명 이상 문항/O, 기존27문항은3~29로 보존하고 클라우드 반영",
+  "implementation": {
+    "originalMainCount": 27,
+    "finalMainCount": 29,
+    "first": {
+      "text": "심재웅 교수는 사회자보다 나이가 많다.",
+      "answer": "X",
+      "topic": "워밍업",
+      "seconds": 10
+    },
+    "second": {
+      "text": "올해 전력기술부문회는 사전등록인원이 520명 이상이다.",
+      "answer": "O",
+      "seconds": 10
+    },
+    "contentSource": "user-provided",
+    "externalAgeOrRegistrationCountInvestigation": false,
+    "unchangedBonusCount": 33,
+    "originalContentAndOrderPreservedExceptPositionTiming": true,
+    "positionTimingChanges": [
+      {
+        "originalPosition": 4,
+        "newPosition": 6,
+        "before": 10,
+        "after": 5
+      },
+      {
+        "originalPosition": 5,
+        "newPosition": 7,
+        "before": 10,
+        "after": 5
+      }
+    ],
+    "dataOnly": true,
+    "offlineHtmlRegenerated": true
+  },
+  "tests": {
+    "offline": 91,
+    "cloud": 49,
+    "total": 140,
+    "passed": true,
+    "offlineBuild": true,
+    "cloudBuild": true,
+    "lintRerun": false,
+    "lintReason": "Only question JSON data changed; JavaScript and UI code unchanged."
+  },
+  "build": {
+    "id": "5af1d88e-ee2b-4a92-8e0e-89fa446ea859",
+    "status": "SUCCESS",
+    "finishTime": "2026-10-22T07:52:05.399622Z",
+    "imageDigest": "sha256:03c8c1a46c3b086b912fc72630f1de2551ba0408c1467128be0b0fbd923652a0",
+    "tag": "20261022-075033-51905fb9",
+    "mainRevision": "ox-manual-quiz-00009-5mp",
+    "readyAtUtc": "2026-10-22T07:52:37.443209Z",
+    "trafficPercent": 100,
+    "screenRedeployed": false,
+    "screenRevision": "ox-manual-screen-00002-crf",
+    "intermediateMain28Revision": "ox-manual-quiz-00008-k7w"
+  },
+  "source": {
+    "capturedAtUtc": "2026-10-22T07:52:04.483Z",
+    "sourceDirectory": "data/manual-cloud-deploy/20261022-075033-51905fb9/source",
+    "sourceFileCount": 49,
+    "sourceHashes": [
+      {
+        "path": "questions/kiee-a-2026-offline.json",
+        "sha256": "d73dd2ebcf073c0ddfec9565a64cbab862175c10d2f9c2b3b128d821aed1d2da",
+        "equalsDeployedSource": true
+      },
+      {
+        "path": "questions/kiee-a-2026-cloud-seed.json",
+        "sha256": "ed54ff85364a9ed0e033f0723545454fc9839faeb0d98131add4cbab40bbf2d5",
+        "equalsDeployedSource": true
+      }
+    ],
+    "allSourceHashesMatch": true
+  },
+  "preparation": {
+    "rows": [
+      {
+        "environment": "offline-seed",
+        "originalCount": 27,
+        "intermediateCount": 28,
+        "finalCount": 29,
+        "existingContentAndOrderPreserved": true,
+        "timingChanges": [
+          {
+            "originalPosition": 4,
+            "newPosition": 6,
+            "before": 10,
+            "after": 5
+          },
+          {
+            "originalPosition": 5,
+            "newPosition": 7,
+            "before": 10,
+            "after": 5
+          }
+        ]
+      },
+      {
+        "environment": "cloud-seed",
+        "originalCount": 27,
+        "intermediateCount": 28,
+        "finalCount": 29,
+        "existingContentAndOrderPreserved": true,
+        "timingChanges": [
+          {
+            "originalPosition": 4,
+            "newPosition": 6,
+            "before": 10,
+            "after": 5
+          },
+          {
+            "originalPosition": 5,
+            "newPosition": 7,
+            "before": 10,
+            "after": 5
+          }
+        ]
+      },
+      {
+        "environment": "local",
+        "originalCount": 27,
+        "intermediateCount": 28,
+        "finalCount": 29,
+        "existingContentAndOrderPreserved": true,
+        "timingChanges": [
+          {
+            "originalPosition": 4,
+            "newPosition": 6,
+            "before": 10,
+            "after": 5
+          },
+          {
+            "originalPosition": 5,
+            "newPosition": 7,
+            "before": 10,
+            "after": 5
+          }
+        ]
+      },
+      {
+        "environment": "cloud",
+        "originalCount": 27,
+        "intermediateCount": 28,
+        "finalCount": 29,
+        "existingContentAndOrderPreserved": true,
+        "timingChanges": [
+          {
+            "originalPosition": 4,
+            "newPosition": 6,
+            "before": 10,
+            "after": 5
+          },
+          {
+            "originalPosition": 5,
+            "newPosition": 7,
+            "before": 10,
+            "after": 5
+          }
+        ]
+      }
+    ],
+    "model": {
+      "firstText": "심재웅 교수는 사회자보다 나이가 많다.",
+      "firstAnswer": "X",
+      "firstTopic": "워밍업",
+      "secondText": "올해 전력기술부문회는 사전등록인원이 520명 이상이다.",
+      "secondAnswer": "O",
+      "firstSeconds": 10,
+      "secondSeconds": 10,
+      "finalCount": 29
+    }
+  },
+  "model": {
+    "count": 29,
+    "firstTopic": "워밍업",
+    "firstSeconds": 10,
+    "secondSeconds": 10,
+    "sixthSeconds": 5,
+    "secondText": "올해 전력기술부문회는 사전등록인원이 520명 이상이다.",
+    "songIndex": 3,
+    "songUntimed": true
+  },
+  "uiBanks": [
+    {
+      "environment": "local",
+      "originalCount": 27,
+      "finalCount": 29,
+      "originalContentAndOrderPreserved": true,
+      "wholeBankMatchesExpected": true,
+      "timingChanges": [
+        {
+          "originalPosition": 4,
+          "newPosition": 6,
+          "before": 10,
+          "after": 5
+        },
+        {
+          "originalPosition": 5,
+          "newPosition": 7,
+          "before": 10,
+          "after": 5
+        }
+      ],
+      "beforeSha256": "740e555ae11a9d3f4a28d165052c8765950ba75e69f34845e632d52f0a86fba5",
+      "afterSha256": "5e885d373ba4ee83571046dc0f41d095f16029b258f86e845904763222396150"
+    },
+    {
+      "environment": "cloud",
+      "originalCount": 27,
+      "finalCount": 29,
+      "originalContentAndOrderPreserved": true,
+      "wholeBankMatchesExpected": true,
+      "timingChanges": [
+        {
+          "originalPosition": 4,
+          "newPosition": 6,
+          "before": 10,
+          "after": 5
+        },
+        {
+          "originalPosition": 5,
+          "newPosition": 7,
+          "before": 10,
+          "after": 5
+        }
+      ],
+      "beforeSha256": "740e555ae11a9d3f4a28d165052c8765950ba75e69f34845e632d52f0a86fba5",
+      "afterSha256": "5e885d373ba4ee83571046dc0f41d095f16029b258f86e845904763222396150"
+    }
+  ],
+  "liveUi": {
+    "tool": "CUA",
+    "finalCount29AfterCloudReconnectAndLocalReload": true,
+    "privateDraftsMatchAppliedBeforeAndAfter": true,
+    "firstTopicWarmupObserved": true,
+    "firstPublicTenSecondsObserved": true,
+    "firstAnswerXObserved": true,
+    "nextToSecondObserved": true,
+    "secondPublicTenSecondsObserved": true,
+    "secondAnswerOObserved": true,
+    "expiredTimersWaitForManualReveal": true,
+    "nextToOriginalAiAtPosition3Observed": true,
+    "originalAiChoicesPreserved": true,
+    "privateNotesHiddenBeforeAndAfterReveal": true,
+    "restored": {
+      "mode": "main",
+      "phase": "cover",
+      "index": 0
+    },
+    "all29LiveFlowsTested": false,
+    "physicalPhoneOrProjectorTested": false,
+    "screenshots": [
+      "main-opening-first-question.jpg",
+      "main-opening-first-answer.jpg",
+      "main-opening-second-question.jpg",
+      "main-opening-second-answer.jpg"
+    ]
+  },
+  "preservation": {
+    "observedAtUtc": "2026-10-22T07:57:09.715Z",
+    "beforeObservedAtUtc": "2026-10-22T07:41:51.948Z",
+    "project": "gridex-companyinfo",
+    "cloudOperations": "read-only",
+    "scope": [
+      "fresh before27 and after29 whole-bank comparison",
+      "two user-provided opening questions and position-dependent timing changes",
+      "recipient records/revision, audio and screen-key preservation",
+      "two owned Ready revisions/runtime/access/traffic settings",
+      "existing midnight task and fixed two-service workflow preservation"
+    ],
+    "questionBank": {
+      "beforeCount": 27,
+      "expectedCount": 29,
+      "liveCount": 29,
+      "insertedCount": 2,
+      "firstUserProvidedTextMatches": true,
+      "firstAnswerX": true,
+      "firstChoicesOX": true,
+      "firstTopicWarmup": true,
+      "secondUserProvidedTextMatches": true,
+      "secondAnswerO": true,
+      "secondChoicesOX": true,
+      "original27OrderAndAllNonSecondsFieldsPreserved": true,
+      "shifted27EqualAfterOnlyPositionSecondsNormalization": true,
+      "before27WholeObjectsJsonSha256": "740e555ae11a9d3f4a28d165052c8765950ba75e69f34845e632d52f0a86fba5",
+      "before27ExcludingSecondsJsonSha256": "ed5976724857e8827395cb283cf4cda9ee68d88c4bd638942ece0fd2541856b0",
+      "liveShifted27ExcludingSecondsJsonSha256": "ed5976724857e8827395cb283cf4cda9ee68d88c4bd638942ece0fd2541856b0",
+      "timingChanges": [
+        {
+          "oldNumber": 4,
+          "newNumber": 6,
+          "fromSeconds": 10,
+          "toSeconds": 5
+        },
+        {
+          "oldNumber": 5,
+          "newNumber": 7,
+          "fromSeconds": 10,
+          "toSeconds": 5
+        }
+      ],
+      "expectedTimingChanges": [
+        {
+          "oldNumber": 4,
+          "newNumber": 6,
+          "fromSeconds": 10,
+          "toSeconds": 5
+        },
+        {
+          "oldNumber": 5,
+          "newNumber": 7,
+          "fromSeconds": 10,
+          "toSeconds": 5
+        }
+      ],
+      "onlyTwoExpectedTimingChanges": true,
+      "all29SecondsMatchPositionRule": true,
+      "newFirstTwoSeconds10": true,
+      "originalQuestionValuesOutput": false,
+      "externalAgeOrRegistrationCountResearchPerformed": false,
+      "userProvidedContentUsedWithoutIndependentFactAssertion": true
+    },
+    "recipientState": {
+      "beforeCount": 28,
+      "liveCount": 28,
+      "beforeRevision": 9,
+      "liveRevision": 9,
+      "revisionUnchanged": true,
+      "recordsUnchanged": true,
+      "beforeRecordsJsonSha256": "e80dfa3bbb63115038f27e3375b47e373053278e427a3b35c35b48bd56baadf4",
+      "liveRecordsJsonSha256": "e80dfa3bbb63115038f27e3375b47e373053278e427a3b35c35b48bd56baadf4",
+      "emptyNameAndPhoneCount": 28,
+      "valuesOutput": false
+    },
+    "audioUnchanged": true,
+    "screenKeyUnchanged": true,
+    "gamePosition": {
+      "mode": "main",
+      "phase": "cover",
+      "index": 0
+    },
+    "services": [
+      {
+        "name": "ox-manual-quiz",
+        "region": "asia-northeast3",
+        "ready": true,
+        "readyRevision": "ox-manual-quiz-00009-5mp",
+        "latestCreatedRevision": "ox-manual-quiz-00009-5mp",
+        "expectedReadyRevision": "ox-manual-quiz-00009-5mp",
+        "expectedReadyRevisionMatches": true,
+        "serviceMinInstances": 1,
+        "revisionMinInstances": 1,
+        "cpuThrottling": false,
+        "iapEnabled": true,
+        "invokerIamCheckDisabled": false,
+        "settingsUnchanged": true,
+        "expectedSettingsMatch": true,
+        "trafficToReadyRevision100Percent": true,
+        "imageDigest": "sha256:03c8c1a46c3b086b912fc72630f1de2551ba0408c1467128be0b0fbd923652a0",
+        "expectedImageDigest": "sha256:03c8c1a46c3b086b912fc72630f1de2551ba0408c1467128be0b0fbd923652a0",
+        "expectedImageMatches": true
+      },
+      {
+        "name": "ox-manual-screen",
+        "region": "asia-northeast3",
+        "ready": true,
+        "readyRevision": "ox-manual-screen-00002-crf",
+        "latestCreatedRevision": "ox-manual-screen-00002-crf",
+        "expectedReadyRevision": "ox-manual-screen-00002-crf",
+        "expectedReadyRevisionMatches": true,
+        "serviceMinInstances": 1,
+        "revisionMinInstances": 1,
+        "cpuThrottling": false,
+        "iapEnabled": false,
+        "invokerIamCheckDisabled": true,
+        "settingsUnchanged": true,
+        "expectedSettingsMatch": true,
+        "trafficToReadyRevision100Percent": true,
+        "imageDigest": "sha256:41c0b98a8675d903d743ea89ee06a1861995a643b9a22b003854f45288c1d3c8",
+        "readyRevisionUnchanged": true,
+        "trafficUnchanged": true
+      }
+    ],
+    "nightStopTask": {
+      "name": "projects/gridex-companyinfo/locations/asia-northeast3/queues/ox-manual-ops/tasks/a0c16796318f5067-20261023-night-stop",
+      "scheduleTime": "2026-10-22T15:00:00Z",
+      "expectedScheduleTime": "2026-10-22T15:00:00Z",
+      "unchanged": true,
+      "expectedScheduleMatches": true,
+      "executionCompletionVerified": false
+    },
+    "workflow": {
+      "name": "projects/gridex-companyinfo/locations/asia-northeast3/workflows/ox-manual-night-stop",
+      "state": "ACTIVE",
+      "revisionId": "000004-58d",
+      "selectedStateAndSourceUnchanged": true,
+      "sourceSha256": "e6e7415569ce98b70c3045ad54e203bf9e89755cea2e30fade94d0c1729a20aa",
+      "sourceMatchesLocal": true,
+      "fixedProject": "gridex-companyinfo",
+      "fixedRegion": "asia-northeast3",
+      "fixedServiceTargets": [
+        "ox-manual-quiz",
+        "ox-manual-screen"
+      ],
+      "fixedStop": "2026-10-22T15:00:00Z",
+      "expectedFixedTargetsMatch": true,
+      "executionCompletionVerified": false
+    },
+    "otherServices": {
+      "rechecked": false,
+      "scopeLimitedToTwoOwnedServices": true,
+      "priorPreservationEvidence": "data/cloud-deployment/public-screen-preservation.json"
+    },
+    "defaultConfiguration": {
+      "explicitProjectOnEveryCloudCommand": true,
+      "configMutationsPerformed": false
+    },
+    "privacy": {
+      "rawStateOrRecipientOrKeyOrPinOrSecretOrEnvironmentValuesOutput": false,
+      "rawSnapshotsOnlyUnderGitIgnoredData": true
+    },
+    "allRequestedChecksPass": true
+  },
+  "futureExecution": {
+    "scheduledKst": "2026-10-23T00:00:00+09:00",
+    "completionVerified": false
+  },
+  "publication": {
+    "gitCommitOrPush": false,
+    "credentialsOrRecipientValuesIncludedInArtifact": false
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "createdAt": "2026-10-22",
+  "purpose": "기존 메인20문항 뒤 제주어6문항과 사용자 제공 전기국가1문항 추가",
+  "questions": [
+    {
+      "text": "제주어 ‘지슬’은 ‘감자’를 뜻한다.",
+      "choiceO": "O", "choiceX": "X", "answer": "O", "seconds": 5,
+      "category": "제주어", "topic": "제주 방언 · 지슬", "review": "확정",
+      "explanation": "‘지슬’은 감자를 뜻합니다. 제주학연구센터 자료에서 감저는 고구마, 지슬은 감자로 구분합니다.",
+      "note": "진행자 멘트: “오늘부터 감자튀김은 지슬튀김입니다. 주문은 잘 알아들으시는 곳에서 해 주세요.”",
+      "source": "제주학연구센터 「제주 사난 제줏사름」 제6장-2 · jeju-main-01 · 2026-10-22 확인",
+      "sources": ["https://www.jeju.go.kr/jedu/archive/jeju.htm?act=view&seq=557"]
+    },
+    {
+      "text": "제주어 ‘감저’는 ‘당근’을 뜻한다.",
+      "choiceO": "O", "choiceX": "X", "answer": "X", "seconds": 5,
+      "category": "제주어", "topic": "제주 방언 · 감저", "review": "확정",
+      "explanation": "‘감저’는 당근이 아니라 고구마를 뜻합니다.",
+      "note": "진행자 멘트: “정답은 고구마입니다. 정답 듣고 답답하셔도 오늘은 달게 받아 주세요.”",
+      "source": "제주학연구센터 「제주 사난 제줏사름」 제6장-2 · jeju-main-02 · 2026-10-22 확인",
+      "sources": ["https://www.jeju.go.kr/jedu/archive/jeju.htm?act=view&seq=557"]
+    },
+    {
+      "text": "제주어 ‘도새기’는 ‘돼지’를 뜻한다.",
+      "choiceO": "O", "choiceX": "X", "answer": "O", "seconds": 5,
+      "category": "제주어", "topic": "제주 방언 · 도새기", "review": "확정",
+      "explanation": "‘도새기’는 돼지를 뜻합니다. 제주어 교육플랫폼의 선흘1리 구술 자료에서도 확인할 수 있습니다.",
+      "note": "진행자 멘트: “정답보다 오늘 저녁 메뉴가 먼저 떠오르신 분, 저도 그렇습니다.”",
+      "source": "제주어 교육플랫폼 선흘1리 구술 자료(밭일, 2017) · jeju-main-03 · 2026-10-22 확인",
+      "sources": ["https://www.jeju.go.kr/jedu/map/record.htm?page=60"]
+    },
+    {
+      "text": "제주어 ‘강생이’는 ‘고양이’를 뜻한다.",
+      "choiceO": "O", "choiceX": "X", "answer": "X", "seconds": 5,
+      "category": "제주어", "topic": "제주 방언 · 강생이", "review": "확정",
+      "explanation": "‘강생이’는 강아지를 뜻합니다. 제주어 교재에서 ‘강생이’와 표준어 ‘강아지’를 대응해 제시합니다.",
+      "note": "진행자 멘트: “고양이 고르신 집사님들, 오늘만큼은 강아지에게 양보해 주세요.”",
+      "source": "제주특별자치도교육청 초등5학년 제주어 교재(2008), 인쇄32·35쪽 · jeju-main-04 · 2026-10-22 확인",
+      "sources": ["https://www.jeju.go.kr/jedu/data/data.htm?act=view&page=16&seq=1537795"]
+    },
+    {
+      "text": "제주어 ‘혼디’는 ‘혼자’를 뜻한다.",
+      "choiceO": "O", "choiceX": "X", "answer": "X", "seconds": 5,
+      "category": "제주어", "topic": "제주 방언 · 혼디", "review": "확정",
+      "explanation": "‘혼디’는 ‘함께’를 뜻합니다. ‘혼자’와 반대되는 뜻입니다.",
+      "note": "진행자 멘트: “오늘 퀴즈도 혼디 즐겨 주세요. 혼자 웃기려니 제가 조금 힘듭니다.”",
+      "source": "제주학연구센터 생생제주어16 자료설명 · jeju-main-05 · 2026-10-22 확인",
+      "sources": ["https://www.jeju.go.kr/jedu/archive/jeju.htm?act=view&seq=681"]
+    },
+    {
+      "text": "제주어 ‘하영’은 ‘많이’를 뜻한다.",
+      "choiceO": "O", "choiceX": "X", "answer": "O", "seconds": 5,
+      "category": "제주어", "topic": "제주 방언 · 하영", "review": "확정",
+      "explanation": "‘하영’은 ‘많이’라는 뜻의 부사입니다.",
+      "note": "진행자 멘트: “박수도 하영, 웃음도 하영 부탁드립니다.”",
+      "source": "제주어 교육플랫폼 기본어휘 하영(많이) · jeju-main-06 · 2026-10-22 확인",
+      "sources": ["https://www.jeju.go.kr/jedu/data/card.htm?act=view&page=18&seq=1535000"]
+    },
+    {
+      "text": "정부는 2026년 전력과 재생에너지를 국가 산업과 경제 경쟁력의 중심에 두고자 ‘OO국가’라는 비전을 발표하였다.",
+      "choiceO": "전력", "choiceX": "전기", "answer": "X", "seconds": 5,
+      "category": "에너지 정책", "topic": "전기국가 비전", "review": "확정",
+      "explanation": "정답은 ‘전기’입니다. 기후에너지환경부는 2026년 재생에너지 기본계획 발표에서 전기국가(electro-state)로의 도약을 제시했습니다.",
+      "note": "사용자 제공: A 전력 / B 전기. 정답 B — 전기. 기존 엔진에서 첫 번째 보기는 O쪽(A), 두 번째 보기는 X쪽(B)이며 화면의 정답은 ‘전기’로 표시합니다.",
+      "source": "2026-10-22 사용자 제공 문항 · electric-nation-main · 기후에너지환경부 2026-05-19 보도자료 확인",
+      "sources": ["https://www.mcee.go.kr/m/mob/board/read.do?boardId=1864660&boardMasterId=939&menuId=156"]
+    }
+  ]
+}

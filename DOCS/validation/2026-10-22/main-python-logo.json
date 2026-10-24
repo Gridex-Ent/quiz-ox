@@ -1,0 +1,414 @@
+{
+  "date": "2026-10-22",
+  "scope": "Append Python30/O and KIEE31/X, preserve original29",
+  "implementation": {
+    "mainCount": 31,
+    "bonusCount": 33,
+    "imageQuestions": 11,
+    "answerOnlyImageQuestions": 5,
+    "newQuestions": [
+      {
+        "position": 30,
+        "text": "파이썬의 로고는 뱀 두 마리이다.",
+        "answer": "O",
+        "category": "컴퓨터",
+        "seconds": 5,
+        "imageReveal": "answer"
+      },
+      {
+        "position": 31,
+        "text": "대한전기학회 로고는 전압, 전류, 저항으로 만들어졌다.",
+        "answer": "X",
+        "category": "전기",
+        "seconds": 5,
+        "imageReveal": "answer",
+        "explanation": "전압과 저항이 합쳐진 로고입니다. 전압 단위 볼트(V)와 전기저항 단위 옴(Ω)을 포갠 모양입니다."
+      }
+    ],
+    "publicInterfacesChanged": false
+  },
+  "automated": {
+    "offlinePassed": 91,
+    "cloudPassed": 49,
+    "totalPassed": 140,
+    "offlineBuildQuestions": 31,
+    "cloudBuildQuestions": 31,
+    "lintRerun": false,
+    "modelChecks": {
+      "mainCount": 31,
+      "rows": [
+        {
+          "position": 30,
+          "answer": "O",
+          "topicMs": 2000,
+          "timerSeconds": 5,
+          "hiddenBeforeAnswer": true,
+          "answerImage": true,
+          "notesPrivate": true,
+          "nextPhase": "topic"
+        },
+        {
+          "position": 31,
+          "answer": "X",
+          "topicMs": 2000,
+          "timerSeconds": 5,
+          "hiddenBeforeAnswer": true,
+          "answerImage": true,
+          "notesPrivate": true,
+          "nextPhase": "end"
+        }
+      ]
+    }
+  },
+  "sources": {
+    "python": {
+      "observedAtUtc": "2026-10-22T08:10:44.122Z",
+      "officialPage": "https://www.python.org/community/logos/",
+      "officialPageNamesTwoSnakes": true,
+      "officialPngUrl": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/community/logos/python-logo-only.png",
+      "asset": "questions/assets/python-logo-only.png",
+      "localPngSignatureValid": true,
+      "remotePngSignatureValid": true,
+      "localAssetSha256": "4008a934b415c152bfa513be3e9b05de4212ae41549a27f2c6c8d41b3a24a4da",
+      "officialRemotePngSha256": "4008a934b415c152bfa513be3e9b05de4212ae41549a27f2c6c8d41b3a24a4da",
+      "localEqualsOfficialRemotePng": true,
+      "width": 269,
+      "height": 326,
+      "imageBytesOutput": false
+    },
+    "kiee": {
+      "url": "https://www.kiee.or.kr/images/sub/ci_01.png",
+      "bytes": 21367,
+      "width": 368,
+      "height": 368,
+      "sha256": "0e39de9f0f9cde17ed0472427f51afab808198348651b9a7513120f53a071bc5",
+      "unmodifiedOfficialAsset": true
+    },
+    "submittedSource": {
+      "source": "data/manual-cloud-deploy/20261022-081827-0a7a5410/source",
+      "files": [
+        {
+          "file": "questions/kiee-a-2026-offline.json",
+          "bytes": 1247825,
+          "sha256": "dfdc10196fb19db421a908e5a5064e6ac91089060511ace7267a3f3cd9103353",
+          "matchesSubmittedSource": true
+        },
+        {
+          "file": "questions/kiee-a-2026-cloud-seed.json",
+          "bytes": 1247824,
+          "sha256": "1ab6e0f784d3f3e5c4b133575049b08000d3e72a661869a3d1d7f77ac7fc9ec1",
+          "matchesSubmittedSource": true
+        },
+        {
+          "file": "questions/assets/python-logo-only.png",
+          "bytes": 20637,
+          "sha256": "4008a934b415c152bfa513be3e9b05de4212ae41549a27f2c6c8d41b3a24a4da",
+          "matchesSubmittedSource": true
+        },
+        {
+          "file": "questions/assets/python-logo-source.md",
+          "bytes": 977,
+          "sha256": "f2471aff3d87797b3e3c227e01d158999175aa538b33a2d00e24a0789aa410b3",
+          "matchesSubmittedSource": true
+        },
+        {
+          "file": "questions/assets/kiee-logo.png",
+          "bytes": 21367,
+          "sha256": "0e39de9f0f9cde17ed0472427f51afab808198348651b9a7513120f53a071bc5",
+          "matchesSubmittedSource": true
+        },
+        {
+          "file": "questions/assets/kiee-logo-source.md",
+          "bytes": 836,
+          "sha256": "d7c6b3906ee4a46b65d89773947e5a67d3456852ddc769c1669c0b2a8ee057e5",
+          "matchesSubmittedSource": true
+        }
+      ]
+    }
+  },
+  "ui": {
+    "computerUse": true,
+    "bankPreservation": [
+      {
+        "environment": "local",
+        "beforeCount": 29,
+        "intermediateCount": 30,
+        "afterCount": 31,
+        "original29WholeObjectsAndOrderPreserved": true,
+        "python30Preserved": true,
+        "entireBankMatchesIntended": true,
+        "finalWholeBankSha256": "0bd670bf4270274bd47a51329b0a80e79df3509fb1c9bfe9cf70526cb4e6a0fb"
+      },
+      {
+        "environment": "cloud",
+        "beforeCount": 29,
+        "intermediateCount": 30,
+        "afterCount": 31,
+        "original29WholeObjectsAndOrderPreserved": true,
+        "python30Preserved": true,
+        "entireBankMatchesIntended": true,
+        "finalWholeBankSha256": "0bd670bf4270274bd47a51329b0a80e79df3509fb1c9bfe9cf70526cb4e6a0fb"
+      }
+    ],
+    "cloudReauthenticationAnd31Persistence": true,
+    "localReloadAnd31Persistence": true,
+    "python": {
+      "topicObserved": true,
+      "questionAutoStarted": true,
+      "countdownObservedSeconds": 1,
+      "beforeAnswerImages": 0,
+      "answer": "O",
+      "loadedImage": {
+        "width": 269,
+        "height": 326
+      },
+      "nextTo31Topic": true
+    },
+    "kiee": {
+      "topicObserved": "전기",
+      "questionAutoStarted": true,
+      "expiredWaitedForManualReveal": true,
+      "beforeAnswerImages": 0,
+      "answer": "X",
+      "publicExplanationVerified": true,
+      "loadedImage": {
+        "width": 368,
+        "height": 368
+      },
+      "nextToFinish": true
+    },
+    "viewports": [
+      {
+        "width": 1366,
+        "height": 768,
+        "domConfirmed": true,
+        "kieeAnswerNoStageOverflow": true
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "domConfirmed": true,
+        "kieeQuestionAndAnswerVisuallyVerified": true
+      }
+    ],
+    "viewportOverrideReset": true,
+    "bothBanksFinalDraftClean": true,
+    "finalPosition": {
+      "mode": "main",
+      "phase": "cover",
+      "index": 0
+    },
+    "limitations": [
+      "Browser emulation, not physical projector/phone",
+      "No precise latency/timing or live audio measurement",
+      "Not a full 31-question rehearsal"
+    ]
+  },
+  "deployment": {
+    "project": "gridex-companyinfo",
+    "region": "asia-northeast3",
+    "buildId": "2fcca05b-afba-4a4e-96db-ea4de996b0c7",
+    "buildStatus": "SUCCESS",
+    "buildFinishTimeUtc": "2026-10-22T08:20:35.561923Z",
+    "mainReadyRevision": "ox-manual-quiz-00011-rqp",
+    "readyTimeUtc": "2026-10-22T08:21:15.206909Z",
+    "readyTimeKst": "2026-10-22 17:21:15 +09:00",
+    "mainImageDigest": "sha256:6a2af3aca4497ca44426f109b9ac53549e6697e7838a5d3722ac58db9e092b1f",
+    "mainTrafficPercent": 100,
+    "screenReadyRevisionUnchanged": "ox-manual-screen-00002-crf",
+    "submittedSourceFileCount": 53,
+    "intermediate30Revision": "ox-manual-quiz-00010-7lv",
+    "gitCommitOrPush": false
+  },
+  "cloudPreservationAudit": {
+    "observedAtUtc": "2026-10-22T08:26:49.994Z",
+    "beforeObservedAtUtc": "2026-10-22T08:06:01.528Z",
+    "project": "gridex-companyinfo",
+    "cloudOperations": "read-only",
+    "scope": [
+      "fresh before29 and final after31 whole-bank comparison",
+      "Python30 O and KIEE31 X; 5-second timings and answer-only official PNGs",
+      "public DTO pure-function checks from the fresh snapshot",
+      "recipient records/revision, audio and screen-key preservation",
+      "two owned Ready revisions/runtime/access/traffic settings",
+      "existing midnight task and fixed two-service workflow preservation"
+    ],
+    "questionBank": {
+      "beforeCount": 29,
+      "expectedCount": 31,
+      "liveCount": 31,
+      "appendedCount": 2,
+      "original29WholeObjectsIncludingSecondsPreservedAsPrefix": true,
+      "before29WholeObjectsJsonSha256": "5e885d373ba4ee83571046dc0f41d095f16029b258f86e845904763222396150",
+      "livePrefix29WholeObjectsJsonSha256": "5e885d373ba4ee83571046dc0f41d095f16029b258f86e845904763222396150",
+      "addedTwoEqualCurrentSeedWholeObjects": true,
+      "python30TextMatches": true,
+      "python30AnswerO": true,
+      "python30Seconds5": true,
+      "kiee31TextMatches": true,
+      "kiee31AnswerX": true,
+      "kiee31Seconds5": true,
+      "kiee31ExplainsVoltageAndResistance": true,
+      "bothAddedChoicesOX": true,
+      "originalQuestionValuesOutput": false
+    },
+    "images": [
+      {
+        "questionNumber": 30,
+        "asset": "questions/assets/python-logo-only.png",
+        "officialSourcePage": "https://www.python.org/community/logos/",
+        "officialPngUrl": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/community/logos/python-logo-only.png",
+        "imageRevealAnswerOnly": true,
+        "imageSourceMatchesOfficialPage": true,
+        "imageIsPngDataUri": true,
+        "pngSignatureValid": true,
+        "cloudImageEqualsLocalOriginal": true,
+        "cloudImageSha256": "4008a934b415c152bfa513be3e9b05de4212ae41549a27f2c6c8d41b3a24a4da",
+        "officialRemotePngSha256": "4008a934b415c152bfa513be3e9b05de4212ae41549a27f2c6c8d41b3a24a4da",
+        "localAssetIndependentlyEqualsOfficialRemotePng": true,
+        "cloudImageEqualsOfficialRemotePng": true,
+        "width": 269,
+        "height": 326,
+        "publicDtoSyntheticFromFreshSnapshot": {
+          "topicWithholdsQuestion": true,
+          "questionAfterTimerExpiryWithholdsImage": true,
+          "questionAfterTimerExpiryWithholdsAnswer": true,
+          "answerIncludesExactImage": true,
+          "answerIncludesExpectedAnswer": true,
+          "privateNotesSourcesFutureBankAbsent": true
+        },
+        "actualBrowserOrNetworkApiValidationByThisAudit": false,
+        "imageBytesOutput": false,
+        "allImageChecksPass": true
+      },
+      {
+        "questionNumber": 31,
+        "asset": "questions/assets/kiee-logo.png",
+        "officialSourcePage": "https://www.kiee.or.kr/pages_introduce/ci.vm",
+        "officialPngUrl": "https://www.kiee.or.kr/images/sub/ci_01.png",
+        "imageRevealAnswerOnly": true,
+        "imageSourceMatchesOfficialPage": true,
+        "imageIsPngDataUri": true,
+        "pngSignatureValid": true,
+        "cloudImageEqualsLocalOriginal": true,
+        "cloudImageSha256": "0e39de9f0f9cde17ed0472427f51afab808198348651b9a7513120f53a071bc5",
+        "officialRemotePngSha256": "0e39de9f0f9cde17ed0472427f51afab808198348651b9a7513120f53a071bc5",
+        "localAssetIndependentlyEqualsOfficialRemotePng": true,
+        "cloudImageEqualsOfficialRemotePng": true,
+        "width": 368,
+        "height": 368,
+        "publicDtoSyntheticFromFreshSnapshot": {
+          "topicWithholdsQuestion": true,
+          "questionAfterTimerExpiryWithholdsImage": true,
+          "questionAfterTimerExpiryWithholdsAnswer": true,
+          "answerIncludesExactImage": true,
+          "answerIncludesExpectedAnswer": true,
+          "privateNotesSourcesFutureBankAbsent": true
+        },
+        "actualBrowserOrNetworkApiValidationByThisAudit": false,
+        "imageBytesOutput": false,
+        "allImageChecksPass": true
+      }
+    ],
+    "recipientState": {
+      "beforeCount": 28,
+      "liveCount": 28,
+      "beforeRevision": 9,
+      "liveRevision": 9,
+      "revisionUnchanged": true,
+      "recordsUnchanged": true,
+      "beforeRecordsJsonSha256": "e80dfa3bbb63115038f27e3375b47e373053278e427a3b35c35b48bd56baadf4",
+      "liveRecordsJsonSha256": "e80dfa3bbb63115038f27e3375b47e373053278e427a3b35c35b48bd56baadf4",
+      "emptyNameAndPhoneCount": 28,
+      "valuesOutput": false
+    },
+    "audioUnchanged": true,
+    "screenKeyUnchanged": true,
+    "gamePosition": {
+      "mode": "main",
+      "phase": "cover",
+      "index": 0
+    },
+    "services": [
+      {
+        "name": "ox-manual-quiz",
+        "region": "asia-northeast3",
+        "ready": true,
+        "readyRevision": "ox-manual-quiz-00011-rqp",
+        "latestCreatedRevision": "ox-manual-quiz-00011-rqp",
+        "expectedReadyRevision": "ox-manual-quiz-00011-rqp",
+        "expectedReadyRevisionMatches": true,
+        "serviceMinInstances": 1,
+        "revisionMinInstances": 1,
+        "cpuThrottling": false,
+        "iapEnabled": true,
+        "invokerIamCheckDisabled": false,
+        "settingsUnchanged": true,
+        "expectedSettingsMatch": true,
+        "trafficToReadyRevision100Percent": true,
+        "imageDigest": "sha256:6a2af3aca4497ca44426f109b9ac53549e6697e7838a5d3722ac58db9e092b1f",
+        "expectedImageDigest": "sha256:6a2af3aca4497ca44426f109b9ac53549e6697e7838a5d3722ac58db9e092b1f",
+        "expectedImageMatches": true
+      },
+      {
+        "name": "ox-manual-screen",
+        "region": "asia-northeast3",
+        "ready": true,
+        "readyRevision": "ox-manual-screen-00002-crf",
+        "latestCreatedRevision": "ox-manual-screen-00002-crf",
+        "expectedReadyRevision": "ox-manual-screen-00002-crf",
+        "expectedReadyRevisionMatches": true,
+        "serviceMinInstances": 1,
+        "revisionMinInstances": 1,
+        "cpuThrottling": false,
+        "iapEnabled": false,
+        "invokerIamCheckDisabled": true,
+        "settingsUnchanged": true,
+        "expectedSettingsMatch": true,
+        "trafficToReadyRevision100Percent": true,
+        "imageDigest": "sha256:41c0b98a8675d903d743ea89ee06a1861995a643b9a22b003854f45288c1d3c8",
+        "readyRevisionUnchanged": true,
+        "trafficUnchanged": true
+      }
+    ],
+    "nightStopTask": {
+      "name": "projects/gridex-companyinfo/locations/asia-northeast3/queues/ox-manual-ops/tasks/a0c16796318f5067-20261023-night-stop",
+      "scheduleTime": "2026-10-22T15:00:00Z",
+      "expectedScheduleTime": "2026-10-22T15:00:00Z",
+      "unchanged": true,
+      "expectedScheduleMatches": true,
+      "executionCompletionVerified": false
+    },
+    "workflow": {
+      "name": "projects/gridex-companyinfo/locations/asia-northeast3/workflows/ox-manual-night-stop",
+      "state": "ACTIVE",
+      "revisionId": "000004-58d",
+      "selectedStateAndSourceUnchanged": true,
+      "sourceSha256": "e6e7415569ce98b70c3045ad54e203bf9e89755cea2e30fade94d0c1729a20aa",
+      "sourceMatchesLocal": true,
+      "fixedProject": "gridex-companyinfo",
+      "fixedRegion": "asia-northeast3",
+      "fixedServiceTargets": [
+        "ox-manual-quiz",
+        "ox-manual-screen"
+      ],
+      "fixedStop": "2026-10-22T15:00:00Z",
+      "expectedFixedTargetsMatch": true,
+      "executionCompletionVerified": false
+    },
+    "otherServices": {
+      "rechecked": false,
+      "scopeLimitedToTwoOwnedServices": true,
+      "priorPreservationEvidence": "data/cloud-deployment/public-screen-preservation.json"
+    },
+    "defaultConfiguration": {
+      "explicitProjectOnEveryCloudCommand": true,
+      "configMutationsPerformed": false
+    },
+    "privacy": {
+      "rawStateOrRecipientOrKeyOrPinOrSecretOrEnvironmentValuesOutput": false,
+      "rawSnapshotsOnlyUnderGitIgnoredData": true
+    },
+    "allRequestedChecksPass": true
+  }
+}

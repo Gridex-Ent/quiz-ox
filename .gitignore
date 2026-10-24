@@ -12,6 +12,7 @@ Thumbs.db
 coverage/
 .vite/
 *.tmp.ts
+*.bak
 
 # Local voice assets and GPT-SoVITS runtime (transfer privately)
 /voice-input/

@@ -1,0 +1,344 @@
+{
+  "capturedAtUtc": "2026-10-22T02:33:58.140Z",
+  "project": "gridex-companyinfo",
+  "region": "asia-northeast3",
+  "publicScreenOrigin": "https://ox-manual-screen-953995790322.asia-northeast3.run.app",
+  "presenterOrigin": "https://ox-manual-quiz-953995790322.asia-northeast3.run.app",
+  "access": {
+    "capturedAtUtc": "2026-10-22T02:26:58.934Z",
+    "requestCookies": false,
+    "requestGoogleAuthorization": false,
+    "publicScreen": "https://ox-manual-screen-953995790322.asia-northeast3.run.app",
+    "results": [
+      {
+        "name": "screen",
+        "status": 200,
+        "elapsedMs": 5717,
+        "setsCookie": false,
+        "redirect": false,
+        "hasStage": true
+      },
+      {
+        "name": "screenJs",
+        "status": 200,
+        "elapsedMs": 4075,
+        "setsCookie": false,
+        "redirect": false
+      },
+      {
+        "name": "missingKey",
+        "status": 401,
+        "elapsedMs": 3836,
+        "setsCookie": false,
+        "redirect": false
+      },
+      {
+        "name": "validKey",
+        "status": 200,
+        "elapsedMs": 4268,
+        "setsCookie": false,
+        "redirect": false,
+        "phase": "cover",
+        "topLevelKeys": [
+          "revision",
+          "serverNow",
+          "view",
+          "audio"
+        ],
+        "hasPrivateFields": false
+      },
+      {
+        "name": "adminBlocked",
+        "status": 404,
+        "elapsedMs": 7240,
+        "setsCookie": false,
+        "redirect": false
+      },
+      {
+        "name": "presenterBlocked",
+        "status": 404,
+        "elapsedMs": 7237,
+        "setsCookie": false,
+        "redirect": false
+      },
+      {
+        "name": "privatePresenter",
+        "status": 302,
+        "elapsedMs": 4954,
+        "setsCookie": true,
+        "redirect": true
+      }
+    ]
+  },
+  "build": {
+    "finishTime": "2026-10-22T02:24:58.734113Z",
+    "id": "30528751-2e60-402f-b641-653baf691e84",
+    "results": {
+      "images": [
+        {
+          "artifactRegistryPackage": "projects/gridex-companyinfo/locations/asia-northeast3/repositories/ox-manual-quiz/packages/ox-manual-quiz/versions/sha256:515930f20ba7af6c9466a5f58838fc6946fc807fdc66c47242ef0157997cb217",
+          "digest": "sha256:515930f20ba7af6c9466a5f58838fc6946fc807fdc66c47242ef0157997cb217",
+          "name": "asia-northeast3-docker.pkg.dev/gridex-companyinfo/ox-manual-quiz/ox-manual-quiz:20261022-022315-4f5ee4dc",
+          "pushTiming": {
+            "endTime": "2026-10-22T02:24:57.123030005Z",
+            "startTime": "2026-10-22T02:24:51.139596426Z"
+          }
+        },
+        {
+          "artifactRegistryPackage": "projects/gridex-companyinfo/locations/asia-northeast3/repositories/ox-manual-quiz/packages/ox-manual-screen/versions/sha256:71edd36cee50cc7e38e7d1a5200f383058b6be38babaab13cf2fe5f7a1955b0c",
+          "digest": "sha256:71edd36cee50cc7e38e7d1a5200f383058b6be38babaab13cf2fe5f7a1955b0c",
+          "name": "asia-northeast3-docker.pkg.dev/gridex-companyinfo/ox-manual-quiz/ox-manual-screen:20261022-022315-4f5ee4dc",
+          "pushTiming": {
+            "endTime": "2026-10-22T02:24:58.666709298Z",
+            "startTime": "2026-10-22T02:24:57.123090465Z"
+          }
+        }
+      ]
+    },
+    "status": "SUCCESS"
+  },
+  "services": {
+    "capturedAtUtc": "2026-10-22T02:32:30.378Z",
+    "project": "gridex-companyinfo",
+    "projectNumber": "953995790322",
+    "cloudOperations": "read-only",
+    "environmentAndSecretFieldsRequested": false,
+    "services": [
+      {
+        "name": "ox-manual-quiz",
+        "region": "asia-northeast3",
+        "readyRevision": "ox-manual-quiz-00003-dd5",
+        "ready": true,
+        "serviceMinInstances": 1,
+        "revisionMinInstances": 1,
+        "cpuThrottling": false,
+        "iapEnabled": true,
+        "invokerIamCheckDisabled": false,
+        "expectedSettingsMatch": true
+      },
+      {
+        "name": "ox-manual-screen",
+        "region": "asia-northeast3",
+        "readyRevision": "ox-manual-screen-00001-dtz",
+        "ready": true,
+        "serviceMinInstances": 1,
+        "revisionMinInstances": 1,
+        "cpuThrottling": false,
+        "iapEnabled": false,
+        "invokerIamCheckDisabled": true,
+        "expectedSettingsMatch": true
+      }
+    ],
+    "allExpectedSettingsMatch": true
+  },
+  "preservation": {
+    "capturedAtUtc": "2026-10-22T02:32:30.378Z",
+    "project": "gridex-companyinfo",
+    "projectNumber": "953995790322",
+    "cloudOperations": "read-only",
+    "existingServices": {
+      "scope": "all regions",
+      "fields": [
+        "name",
+        "region",
+        "readyRevision",
+        "traffic"
+      ],
+      "baselineCount": 10,
+      "currentTotal": 12,
+      "comparedCount": 10,
+      "excludedQuizServices": [
+        {
+          "name": "ox-manual-quiz",
+          "region": "asia-northeast3"
+        },
+        {
+          "name": "ox-manual-screen",
+          "region": "asia-northeast3"
+        }
+      ],
+      "unchanged": true,
+      "missing": [],
+      "unexpected": [],
+      "changed": [],
+      "normalization": "Traffic order ignored; missing/null/empty optional tag/url compare equally."
+    },
+    "questionBank": {
+      "freshGcsRead": true,
+      "bucket": "gridex-companyinfo-ox-manual-state-953995790322",
+      "object": "manual/state-v1.json",
+      "wholeObjectsCompared": true,
+      "seedCount": 20,
+      "liveCount": 20,
+      "equal": true,
+      "seedSha256": "55194fd8228b0cfbbe89f064f737988274d65a3122ceeeb0986e4963e3d0c753",
+      "liveSha256": "55194fd8228b0cfbbe89f064f737988274d65a3122ceeeb0986e4963e3d0c753"
+    },
+    "recipientCleanup": {
+      "expectedCount": 28,
+      "count": 28,
+      "emptyNameAndPhoneCount": 28,
+      "all28Empty": true,
+      "valuesOutput": false
+    },
+    "defaultConfiguration": {
+      "verification": "Stored named configuration selected fields, not effective project override",
+      "fields": [
+        "name",
+        "properties.core.project",
+        "properties.run.region",
+        "properties.run.platform"
+      ],
+      "unchanged": true,
+      "configMutationsPerformed": false
+    },
+    "privacy": {
+      "recipientValuesOutput": false,
+      "keyOrSecretOrEnvironmentValuesOutput": false,
+      "rawSnapshotOnlyUnderGitIgnoredData": true
+    }
+  },
+  "policy": {
+    "observedAtUtc": "2026-10-22T02:19:28.2284629Z",
+    "project": "gridex-companyinfo",
+    "projectNumber": "953995790322",
+    "source": "gcloud effective organization policy read-only queries",
+    "policies": {
+      "run.managed.requireInvokerIam": {
+        "effectiveReadSucceeded": true,
+        "enforce": false
+      },
+      "run.requireInvokerIam": {
+        "effectiveReadSucceeded": false,
+        "status": "NOT_FOUND",
+        "enforcementVerified": false
+      },
+      "iam.allowedPolicyMemberDomains": {
+        "allowedCustomerCount": 1,
+        "effectiveReadSucceeded": true,
+        "customerIdentifiersOmitted": true
+      },
+      "iam.managed.allowedPolicyMembers": {
+        "effectiveReadSucceeded": true,
+        "enforce": false
+      }
+    },
+    "requiredApis": {
+      "orgpolicy.googleapis.com": "ENABLED",
+      "iamcredentials.googleapis.com": "ENABLED"
+    },
+    "interpretation": {
+      "existingDomainRestrictedSharingPreserved": true,
+      "managedConstraintRequiresInvokerIam": false,
+      "documentedPublicServiceMethod": "--no-invoker-iam-check on a separate screen-only service",
+      "deploymentAndAnonymousAccessVerification": "pending root execution",
+      "privatePresenterIapRemainsEnabled": true
+    },
+    "cloudMutationsPerformedByThisAudit": false,
+    "credentialsOrCustomerIdentifiersIncluded": false
+  },
+  "nightStop": {
+    "task": {
+      "httpRequest": {
+        "oauthToken": {
+          "serviceAccountEmail": "ox-manual-task@gridex-companyinfo.iam.gserviceaccount.com"
+        },
+        "url": "https://workflowexecutions.googleapis.com/v1/projects/gridex-companyinfo/locations/asia-northeast3/workflows/ox-manual-night-stop/executions"
+      },
+      "name": "projects/gridex-companyinfo/locations/asia-northeast3/queues/ox-manual-ops/tasks/a0c16796318f5067-20261023-night-stop",
+      "scheduleTime": "2026-10-22T15:00:00Z"
+    },
+    "workflowRevision": "000004-58d",
+    "execution": {
+      "endTime": "2026-10-22T02:28:32.434961877Z",
+      "name": "projects/953995790322/locations/asia-northeast3/workflows/ox-manual-night-stop/executions/30bf3bb7-9ecc-4030-9dcb-46e9dea7e579",
+      "result": {
+        "expectedStop": "2026-10-22T15:00:00Z",
+        "patchValidated": false,
+        "results": [
+          {
+            "before": {
+              "cpuIdle": null,
+              "revisionMin": 1,
+              "serviceMin": 1
+            },
+            "expectedStop": "2026-10-22T15:00:00Z",
+            "operationName": "projects/gridex-companyinfo/locations/asia-northeast3/operations/25bc1529-e9f5-4c3d-8988-f8bc288aa9e8",
+            "patchValidated": false,
+            "reason": "Validate-only PATCH was accepted; terminal validation completion is unconfirmed.",
+            "service": "ox-manual-quiz",
+            "status": "DRY_RUN_ACCEPTED",
+            "target": "projects/gridex-companyinfo/locations/asia-northeast3/services/ox-manual-quiz",
+            "updateMask": "scaling.minInstanceCount,template.scaling.minInstanceCount,template.containers",
+            "validationAccepted": true,
+            "validationCompleted": false
+          },
+          {
+            "before": {
+              "cpuIdle": null,
+              "revisionMin": 1,
+              "serviceMin": 1
+            },
+            "expectedStop": "2026-10-22T15:00:00Z",
+            "operationName": "projects/gridex-companyinfo/locations/asia-northeast3/operations/ce94d885-77ab-474b-8b65-91ab52512b5f",
+            "patchValidated": false,
+            "reason": "Validate-only PATCH was accepted; terminal validation completion is unconfirmed.",
+            "service": "ox-manual-screen",
+            "status": "DRY_RUN_ACCEPTED",
+            "target": "projects/gridex-companyinfo/locations/asia-northeast3/services/ox-manual-screen",
+            "updateMask": "scaling.minInstanceCount,template.scaling.minInstanceCount,template.containers",
+            "validationAccepted": true,
+            "validationCompleted": false
+          }
+        ],
+        "services": [
+          "ox-manual-quiz",
+          "ox-manual-screen"
+        ],
+        "status": "DRY_RUN_ACCEPTED",
+        "validationAccepted": true,
+        "validationCompleted": false
+      },
+      "startTime": "2026-10-22T02:28:29.303658582Z",
+      "state": "SUCCEEDED",
+      "workflowRevisionId": "000004-58d"
+    },
+    "actualMidnightExecution": "future-unverified",
+    "codexBackup": {
+      "id": "ox-off",
+      "updatedForServices": [
+        "ox-manual-quiz",
+        "ox-manual-screen"
+      ],
+      "localTime": "2026-10-23T00:02:00+09:00"
+    }
+  },
+  "checks": {
+    "latestCloudTests": 49,
+    "previousOfflineTestsStillValid": 90,
+    "offlineRerun": false,
+    "lintPassed": true,
+    "cloudBuildPassed": true,
+    "stagedSourceHashesMatch": true,
+    "actualCuaFlow": [
+      "prizes",
+      "warmup-topic",
+      "question-1",
+      "answer-1",
+      "next",
+      "cover"
+    ],
+    "presenterPublishesPublicScreenLink": true,
+    "lastState": {
+      "index": 0,
+      "phase": "cover",
+      "muted": true
+    },
+    "physicalVenueDevices": "unverified"
+  },
+  "screenshots": [
+    "public-screen-cover-1366.jpg",
+    "public-screen-prizes-1366.jpg",
+    "public-screen-first-answer-1366.jpg"
+  ]
+}

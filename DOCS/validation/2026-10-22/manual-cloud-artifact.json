@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-22",
+  "branch": "main",
+  "baseline": "ee085c992ace385a6e3b0c8a00803ce2a69027ee",
+  "implementation": "complete",
+  "verification": "local-automated-and-cua",
+  "deployment": "awaiting-explicit-project-and-valid-gcloud-auth",
+  "tests": {
+    "offline": 90,
+    "cloud": 38
+  },
+  "customBank": {
+    "count": 20,
+    "allObjectsEqualToGuiBackup": true,
+    "allObjectsRestoredAfterUiEdits": true
+  },
+  "syntheticRecipientsRemaining": 0,
+  "artifacts": [
+    {
+      "path": "OX퀴즈.html",
+      "bytes": 5101297,
+      "sha256": "bede997a9a364e1f4bc1d01282c5701b89d495c20cea26ccf05b54660342cbe6"
+    },
+    {
+      "path": "dist/cloud/host.html",
+      "bytes": 5104532,
+      "sha256": "508f1a54a664099b04d6a071d9054795884d46eee433360ac0a43b7726a23e44"
+    },
+    {
+      "path": "dist/cloud/screen.html",
+      "bytes": 3523737,
+      "sha256": "a4dfc72833d87114e6283fecf02566f2f9ce245f710b99425163c29e16a5af1c"
+    },
+    {
+      "path": "dist/cloud/screen.js",
+      "bytes": 35588,
+      "sha256": "f9c238ccf90c1b0b9b1fe13cdb2f77ae8d5815f40ea89deccac04a43b9ab073f"
+    },
+    {
+      "path": "dist/cloud/seed.json",
+      "bytes": 1180971,
+      "sha256": "0e50c959091325d5e37dbbcc6ebeebbb5c206ee909329bab6b236cb20f3f5ae0"
+    }
+  ]
+}

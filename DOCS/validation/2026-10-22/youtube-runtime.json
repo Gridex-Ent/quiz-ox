@@ -1,0 +1,34 @@
+{
+  "youtubePlaying": {
+    "answerShown": false,
+    "frameRect": {
+      "height": 200,
+      "left": 36.66666793823242,
+      "top": 153.05209350585938,
+      "width": 266.66668701171875
+    },
+    "height": 768,
+    "state": "YouTube 재생 중",
+    "status": "공식 영상 재생 중",
+    "timer": "1초",
+    "width": 1366
+  },
+  "finalUserPlayback": {
+    "firstActionY": 494.3125,
+    "height": 768,
+    "nextBottom": 672.9791679382324,
+    "status": "공식 영상 재생 중",
+    "timer": "10초",
+    "width": 1366,
+    "youtube": "YouTube 재생 중"
+  },
+  "youtubeStopped": "공식 영상 일시정지",
+  "liveExpiry": {
+    "answerShown": false,
+    "nextEnabled": false,
+    "timer": "시간 종료! 손을 그대로 유지해 주세요",
+    "youtube": "YouTube 재생 중"
+  },
+  "liveStop": "공식 영상 일시정지",
+  "logs": []
+}

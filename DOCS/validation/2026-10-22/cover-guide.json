@@ -1,0 +1,165 @@
+{
+  "capturedAtUtc": "2026-10-22T03:14:55.836Z",
+  "requirement": "대문 게임 방법: 시간 중 생각 → 시간이 끝나면 손들기 → 든 손 유지하고 정답 공개 기다리기",
+  "build": {
+    "finishTime": "2026-10-22T03:07:14.673242Z",
+    "id": "f549282d-f2fa-48ca-a135-829531dbfde3",
+    "results": {
+      "images": [
+        {
+          "artifactRegistryPackage": "projects/gridex-companyinfo/locations/asia-northeast3/repositories/ox-manual-quiz/packages/ox-manual-quiz/versions/sha256:bf01a05af730cbd59f066fe3fb2bf24a6052b5459e01cf95cd34a662f94da8b5",
+          "digest": "sha256:bf01a05af730cbd59f066fe3fb2bf24a6052b5459e01cf95cd34a662f94da8b5",
+          "name": "asia-northeast3-docker.pkg.dev/gridex-companyinfo/ox-manual-quiz/ox-manual-quiz:20261022-030325-77f4e2c2",
+          "pushTiming": {
+            "endTime": "2026-10-22T03:07:12.783574455Z",
+            "startTime": "2026-10-22T03:07:06.746142179Z"
+          }
+        },
+        {
+          "artifactRegistryPackage": "projects/gridex-companyinfo/locations/asia-northeast3/repositories/ox-manual-quiz/packages/ox-manual-screen/versions/sha256:41c0b98a8675d903d743ea89ee06a1861995a643b9a22b003854f45288c1d3c8",
+          "digest": "sha256:41c0b98a8675d903d743ea89ee06a1861995a643b9a22b003854f45288c1d3c8",
+          "name": "asia-northeast3-docker.pkg.dev/gridex-companyinfo/ox-manual-quiz/ox-manual-screen:20261022-030325-77f4e2c2",
+          "pushTiming": {
+            "endTime": "2026-10-22T03:07:14.332198185Z",
+            "startTime": "2026-10-22T03:07:12.783635008Z"
+          }
+        }
+      ]
+    },
+    "status": "SUCCESS"
+  },
+  "layout": {
+    "screen1366": {
+      "allWithinStage": true,
+      "horizontalOverflow": false,
+      "stepCount": 3,
+      "verticalOverflow": false
+    },
+    "screen1920": {
+      "allWithinStage": true,
+      "horizontalOverflow": false,
+      "stepCount": 3,
+      "verticalOverflow": false
+    }
+  },
+  "preservation": {
+    "capturedAtUtc": "2026-10-22T03:13:38.119Z",
+    "project": "gridex-companyinfo",
+    "projectNumber": "953995790322",
+    "cloudOperations": "read-only",
+    "scope": "Fresh GCS snapshot, two owned service settings and existing task schedule only",
+    "services": [
+      {
+        "name": "ox-manual-quiz",
+        "region": "asia-northeast3",
+        "readyRevision": "ox-manual-quiz-00004-x6f",
+        "expectedReadyRevision": "ox-manual-quiz-00004-x6f",
+        "ready": true,
+        "serviceMinInstances": 1,
+        "revisionMinInstances": 1,
+        "cpuThrottling": false,
+        "iapEnabled": true,
+        "invokerIamCheckDisabled": false,
+        "expectedSettingsMatch": true
+      },
+      {
+        "name": "ox-manual-screen",
+        "region": "asia-northeast3",
+        "readyRevision": "ox-manual-screen-00002-crf",
+        "expectedReadyRevision": "ox-manual-screen-00002-crf",
+        "ready": true,
+        "serviceMinInstances": 1,
+        "revisionMinInstances": 1,
+        "cpuThrottling": false,
+        "iapEnabled": false,
+        "invokerIamCheckDisabled": true,
+        "expectedSettingsMatch": true
+      }
+    ],
+    "allServiceSettingsMatch": true,
+    "questionBank": {
+      "freshGcsRead": true,
+      "bucket": "gridex-companyinfo-ox-manual-state-953995790322",
+      "object": "manual/state-v1.json",
+      "seedFile": "questions/kiee-a-2026-cloud-seed.json",
+      "wholeObjectsCompared": true,
+      "seedCount": 20,
+      "liveCount": 20,
+      "equal": true,
+      "seedSha256": "55194fd8228b0cfbbe89f064f737988274d65a3122ceeeb0986e4963e3d0c753",
+      "liveSha256": "55194fd8228b0cfbbe89f064f737988274d65a3122ceeeb0986e4963e3d0c753"
+    },
+    "recipientCleanup": {
+      "expectedCount": 28,
+      "count": 28,
+      "emptyNameAndPhoneCount": 28,
+      "all28Empty": true,
+      "valuesOutput": false
+    },
+    "nightStopTask": {
+      "name": "projects/gridex-companyinfo/locations/asia-northeast3/queues/ox-manual-ops/tasks/a0c16796318f5067-20261023-night-stop",
+      "scheduleTime": "2026-10-22T15:00:00Z",
+      "expectedScheduleTime": "2026-10-22T15:00:00Z",
+      "expectedKst": "2026-10-23T00:00:00+09:00",
+      "unchanged": true,
+      "executionCompletionVerified": false
+    },
+    "otherServices": {
+      "rechecked": false,
+      "priorPreservationEvidence": "data/cloud-deployment/public-screen-preservation.json"
+    },
+    "defaultConfiguration": {
+      "explicitProjectOnEveryCommand": true,
+      "configMutationsPerformed": false
+    },
+    "privacy": {
+      "recipientOrKeyOrSecretOrEnvironmentValuesOutput": false,
+      "rawSnapshotOnlyUnderGitIgnoredData": true
+    },
+    "allRequestedChecksPass": true
+  },
+  "sourceHashes": [
+    {
+      "path": "web/src/offline/presentation.js",
+      "sha256": "9651755da13e39ccac657c85430333b660b194d63f3043ba8eb013c732fde0b7",
+      "equalsDeployedSource": true
+    },
+    {
+      "path": "web/offline-shell.html",
+      "sha256": "9c8be716cfd708c5fb1ff6d41224480b91b23c1c5f9b6cd3ec1366ce34976849",
+      "equalsDeployedSource": true
+    }
+  ],
+  "tests": {
+    "offline": 90,
+    "cloud": 49,
+    "total": 139,
+    "passed": true,
+    "lint": true,
+    "cloudBuild": true,
+    "offlineHtmlBuild": true
+  },
+  "actualCuaFlow": [
+    "cover-guide",
+    "prizes",
+    "first-question-ten-second-timer",
+    "cover-guide"
+  ],
+  "refreshedExistingViews": [
+    "public-screen-popup",
+    "local-4179"
+  ],
+  "unchangedBoundaries": [
+    "question-bank",
+    "answer-order",
+    "recipient-records",
+    "presenter-iap-pin",
+    "public-screen-key",
+    "midnight-task"
+  ],
+  "physicalVenueDevices": "unverified",
+  "screenshots": [
+    "cover-guide-1366.jpg",
+    "cover-guide-1920.jpg"
+  ]
+}

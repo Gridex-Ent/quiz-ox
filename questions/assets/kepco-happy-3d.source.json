@@ -1,0 +1,60 @@
+{
+  "asset": "kepco-happy-3d.jpg",
+  "format": "image/jpeg",
+  "width": 1272,
+  "height": 712,
+  "bytes": 46322,
+  "sha256": "1e0980422fe22e979317bdd32d8d136119e4d537c6b49e1c8c8d2d8ad54c54f3",
+  "checkedAt": "2026-10-22",
+  "description": "한국전력공사 사내 극장 안내영상 제작 포트폴리오에 게시된 파란 플러그 귀의 3D 캐릭터 전신. KEPCO 로고가 있으며 캐릭터 이름 문자는 없다.",
+  "source": {
+    "page": "https://kmong.com/portfolio/view/95381",
+    "pageTitle": "한국전력공사 사내 극장 안내영상 캐릭터 모델링, 애니메이션, 렌더링",
+    "image": "https://d2v80xjmx68n4w.cloudfront.net/members/portfolios/78J081699841706.jpg",
+    "kind": "production-portfolio",
+    "officialServerAsset": false
+  },
+  "identityCrossChecks": [
+    {
+      "page": "https://chat-online.kepco.co.kr/kepcoHappyBot/",
+      "image": "https://chat-online.kepco.co.kr/kepcoHappyBot/img/bot_face.webp",
+      "evidence": "공식 페이지 제목 한전 챗봇 해피와 같은 파란 플러그 귀·흰 얼굴의 3D 형태를 대조했다."
+    },
+    {
+      "page": "https://online.kepco.co.kr/",
+      "image": "https://online.kepco.co.kr/cm/images/ico-chatbot.png",
+      "evidence": "공식 한전ON의 /cm/css/all.css에서 .chatbot .btn_chatbot 배경으로 참조하는 3D 캐릭터 얼굴을 대조했다."
+    },
+    {
+      "page": "https://www.kepco.co.kr/home/service/privacy/boardView.do",
+      "image": "https://www.kepco.co.kr/assets/images/pages/service/popup_slide/CUGBHP004_01.jpg",
+      "evidence": "공식 마스코트 소개의 해피 이름·형태를 대조했다. 소개 문자는 정답 단서이므로 이 이미지를 퀴즈에 사용하지 않는다."
+    },
+    {
+      "page": "https://www.cogulcontents.com/myboard/portfolio/91223",
+      "image": "https://www.cogulcontents.com/img_up/shop_pds/cogul/2021/3d1631774866.png",
+      "evidence": "캐릭터 리터치 제작사가 제시한 기존 3D 기본형의 파란 해피·빨간 케피·초록 우피와 구분해 확인했다."
+    }
+  ],
+  "rights": {
+    "license": "No separate CC or public-use license verified",
+    "notice": "이미지와 캐릭터의 권리는 각 권리자에게 있다. 공개 제작 포트폴리오의 게시가 별도 이용권을 부여하는 것으로 해석하지 않는다. 저장소 코드 라이선스도 이 자산에 별도 권리를 부여하지 않는다.",
+    "modification": "none; original JPEG bytes preserved"
+  },
+  "quizUse": {
+    "defaultPosition": 4,
+    "observedUserPosition": 6,
+    "captionContainsAnswerName": false,
+    "questionContentAndOrder": "preserved",
+    "embedding": "data URI in question data and standalone HTML"
+  },
+  "legacyAsset": {
+    "file": "kepco-happy.gif",
+    "width": 360,
+    "height": 360,
+    "bytes": 150152,
+    "sha256": "b18c9629ea74a3bd274050b03b0a0684e0f1b7f1c1118d2e9e7bd321aea24abd",
+    "source": "https://www.cogulcontents.com/img_up/shop_pds/cogul/2021/emot_012_x31631775208.gif",
+    "purpose": "기존 저장 이미지와 정확히 대조하는 이관용 원본 보존. 새 문제 화면에서는 재생하지 않는다."
+  }
+}

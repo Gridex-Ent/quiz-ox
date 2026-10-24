@@ -1,0 +1,68 @@
+[
+  {
+    "answerShown": false,
+    "image": 936,
+    "index": 1,
+    "timer": "10초",
+    "topic": "전기"
+  },
+  {
+    "answerShown": false,
+    "image": 0,
+    "index": 3,
+    "timer": "10초",
+    "topic": "스포츠",
+    "imageAfterAnswer": 100
+  },
+  {
+    "answerShown": false,
+    "image": 360,
+    "index": 4,
+    "timer": "10초",
+    "topic": "전기"
+  },
+  {
+    "answerShown": false,
+    "image": 500,
+    "index": 5,
+    "timer": "10초",
+    "topic": "연예"
+  },
+  {
+    "answerShown": false,
+    "image": 500,
+    "index": 6,
+    "timer": "5초",
+    "topic": "스포츠"
+  },
+  {
+    "answerShown": false,
+    "image": 506,
+    "index": 8,
+    "timer": "5초",
+    "topic": "스포츠"
+  },
+  {
+    "answerShown": false,
+    "image": 258,
+    "index": 14,
+    "timer": "5초",
+    "topic": "역사"
+  },
+  {
+    "answerShown": false,
+    "image": 0,
+    "index": 15,
+    "timer": "5초",
+    "topic": "역사",
+    "imageAfterAnswer": 500
+  },
+  {
+    "answerShown": false,
+    "image": 0,
+    "index": 16,
+    "timer": "5초",
+    "topic": "예술",
+    "imageAfterAnswer": 500
+  }
+]

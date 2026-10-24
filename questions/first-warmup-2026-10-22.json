@@ -1,0 +1,14 @@
+{
+  "text": "심재웅 교수는 사회자보다 나이가 많다.",
+  "choiceO": "O",
+  "choiceX": "X",
+  "answer": "X",
+  "seconds": 10,
+  "explanation": "정답은 X입니다.",
+  "category": "워밍업",
+  "topic": "워밍업",
+  "review": "확정",
+  "note": "사용자 지정 정답: X. 첫 문제는 워밍업으로 진행합니다.",
+  "source": "2026-10-22 사용자 제공 문항·정답 · first-warmup-shim",
+  "sources": []
+}

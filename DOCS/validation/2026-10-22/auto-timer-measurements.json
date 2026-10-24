@@ -1,0 +1,89 @@
+{
+  "validationDate": "2026-10-22",
+  "viewport": {
+    "width": 1366,
+    "height": 768
+  },
+  "preservation": {
+    "questionCount": 19,
+    "oldArtifactMatchesSourceExceptTime": true,
+    "unsavedContentFields": [],
+    "oldTimes": [
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+    ],
+    "newTimes": [
+      10,
+      10,
+      10,
+      10,
+      10,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+    ]
+  },
+  "firstStart": {
+    "answerShown": false,
+    "quiz": "QUIZ · 1 / 19",
+    "timer": "10초"
+  },
+  "fifthStart": {
+    "answerShown": false,
+    "pauseEnabled": true,
+    "quiz": "QUIZ · 5 / 19",
+    "timer": "10초",
+    "timerButton": "자동 타이머 진행 중"
+  },
+  "fifthExpired": {
+    "answerShown": false,
+    "nextEnabled": false,
+    "quiz": "QUIZ · 5 / 19",
+    "timer": "시간 종료! 손을 그대로 유지해 주세요"
+  },
+  "sixthStart": {
+    "answerShown": false,
+    "pauseEnabled": true,
+    "quiz": "QUIZ · 6 / 19",
+    "timer": "5초",
+    "timerButton": "자동 타이머 진행 중"
+  },
+  "sixthExpired": {
+    "answerShown": false,
+    "nextEnabled": false,
+    "quiz": "QUIZ · 6 / 19",
+    "timer": "시간 종료! 손을 그대로 유지해 주세요"
+  },
+  "reorderedFifth": "QUIZ · 5 / 19\n원주율 π는 3.1415926보다 크다.\n10초\nO\n왼손\nX\n오른손\n참가자 본인의 왼손 · 오른손 기준",
+  "reorderedSixth": "QUIZ · 6 / 19\n손흥민은 2020–2021 시즌에 23골을 기록하며 EPL 득점왕을 차지했다.\n5초\nO\n왼손\nX\n오른손\n참가자 본인의 왼손 · 오른손 기준",
+  "finalPrizesTitle": "총 200만 원 상당의 상품",
+  "livePopupSyncTested": false
+}
