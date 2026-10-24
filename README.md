@@ -1,5 +1,8 @@
 # OX Quiz Cloud
 
+> 소속: [Gridex-Ent](https://github.com/Gridex-Ent) · 저장소: [Gridex-Ent/quiz-ox](https://github.com/Gridex-Ent/quiz-ox) · 공개
+
+
 **행사마다 이름·날짜·상품 이미지를 바꾸어 사용하는, 진행자 중심의 OX 퀴즈입니다.**
 
 진행자는 휴대폰이나 노트북의 **진행실**에서 문제를 공개하고, 참가자는 **프로젝션 화면**을 보며 답합니다. 시간이 끝나면 **O는 주먹, X는 보자기**로 손을 듭니다. 정답과 다음 문제를 공개하는 속도는 진행자가 직접 조절합니다.
