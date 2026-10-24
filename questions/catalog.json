@@ -1,0 +1,968 @@
+[
+  {
+    "id": "catalog-electricity-001",
+    "text": "전류의 SI 단위는 암페어(A)이다.",
+    "category": "전기",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "암페어(A)는 전류의 SI 기본단위입니다.",
+    "source": "NIST, SI 기본단위 표",
+    "sources": [
+      "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes"
+    ]
+  },
+  {
+    "id": "catalog-electricity-002",
+    "text": "전압의 SI 단위는 옴(Ω)이다.",
+    "category": "전기",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "전압은 볼트(V), 전기저항은 옴(Ω)으로 나타냅니다.",
+    "source": "NIST, SI 유도단위 표",
+    "sources": [
+      "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes"
+    ]
+  },
+  {
+    "id": "catalog-electricity-003",
+    "text": "전기저항의 SI 단위는 옴(Ω)이다.",
+    "category": "전기",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "전기저항의 SI 단위는 옴이며 기호는 Ω입니다.",
+    "source": "NIST, SI 유도단위 표",
+    "sources": [
+      "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes"
+    ]
+  },
+  {
+    "id": "catalog-electricity-004",
+    "text": "와트(W)는 전력의 단위이다.",
+    "category": "전기",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "와트는 단위 시간당 에너지를 나타내는 전력의 단위입니다.",
+    "source": "NIST, SI 유도단위 표",
+    "sources": [
+      "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes"
+    ]
+  },
+  {
+    "id": "catalog-electricity-005",
+    "text": "1킬로와트(kW)는 1,000와트(W)이다.",
+    "category": "전기",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "접두어 킬로(k)는 1,000배를 뜻하므로 1kW는 1,000W입니다.",
+    "source": "NIST, SI 접두어 표",
+    "sources": [
+      "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes"
+    ]
+  },
+  {
+    "id": "catalog-electricity-006",
+    "text": "킬로와트시(kWh)는 전력의 크기만 나타내는 단위이다.",
+    "category": "전기",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "kWh는 전력에 시간을 곱한 전기에너지의 단위입니다. 전력은 kW 등으로 나타냅니다.",
+    "source": "NIST, 에너지 단위 변환표",
+    "sources": [
+      "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b9"
+    ]
+  },
+  {
+    "id": "catalog-electricity-007",
+    "text": "헤르츠(Hz)는 전하량의 SI 단위이다.",
+    "category": "전기",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "헤르츠는 주파수 단위이며 전하량 단위는 쿨롱(C)입니다.",
+    "source": "NIST, SI 유도단위 표",
+    "sources": [
+      "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes"
+    ]
+  },
+  {
+    "id": "catalog-science-001",
+    "text": "질량의 SI 기본단위는 킬로그램(kg)이다.",
+    "category": "과학",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "질량의 SI 기본단위는 킬로그램입니다.",
+    "source": "NIST, SI 기본단위 표",
+    "sources": [
+      "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes"
+    ]
+  },
+  {
+    "id": "catalog-science-002",
+    "text": "열역학적 온도의 SI 기본단위는 켈빈(K)이다.",
+    "category": "과학",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "열역학적 온도는 SI에서 켈빈으로 나타냅니다.",
+    "source": "NIST, SI 기본단위 표",
+    "sources": [
+      "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes"
+    ]
+  },
+  {
+    "id": "catalog-science-003",
+    "text": "뉴턴(N)은 힘의 SI 단위이다.",
+    "category": "과학",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "힘의 SI 단위는 뉴턴이며 1N은 1kg·m/s²입니다.",
+    "source": "NIST, SI 유도단위 표",
+    "sources": [
+      "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes"
+    ]
+  },
+  {
+    "id": "catalog-science-004",
+    "text": "초(s)는 길이의 SI 기본단위이다.",
+    "category": "과학",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "초는 시간의 기본단위이며 길이의 기본단위는 미터(m)입니다.",
+    "source": "NIST, SI 기본단위 표",
+    "sources": [
+      "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes"
+    ]
+  },
+  {
+    "id": "catalog-science-005",
+    "text": "빛은 진공에서 전파될 수 없다.",
+    "category": "과학",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "빛은 전자기파이므로 공기 같은 물질이 없어도 진공에서 전파됩니다.",
+    "source": "NASA, 빛의 전파와 진공",
+    "sources": [
+      "https://science.nasa.gov/big-idea-2-3-intermediate-level-guiding-question/"
+    ]
+  },
+  {
+    "id": "catalog-science-006",
+    "text": "물 분자의 화학식은 CO₂이다.",
+    "category": "과학",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "물은 수소 원자 두 개와 산소 원자 한 개로 이루어진 H₂O입니다.",
+    "source": "NIH PubChem, Water",
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/water"
+    ]
+  },
+  {
+    "id": "catalog-science-007",
+    "text": "금의 원소 기호는 Ag이다.",
+    "category": "과학",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "금의 원소 기호는 Au입니다. Ag는 은의 기호입니다.",
+    "source": "Royal Society of Chemistry, Gold",
+    "sources": [
+      "https://periodic-table.rsc.org/element/79/Gold"
+    ]
+  },
+  {
+    "id": "catalog-nature-001",
+    "text": "산호는 식물로 분류된다.",
+    "category": "자연",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "산호는 동물입니다. 몸속의 공생 조류와 함께 살기도 합니다.",
+    "source": "NOAA, 산호의 분류",
+    "sources": [
+      "https://oceanservice.noaa.gov/facts/coral.html"
+    ]
+  },
+  {
+    "id": "catalog-nature-002",
+    "text": "고래상어는 이름에 ‘고래’가 들어가지만 어류이다.",
+    "category": "자연",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "고래상어는 상어의 한 종류로, 포유류인 고래와 달리 어류입니다.",
+    "source": "NOAA, 가장 큰 어류",
+    "sources": [
+      "https://oceanservice.noaa.gov/facts/bigfish.html"
+    ]
+  },
+  {
+    "id": "catalog-nature-003",
+    "text": "해마는 수컷이 새끼를 낳는다.",
+    "category": "자연",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "암컷이 수컷의 육아주머니로 알을 옮기면 수컷이 알을 품고 새끼를 낳습니다.",
+    "source": "NOAA, 해마의 번식",
+    "sources": [
+      "https://oceanservice.noaa.gov/facts/seahorse.html"
+    ]
+  },
+  {
+    "id": "catalog-nature-004",
+    "text": "바다거북은 포유류이다.",
+    "category": "자연",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "바다거북은 바다에서 생활하는 파충류입니다.",
+    "source": "NOAA Fisheries, Sea Turtles",
+    "sources": [
+      "https://www.fisheries.noaa.gov/sea-turtles"
+    ]
+  },
+  {
+    "id": "catalog-nature-005",
+    "text": "상어의 골격은 주로 연골로 이루어져 있다.",
+    "category": "자연",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "상어는 연골어류이며 뼈 대신 연골로 된 골격을 가집니다.",
+    "source": "NOAA Fisheries, 상어의 특징",
+    "sources": [
+      "https://www.fisheries.noaa.gov/feature-story/12-shark-facts-may-surprise-you"
+    ]
+  },
+  {
+    "id": "catalog-nature-006",
+    "text": "돌고래는 아가미로 물속의 산소를 직접 호흡한다.",
+    "category": "자연",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "돌고래는 포유류여서 폐로 공기를 호흡하며 수면으로 올라와 숨을 쉽니다.",
+    "source": "NOAA, 해양 포유류의 호흡",
+    "sources": [
+      "https://repository.library.noaa.gov/view/noaa/37757/noaa_37757_DS1.pdf"
+    ]
+  },
+  {
+    "id": "catalog-nature-007",
+    "text": "흰긴수염고래는 지구에서 가장 큰 동물이다.",
+    "category": "자연",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "흰긴수염고래는 지구에서 가장 큰 동물로 알려져 있습니다.",
+    "source": "NOAA Fisheries, Blue Whale",
+    "sources": [
+      "https://www.fisheries.noaa.gov/species/blue-whale"
+    ]
+  },
+  {
+    "id": "catalog-space-001",
+    "text": "목성은 태양계의 행성 중 가장 크다.",
+    "category": "우주",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "목성은 태양계에서 가장 큰 행성입니다.",
+    "source": "NASA, 태양계 행성 소개",
+    "sources": [
+      "https://science.nasa.gov/solar-system/planets/"
+    ]
+  },
+  {
+    "id": "catalog-space-002",
+    "text": "토성은 태양에서 여섯 번째에 있는 행성이다.",
+    "category": "우주",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "태양에서 가까운 순서는 수성·금성·지구·화성·목성·토성입니다.",
+    "source": "NASA, 태양계 행성 순서",
+    "sources": [
+      "https://science.nasa.gov/solar-system/planets/"
+    ]
+  },
+  {
+    "id": "catalog-space-003",
+    "text": "수성·금성·지구·화성은 모두 암석형 행성이다.",
+    "category": "우주",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "태양에 가까운 이 네 행성은 암석과 금속을 주로 가진 지구형 행성입니다.",
+    "source": "NASA, Solar System Facts",
+    "sources": [
+      "https://science.nasa.gov/solar-system/solar-system-facts/"
+    ]
+  },
+  {
+    "id": "catalog-space-004",
+    "text": "지구는 태양에서 네 번째에 있는 행성이다.",
+    "category": "우주",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "지구는 세 번째 행성이며 네 번째는 화성입니다.",
+    "source": "NASA, 태양계 행성 순서",
+    "sources": [
+      "https://science.nasa.gov/solar-system/planets/"
+    ]
+  },
+  {
+    "id": "catalog-space-005",
+    "text": "태양은 태양계의 행성 중 하나이다.",
+    "category": "우주",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "태양은 스스로 에너지를 내는 별, 즉 항성입니다. 태양계의 행성이 아닙니다.",
+    "source": "NASA, Solar System Facts",
+    "sources": [
+      "https://science.nasa.gov/solar-system/solar-system-facts/"
+    ]
+  },
+  {
+    "id": "catalog-space-006",
+    "text": "화성은 지구와 태양 사이에 있는 궤도를 돈다.",
+    "category": "우주",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "화성은 지구보다 태양에서 더 먼 궤도를 돕니다.",
+    "source": "NASA, 태양계 행성 순서",
+    "sources": [
+      "https://science.nasa.gov/solar-system/planets/"
+    ]
+  },
+  {
+    "id": "catalog-space-007",
+    "text": "천왕성은 수성과 금성 사이에 있는 행성이다.",
+    "category": "우주",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "천왕성은 태양에서 일곱 번째 행성으로 토성보다 바깥쪽에 있습니다.",
+    "source": "NASA, 태양계 행성 순서",
+    "sources": [
+      "https://science.nasa.gov/solar-system/planets/"
+    ]
+  },
+  {
+    "id": "catalog-geography-001",
+    "text": "태평양은 지구의 대양 중 면적이 가장 넓다.",
+    "category": "지리",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "태평양은 대서양과 인도양보다 넓은, 지구에서 가장 큰 대양입니다.",
+    "source": "NOAA, 대양별 면적",
+    "sources": [
+      "https://www.noaa.gov/jetstream/ocean"
+    ]
+  },
+  {
+    "id": "catalog-geography-002",
+    "text": "북극해는 지구의 대양 중 면적이 가장 넓다.",
+    "category": "지리",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "북극해는 주요 대양 중 가장 작으며 가장 넓은 대양은 태평양입니다.",
+    "source": "NOAA, 대양별 면적",
+    "sources": [
+      "https://www.noaa.gov/jetstream/ocean"
+    ]
+  },
+  {
+    "id": "catalog-geography-003",
+    "text": "지구 표면의 약 71%는 바다로 덮여 있다.",
+    "category": "지리",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "지구 표면에서 바다가 차지하는 비율은 약 71%입니다.",
+    "source": "NOAA, 바다의 면적",
+    "sources": [
+      "https://www.noaa.gov/jetstream/ocean"
+    ]
+  },
+  {
+    "id": "catalog-geography-004",
+    "text": "대서양은 태평양보다 면적이 넓다.",
+    "category": "지리",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "태평양의 면적이 대서양보다 넓습니다.",
+    "source": "NOAA, 대양별 면적",
+    "sources": [
+      "https://www.noaa.gov/jetstream/ocean"
+    ]
+  },
+  {
+    "id": "catalog-geography-005",
+    "text": "남극해는 남극 대륙을 둘러싼 바다이다.",
+    "category": "지리",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "남극해는 남극 대륙 주변의 해역을 말합니다.",
+    "source": "NOAA, 대양의 구분",
+    "sources": [
+      "https://oceanservice.noaa.gov/facts/howmanyoceans.html"
+    ]
+  },
+  {
+    "id": "catalog-geography-006",
+    "text": "바이칼호는 러시아에 있는 호수이다.",
+    "category": "지리",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "바이칼호는 러시아의 시베리아 남동부에 위치합니다.",
+    "source": "UNESCO, Lake Baikal",
+    "sources": [
+      "https://whc.unesco.org/en/list/754/"
+    ]
+  },
+  {
+    "id": "catalog-geography-007",
+    "text": "그랜드캐니언은 아프리카 대륙에 있다.",
+    "category": "지리",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "그랜드캐니언은 북아메리카의 미국 애리조나주에 있습니다.",
+    "source": "UNESCO, Grand Canyon National Park",
+    "sources": [
+      "https://whc.unesco.org/en/list/75/"
+    ]
+  },
+  {
+    "id": "catalog-history-001",
+    "text": "타지마할은 샤 자한이 아내를 기리기 위해 지은 묘당이다.",
+    "category": "역사",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "무굴 제국의 황제 샤 자한은 아내 뭄타즈 마할을 기리기 위해 타지마할을 건립했습니다.",
+    "source": "UNESCO, Taj Mahal",
+    "sources": [
+      "https://whc.unesco.org/en/list/252/"
+    ]
+  },
+  {
+    "id": "catalog-history-002",
+    "text": "마추픽추는 잉카 문명의 유적이다.",
+    "category": "역사",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "페루의 마추픽추는 잉카 제국이 남긴 대표적인 유적입니다.",
+    "source": "UNESCO, Historic Sanctuary of Machu Picchu",
+    "sources": [
+      "https://whc.unesco.org/en/list/274/"
+    ]
+  },
+  {
+    "id": "catalog-history-003",
+    "text": "만리장성은 한 왕조가 한 번에 모두 완성한 건축물이다.",
+    "category": "역사",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "기존 성벽의 연결과 증축이 여러 시대에 걸쳐 이루어졌고 명나라 때까지 건설이 이어졌습니다.",
+    "source": "UNESCO, The Great Wall",
+    "sources": [
+      "https://whc.unesco.org/en/list/438/"
+    ]
+  },
+  {
+    "id": "catalog-history-004",
+    "text": "앙코르와트는 고대 로마 제국이 세운 유적이다.",
+    "category": "역사",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "앙코르와트는 캄보디아의 크메르 제국 유적에 속합니다.",
+    "source": "UNESCO, Angkor",
+    "sources": [
+      "https://whc.unesco.org/en/list/668/"
+    ]
+  },
+  {
+    "id": "catalog-history-005",
+    "text": "스톤헨지는 고대 그리스인이 그리스에 세운 신전이다.",
+    "category": "역사",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "스톤헨지는 영국 윌트셔에 있는 선사시대의 거석 유적입니다.",
+    "source": "UNESCO, Stonehenge, Avebury and Associated Sites",
+    "sources": [
+      "https://whc.unesco.org/en/list/373/"
+    ]
+  },
+  {
+    "id": "catalog-history-006",
+    "text": "베르사유 궁전은 프랑스 왕들의 거처로 사용되었다.",
+    "category": "역사",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "베르사유 궁전은 루이 14세부터 루이 16세 시기까지 프랑스 왕들의 주요 거처였습니다.",
+    "source": "UNESCO, Palace and Park of Versailles",
+    "sources": [
+      "https://whc.unesco.org/en/list/83/"
+    ]
+  },
+  {
+    "id": "catalog-history-007",
+    "text": "기자의 피라미드는 멕시코에 있는 마야 문명의 유적이다.",
+    "category": "역사",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "기자의 피라미드는 이집트에 있는 고대 이집트 문명의 유적입니다.",
+    "source": "UNESCO, Memphis and its Necropolis",
+    "sources": [
+      "https://whc.unesco.org/en/list/86/"
+    ]
+  },
+  {
+    "id": "catalog-language-001",
+    "text": "한글을 창제한 왕은 세종이다.",
+    "category": "문학·언어",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "세종은 1443년에 훈민정음이라는 이름으로 한글을 만들었습니다.",
+    "source": "국립한글박물관, 상설 전시",
+    "sources": [
+      "https://www.hangeul.go.kr/exhi/dailyExhibition.do?curr_menu_cd=0102010000"
+    ]
+  },
+  {
+    "id": "catalog-language-002",
+    "text": "처음 만들어진 훈민정음의 글자 수는 28개이다.",
+    "category": "문학·언어",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "훈민정음은 처음에 자음 17개와 모음 11개, 모두 28개로 이루어졌습니다.",
+    "source": "국립한글박물관, 상설 전시",
+    "sources": [
+      "https://www.hangeul.go.kr/exhi/dailyExhibition.do?curr_menu_cd=0102010000"
+    ]
+  },
+  {
+    "id": "catalog-language-003",
+    "text": "처음 훈민정음의 자음 글자는 17개였다.",
+    "category": "문학·언어",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "창제 당시 자음 17개와 모음 11개를 합해 28개였습니다.",
+    "source": "국립한글박물관, 상설 전시",
+    "sources": [
+      "https://www.hangeul.go.kr/exhi/dailyExhibition.do?curr_menu_cd=0102010000"
+    ]
+  },
+  {
+    "id": "catalog-language-004",
+    "text": "‘훈민정음’은 ‘백성을 가르치는 바른 소리’라는 뜻이다.",
+    "category": "문학·언어",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "훈민정음은 백성을 가르치는 바른 소리라는 뜻을 담고 있습니다.",
+    "source": "국사편찬위원회 우리역사넷, 훈민정음",
+    "sources": [
+      "https://contents.history.go.kr/mobile/kc/view.do?code=kc_age_30&levelId=kc_r300900"
+    ]
+  },
+  {
+    "id": "catalog-language-005",
+    "text": "한강이 2024년에 받은 노벨상은 평화상이다.",
+    "category": "문학·언어",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "한강은 2024년 노벨문학상을 받았습니다.",
+    "source": "Nobel Prize, Literature 2024",
+    "sources": [
+      "https://www.nobelprize.org/prizes/literature/2024/summary/"
+    ]
+  },
+  {
+    "id": "catalog-language-006",
+    "text": "밥 딜런은 2016년 노벨물리학상 수상자이다.",
+    "category": "문학·언어",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "밥 딜런은 2016년 노벨문학상 수상자입니다.",
+    "source": "Nobel Prize, Literature 2016",
+    "sources": [
+      "https://www.nobelprize.org/prizes/literature/2016/summary/"
+    ]
+  },
+  {
+    "id": "catalog-language-007",
+    "text": "타고르가 1913년에 받은 노벨상은 화학상이다.",
+    "category": "문학·언어",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "라빈드라나트 타고르는 1913년 노벨문학상을 받았습니다.",
+    "source": "Nobel Prize, Literature 1913",
+    "sources": [
+      "https://www.nobelprize.org/prizes/literature/1913/summary/"
+    ]
+  },
+  {
+    "id": "catalog-math-001",
+    "text": "0은 짝수이다.",
+    "category": "수학",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "짝수는 2의 정수배입니다. 0=2×0이므로 짝수입니다.",
+    "source": "기초 수학 정의와 직접 계산",
+    "sources": []
+  },
+  {
+    "id": "catalog-math-002",
+    "text": "1은 소수이다.",
+    "category": "수학",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "소수는 1보다 큰 자연수 중 양의 약수가 1과 자기 자신뿐인 수입니다. 1은 소수가 아닙니다.",
+    "source": "기초 수학 정의와 직접 계산",
+    "sources": []
+  },
+  {
+    "id": "catalog-math-003",
+    "text": "모든 평행사변형은 직사각형이다.",
+    "category": "수학",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "직사각형은 네 각이 모두 직각인 평행사변형입니다. 직각이 아닌 평행사변형도 있습니다.",
+    "source": "기초 수학 정의와 직접 계산",
+    "sources": []
+  },
+  {
+    "id": "catalog-math-004",
+    "text": "100의 20%는 20이다.",
+    "category": "수학",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "100×20/100=20입니다.",
+    "source": "기초 수학 정의와 직접 계산",
+    "sources": []
+  },
+  {
+    "id": "catalog-math-005",
+    "text": "음수인 실수를 제곱하면 양수가 된다.",
+    "category": "수학",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "음수와 음수를 곱하면 양수입니다. 예를 들어 (-3)²=9입니다.",
+    "source": "기초 수학 정의와 직접 계산",
+    "sources": []
+  },
+  {
+    "id": "catalog-math-006",
+    "text": "1/2과 1/3을 더하면 2/5이다.",
+    "category": "수학",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "통분하면 3/6+2/6=5/6입니다.",
+    "source": "기초 수학 정의와 직접 계산",
+    "sources": []
+  },
+  {
+    "id": "catalog-math-007",
+    "text": "100원짜리 물건이 10% 오른 뒤 그 가격에서 10% 내리면 다시 100원이 된다.",
+    "category": "수학",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "100×1.1×0.9=99이므로 최종 가격은 99원입니다.",
+    "source": "기초 수학 정의와 직접 계산",
+    "sources": []
+  },
+  {
+    "id": "catalog-sports-001",
+    "text": "일반적인 11인제 축구에서 한 팀은 골키퍼를 포함해 최대 11명이 경기한다.",
+    "category": "스포츠",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "IFAB 규칙에서 한 팀의 최대 경기 인원은 골키퍼를 포함해 11명입니다.",
+    "source": "IFAB, Law 3 — The Players",
+    "sources": [
+      "https://www.theifab.com/laws/latest/the-players/"
+    ]
+  },
+  {
+    "id": "catalog-sports-002",
+    "text": "일반적인 5인제 농구에서 한 팀은 코트에 6명으로 경기한다.",
+    "category": "스포츠",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "5인제 농구에서는 각 팀에서 5명이 코트에 나섭니다.",
+    "source": "FIBA WABC, 코치 매뉴얼 기본 규칙",
+    "sources": [
+      "https://assets.fiba.basketball/image/upload/documents-corporate-wabc-coaches-manual-eng.pdf"
+    ]
+  },
+  {
+    "id": "catalog-sports-003",
+    "text": "실내 6인제 배구에서 한 팀의 코트 위 선수는 6명이다.",
+    "category": "스포츠",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "실내 6인제 배구에서는 각 팀에서 6명이 코트 위에 경기합니다.",
+    "source": "FIVB, Basic Rules",
+    "sources": [
+      "https://www.fivb.com/volleyball/the-game/basic-rules/"
+    ]
+  },
+  {
+    "id": "catalog-sports-004",
+    "text": "마라톤의 정식 거리는 42.195km이다.",
+    "category": "스포츠",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "정식 마라톤 거리는 42.195km입니다.",
+    "source": "World Athletics, Marathon",
+    "sources": [
+      "https://worldathletics.org/disciplines/race-walks/marathon"
+    ]
+  },
+  {
+    "id": "catalog-sports-005",
+    "text": "탁구에서 10대10이 된 뒤에는 먼저 11점을 얻으면 무조건 그 게임을 이긴다.",
+    "category": "스포츠",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "10대10부터는 상대보다 2점을 앞서야 그 게임에서 승리합니다.",
+    "source": "USA Table Tennis, Scoring and Games",
+    "sources": [
+      "https://www.usatt.org/rules-of-table-tennis"
+    ]
+  },
+  {
+    "id": "catalog-sports-006",
+    "text": "올림픽 오륜기의 고리 수는 6개이다.",
+    "category": "스포츠",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "올림픽 상징은 서로 연결된 다섯 개의 고리로 이루어져 있습니다.",
+    "source": "IOC, Olympic rings",
+    "sources": [
+      "https://www.olympics.com/ioc/olympic-rings"
+    ]
+  },
+  {
+    "id": "catalog-sports-007",
+    "text": "테니스에서 점수 ‘러브(love)’는 0점을 뜻한다.",
+    "category": "스포츠",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "테니스의 일반적인 게임 점수에서 러브는 0점을 뜻합니다.",
+    "source": "ITF, Tennis Glossary",
+    "sources": [
+      "https://www.itftennis.com/en/about-us/organisation/tennis-glossary/"
+    ]
+  },
+  {
+    "id": "catalog-culture-001",
+    "text": "김장은 김치를 만들어 함께 나누는 문화이다.",
+    "category": "문화·생활",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "김장은 겨울을 대비해 김치를 함께 만들고 나누는 공동체 문화입니다.",
+    "source": "UNESCO, Kimjang",
+    "sources": [
+      "https://ich.unesco.org/en/RL/kimjang-making-and-sharing-kimchi-in-the-republic-of-korea-00881?RL=00881"
+    ]
+  },
+  {
+    "id": "catalog-culture-002",
+    "text": "탱고는 아르헨티나와 우루과이의 문화유산으로 함께 등재되었다.",
+    "category": "문화·생활",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "유네스코 인류무형문화유산의 탱고는 아르헨티나와 우루과이가 공동으로 등재했습니다.",
+    "source": "UNESCO, Tango",
+    "sources": [
+      "https://ich.unesco.org/en/rl/tango-00258"
+    ]
+  },
+  {
+    "id": "catalog-culture-003",
+    "text": "플라멩코는 노르웨이를 대표하는 전통 예술이다.",
+    "category": "문화·생활",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "플라멩코는 스페인, 특히 안달루시아 지역을 중심으로 발전한 노래·춤·기타 연주의 예술입니다.",
+    "source": "UNESCO, 인류무형문화유산 플라멩코 소개",
+    "sources": [
+      "https://ich.unesco.org/doc/src/17331-EN.pdf"
+    ]
+  },
+  {
+    "id": "catalog-culture-004",
+    "text": "레게 음악은 자메이카의 문화유산으로 유네스코에 등재되었다.",
+    "category": "문화·생활",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "O",
+    "seconds": 10,
+    "explanation": "자메이카의 레게 음악은 2018년 유네스코 인류무형문화유산 대표목록에 등재되었습니다.",
+    "source": "UNESCO, Reggae music of Jamaica",
+    "sources": [
+      "https://ich.unesco.org/en/RL/reggae-music-of-jamaica-01398?call=film&id=45069&include=film_inc.php&width=700"
+    ]
+  },
+  {
+    "id": "catalog-culture-005",
+    "text": "택견은 피아노 연주 기법을 뜻한다.",
+    "category": "문화·생활",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "택견은 한국의 전통 무예입니다.",
+    "source": "UNESCO, Taekkyeon 등재 결정",
+    "sources": [
+      "https://ich.unesco.org/doc/src/17331-EN.pdf?t=1344431867"
+    ]
+  },
+  {
+    "id": "catalog-culture-006",
+    "text": "와쇼쿠는 이탈리아의 전통 식문화를 뜻한다.",
+    "category": "문화·생활",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "와쇼쿠는 일본의 전통 식문화를 뜻합니다.",
+    "source": "일본 농림수산성, What is Washoku?",
+    "sources": [
+      "https://www.maff.go.jp/e/policies/market/washoku-world-challenge/en/learning_01.html"
+    ]
+  },
+  {
+    "id": "catalog-culture-007",
+    "text": "나폴리의 전통 피자 장인 기술은 프랑스의 문화유산이다.",
+    "category": "문화·생활",
+    "choiceO": "O",
+    "choiceX": "X",
+    "answer": "X",
+    "seconds": 10,
+    "explanation": "나폴리는 이탈리아의 도시이며 나폴리 피자 장인의 기술은 이탈리아의 문화유산입니다.",
+    "source": "UNESCO, Art of Neapolitan Pizzaiuolo 공동체 동의 자료",
+    "sources": [
+      "https://ich.unesco.org/doc/src/33446.pdf"
+    ]
+  }
+]

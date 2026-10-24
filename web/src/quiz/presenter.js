@@ -10,6 +10,8 @@ import { PRIZE_TIERS } from './prize-tiers.js';
 import { createCloudTransport } from '../cloud/transport.js';
 import { DEFAULT_EVENT_INFO, validateEventInfo } from './event-info.js';
 import { createPrizeSettings } from './prize-settings.js';
+import { createQuestionBank } from './question-bank.js';
+import QUESTION_CATALOG from '../../../questions/catalog.json' with { type: 'json' };
 
 const $ = id => document.getElementById(id);
 const isCloud = true; // This entry is exclusively the authenticated cloud presenter.
@@ -58,6 +60,7 @@ catch { state = createState(DEFAULTS); status('저장된 문제를 읽지 못했
 let draft = structuredClone(state.questions), screen = null, lastPreview = '', lastProjection = '', lastAdvance = -Infinity;
 let draftPersisted = true;
 let draftRevision = 0;
+let questionBank = null;
 try { draft = restoreQuestionDraft(stored, state.questions); }
 catch (error) { restored = false; status(error.message); }
 // 먼저 이전 목록 기준의 편집 차이를 복원한 후, 두 목록의 알려진 이미지만 함께 갱신한다.
@@ -382,6 +385,7 @@ function adminPage(page, paused = false) {
   $('recipients-page').hidden = page !== 'recipients';
   $('runbook-page').hidden = page !== 'runbook';
   $('event-page').hidden = page !== 'event';
+  $('bank-page').hidden = page !== 'bank';
   if (isCloud && page !== 'recipients' && recipientBook) { recipientBook.destroy(); recipientBook = null; }
   if (page === 'recipients') {
     if (isCloud) void cloudRecipients();
@@ -398,10 +402,30 @@ function adminPage(page, paused = false) {
     const current = state.mainState || state;
     runbookBook.render({ questions: current.questions, index: current.index, phase: current.phase, inBonus: state.mode === 'bonus' });
     $('runbook-page').scrollIntoView?.({ block: 'start' });
+  } else if (page === 'bank') {
+    questionBank ||= createQuestionBank({
+      root: $('question-bank'), catalog: QUESTION_CATALOG, getDraft: () => draft,
+      onImport: result => {
+        draft = result.questions; editor(); keepDraft();
+        if (!draftPersisted) throw Error('가져온 문제를 편집란에 유지했습니다. 브라우저에 보관하지 못했으니 창을 닫기 전에 문제·순서 저장을 완료해 주세요.');
+        return true;
+      },
+      onEdit: () => {
+        adminPage('quiz'); $('question-prep').open = true;
+        $('question-prep').scrollIntoView?.({ block: 'start' });
+        $('apply-top').focus?.({ preventScroll: true });
+      },
+    });
+    questionBank.refresh();
+    $('bank-page').scrollIntoView?.({ block: 'start' });
   } else if (page === 'event') $('event-page').scrollIntoView?.({ block: 'start' });
   else focusQuiz();
 }
 $('runbook-nav').onclick = () => adminPage('runbook');
+$('bank-nav').onclick = () => adminPage('bank');
+$('event-bank-open').onclick = () => adminPage('bank');
+$('prep-bank-open').onclick = () => adminPage('bank');
+$('bank-back').onclick = () => adminPage('quiz');
 $('return-main').onclick = () => { dispatch({ type: 'resume-main' }); adminPage('quiz'); };
 $('cover-nav').onclick = () => { adminPage('quiz'); dispatch({ type: 'cover' }); focusQuiz(); };
 $('recipients-nav').onclick = () => adminPage('recipients');
@@ -491,6 +515,7 @@ if (isCloud) {
       if (meta.screenPath) { $('cloud-screen-link').href = meta.screenPath; $('cloud-screen-url').value = new URL(meta.screenPath, location.href).href; }
       if (!$('runbook-page').hidden && runbookBook) { const main = mainState(); runbookBook.render({ questions: main.questions, index: main.index, phase: main.phase, inBonus: state.mode === 'bonus' }); }
       if (bankChanged) save();
+      if (bankChanged && questionBank && !$('bank-page').hidden) questionBank.refresh();
       render();
     },
     onStatus: status,

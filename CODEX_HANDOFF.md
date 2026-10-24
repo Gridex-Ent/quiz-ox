@@ -21,6 +21,12 @@
 
 ## 현재 구조
 
+### 선택형 문제은행 추가 — 2026-10-24
+
+`questions/catalog.json`에 범용 후보70개(10주제×7, O35/X35)를 분리했다. `question-bank.js`의 `createQuestionBank({root,catalog,getDraft,onImport,onEdit})`는 체크·검색/주제/정답 필터·중복 방지와 최대300개 검사를 담당한다. 진행실·행사 설정·편집 영역에서 같은 탭으로 연다. 후보 선택만으로 진행 상태가 바뀌지 않으며 선택한 문제는 기존 미완성 초안 끝에 추가한 후 기존 `문제·순서 저장`으로 확정한다. 후보 전체는 공개 스크린에 번들하지 않는다. 타이머는 이 탭을 열어도 계속된다.
+
+기존31/33 데이터 파일은 변경하지 않았다. 전체185개 검사·lint/build, 격리 로컬 서버의31→초안33→ACK33→새로고침 복원과 중복 차단,1366/390 화면 검증을 완료했다. 기존4190 상태와 Cloud 운영 문제집은 바꾸지 않았다. [검증](DOCS/validation/2026-10-24/question-bank.md), [후보 출처](DOCS/research/question-catalog-sources.md). 사용자 지시에 따라 배포하지 않는다.
+
 | 영역 | 목표 경로와 책임 |
 |---|---|
 | 단일 패키지 | `ox-quiz-cloud`; workspace 기반 앱/서버 구성 제거 |
@@ -42,7 +48,7 @@
 
 최종 scripts는 `dev/build/test/lint/start`와 `build:cloud/test:cloud/start:cloud` 호환 별칭이다. Node.js22.13 이상, 운영 GCS 의존성8.1.0을 기준으로 정리한다. 운영은 Secret Manager의 PIN/키·GCS·진행실 IAP·별도 읽기 전용 스크린 경계를 유지한다.
 
-최종164/164 검사·lint·build와 모바일/노트북/프로젝션 UI를 통과했다. 상품 업로드4MiB·prizeVersion·10초/노래 무타이머·똑딱·진행자 전용 팁을 포함한다. [최종 검증](DOCS/validation/2026-10-24/cloud-events.md). 사용자 지시로 운영 배포는 이번 범위에서 제외했다.
+문제은행 추가 전 범용 행사 전환은164/164 검사·lint·build와 모바일/노트북/프로젝션 UI를 통과했다. 상품 업로드4MiB·prizeVersion·10초/노래 무타이머·똑딱·진행자 전용 팁을 포함한다. [당시 검증](DOCS/validation/2026-10-24/cloud-events.md). 문제은행까지 포함한 현재 전체 검사는185개다. 사용자 지시로 운영 배포는 이번 범위에서 제외했다.
 
 검증은 행사 정보 편집/저장/새로고침·대문/종료 동기화, O 주먹/X 보자기·선택형 표시, 주제2초/일반·번외 자동10초/노래 무타이머·직접 정답 공개, 런북 복귀, 명단 ACK/공개 경계와31/33 데이터 보존을 포함한다. 실제 휴대폰/프로젝터/스피커는 브라우저 크기 검사와 구분한다.
 
@@ -54,4 +60,4 @@
 
 [현재 대시보드](DOCS/index.md) · [설계](DOCS/design/manual-cloud.md) · [로드맵](DOCS/planning/roadmap.md) · [배포 절차](DOCS/planning/manual-cloud-deploy.md)
 
-최신 source commit: b7f9e9c38247ce6294d662dd8b8eff684d33da45. 실제 GitHub main SHA를 확인했다. 유지보수는 통합 작업폴더를 기준으로 계속하며 원래 작업폴더는 원본 백업으로 남겼다. [발행 영수증](DOCS/validation/2026-10-24/github-publication.json).
+클라우드 전용 통합 기준 source commit: b7f9e9c38247ce6294d662dd8b8eff684d33da45. 당시 실제 GitHub main SHA를 확인했다. 이후 문서·문제은행 변경은 후속 커밋으로 관리한다. 유지보수는 통합 작업폴더를 기준으로 계속하며 원래 작업폴더는 원본 백업으로 남겼다. [초기 발행 영수증](DOCS/validation/2026-10-24/github-publication.json).
