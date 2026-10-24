@@ -1,7 +1,7 @@
 ---
 title: 클라우드 전용 범용 행사 퀴즈 검증
 date: 2026-10-24
-status: verified-source-publication-pending
+status: verified-published-source
 tags: [validation, cloud, project/ox-quiz]
 ---
 
@@ -36,7 +36,7 @@ CUA로 localhost:4190의 실제 진행실과 별도 스크린을 조작했다.
 
 ## GitHub와 운영 반영 구분
 
-origin은 Gridex-Ent/quiz-ox로 변경하고 원격 `f20163a`에서 통합 branch를 만들었다. 원본 작업폴더는 reset/clean하지 않았고 snapshot211개 해시를 모두 확인했다. 비밀값·명단·개발 접근 파일·런타임 상태·Git bundle은 ignored data에만 둔다. Git 커밋/push 결과는 후속 확인 기록으로 확정한다.
+origin은 Gridex-Ent/quiz-ox로 변경하고 원격 `f20163a`에서 통합 branch를 만들었다. 원본 작업폴더는 reset/clean하지 않았고 snapshot211개 해시를 모두 확인했다. 비밀값·명단·개발 접근 파일·런타임 상태·Git bundle은 ignored data에만 둔다. 코드 커밋 [b7f9e9c](https://github.com/Gridex-Ent/quiz-ox/commit/b7f9e9c38247ce6294d662dd8b8eff684d33da45)을 정상 push하고 GitHub API와 ls-remote에서 main SHA 일치를 확인했다. 기존 원격4커밋과 원본 HEAD는 모두 조상으로 보존된다. [발행 영수증](github-publication.json).
 
 현재 운영 Cloud CLI는 재인증을 요구한다. 이번 코드의 Cloud Run 배포와 기존 가동 상태는 미확인이다. 이 소스/로컬 UI 검증을 새 운영 배포로 해석하지 않는다.
 

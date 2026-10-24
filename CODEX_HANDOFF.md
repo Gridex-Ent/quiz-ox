@@ -1,6 +1,6 @@
 # Codex 작업 인계 — OX Quiz Cloud
 
-최신 갱신: 2026-10-24 / 상태: 클라우드 전용 구현·로컬 검증 완료 / Git 발행 대기
+최신 갱신: 2026-10-24 / 상태: 클라우드 전용 구현·로컬 검증 완료 / GitHub main 발행·검증 완료
 
 ## 현재 목표와 보존 범위
 
@@ -15,7 +15,7 @@
 - 통합 기준: 원격4커밋을 포함한 `f20163a34c28d6b83cd279885ea8a24a514674a3`
 - 원본 기준: `main`의 `ee085c992ace385a6e3b0c8a00803ce2a69027ee`와 최신 미커밋31문항/클라우드 작업
 - 원본 백업: ignored `data/git-sync/20261024-011222` 및 해당 보존 작업의 Git bundle
-- 현재는 격리 통합 작업이다. 원본 작업 폴더·백업·기존 원격 커밋을 보존하고 commit/push 결과는 완료 후 기록한다.
+- 현재는 격리 통합 작업이다. 원본 작업 폴더·백업·기존 원격 커밋을 보존하고 코드 b7f9e9c을 정상 push해 원격 main에서 확인했다.
 
 원시 상태·수령 명단·실PIN/스크린 키·토큰·개발 접근 파일·Git bundle은 발행 대상에서 제외한다. 활성 문서의 계정은 운영자 계정 자리표시자로 쓰고 개인 계정/절대 사용자 경로를 넣지 않는다.
 
@@ -56,3 +56,5 @@
 4. 인증 복구 후 실제 Cloud Run 상태와 새 코드 반영 여부를 조회해 별도 운영 결과로 남긴다.
 
 [현재 대시보드](DOCS/index.md) · [설계](DOCS/design/manual-cloud.md) · [로드맵](DOCS/planning/roadmap.md) · [배포 절차](DOCS/planning/manual-cloud-deploy.md)
+
+최신 source commit: b7f9e9c38247ce6294d662dd8b8eff684d33da45. 실제 GitHub main SHA를 확인했다. 유지보수는 통합 작업폴더를 기준으로 계속하며 원래 작업폴더는 원본 백업으로 남겼다. [발행 영수증](DOCS/validation/2026-10-24/github-publication.json).

@@ -67,10 +67,12 @@
     ]
   },
   "publication": {
-    "state": "ready-to-commit",
+    "state": "published-and-verified",
     "origin": "https://github.com/Gridex-Ent/quiz-ox.git",
     "forcePush": false,
-    "secretsAndRecipientDataIncluded": false
+    "secretsAndRecipientDataIncluded": false,
+    "sourceCommit": "b7f9e9c38247ce6294d662dd8b8eff684d33da45",
+    "remoteMainVerified": "b7f9e9c38247ce6294d662dd8b8eff684d33da45"
   },
   "production": {
     "newDeployment": false,

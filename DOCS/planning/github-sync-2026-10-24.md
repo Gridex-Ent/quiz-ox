@@ -2,7 +2,7 @@
 title: Gridex-Ent 원격과 최신 수동 퀴즈 통합
 date: 2026-10-24
 tags: [계획, git, project/ox-quiz]
-status: in-progress
+status: source-published
 ---
 
 # 원격 이력·로컬 작업 보존 통합
@@ -49,3 +49,5 @@ status: in-progress
 완료 기준은 원격의 기존4커밋과 시작 로컬 HEAD를 모두 조상으로 갖는 발행 HEAD, 최신31개 seed·클라우드 소스/필수 자산 포함, 검증 결과와 원본 snapshot의 무손실 확인이다. 단순 소스 발행 결과를 새 클라우드 배포·현재 가동 검증으로 표현하지 않는다.
 
 진행자 팁: 사용자 제공 무대 인원 조정 멘트를 진행실 전용 panel에 원문 그대로 표시한다. host HTML은 기존 관리자 인증 경계 안에 두고 public renderer/DTO/스크린 번들에는 문구를 넣지 않는다.
+
+완료: 클라우드 전용·행사/상품 정보·주먹 안내·10초/똑딱·진행자 팁을 구현하고164개 검사/lint/build와 실제 화면을 검증했다. 코드 b7f9e9c을 GitHub main에 정상 push/조회 완료. 기존 원격4커밋은 조상이고 원본211파일 backup해시도모두일치한다. Cloud 운영 재배포는Google재인증필요로별도대기다.
