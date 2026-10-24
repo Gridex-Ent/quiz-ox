@@ -13,5 +13,17 @@
   "tests": 164,
   "sourcePublication": true,
   "productionDeployment": false,
-  "credentialsAndPrivateDataPublished": false
+  "credentialsAndPrivateDataPublished": false,
+  "homeDocumentation": {
+    "commit": "00463f10468fc11bff20feec850af01d52066215",
+    "remoteMainVerified": true,
+    "readmeRenderedInBrowser": true,
+    "repositoryAboutUpdated": true,
+    "userGuideLinkAndBodyVerified": true,
+    "readmeImagesLoaded": 2,
+    "mermaidRendered": true,
+    "relativeLinksChecked": 39,
+    "missingRelativeLinks": 0,
+    "productionDeployment": false
+  }
 }
