@@ -150,9 +150,11 @@ test('gestures remain attached to O and X choices when display order reverses, i
   for (const phase of ['question', 'answer']) for (const left of ['O', 'X']) {
     const state = { ...createState(bank), phase, left, deadline: null, remaining: 5 };
     const html = renderQuizStage(makePublicView(state));
-    const hands = new Map([...html.matchAll(/<div class="hand ([OX]) [^"]*">([\s\S]*?)<\/div>/g)].map(([, choice, body]) => [choice, body]));
-    assert.match(hands.get('O'), /전력<\/b><span>주먹<\/span>/);
-    assert.match(hands.get('X'), /전기<\/b><span>보자기<\/span>/);
+    const hands = new Map([...html.matchAll(/<div class="hand ([OX])(?: [^"]*)?">([\s\S]*?)<\/div>/g)].map(([, choice, body]) => [choice, body]));
+    assert.match(hands.get('O'), /class="choice-label">전력<\/span>/);
+    assert.match(hands.get('O'), /class="choice-gesture">✊ 주먹/);
+    assert.match(hands.get('X'), /class="choice-label">전기<\/span>/);
+    assert.match(hands.get('X'), /class="choice-gesture">🖐 보자기/);
     assert.doesNotMatch(html, /왼손|오른손/);
     assert.equal(html.indexOf('class="hand O') < html.indexOf('class="hand X'), left === 'O');
   }
